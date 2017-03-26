@@ -18,13 +18,20 @@ import { StyleSheet,
 import LinearGradient from 'react-native-linear-gradient';
 
 class QButton extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { selected: false }
+    }
+
   props: {
     type: 'primary' | 'secondary' | 'bordered';
     icon?: number;
-    caption: string;
+    title: string;
     style?: any;
     backgroundColor?: string;
     borderColor?: string;
+    borderWidth?: number;
+    borderRadius?: number;
     color?: string;
     onPress: () => mixed;
   };
@@ -35,6 +42,7 @@ class QButton extends Component {
     type: 'primary',
     // backgroundColor: 'white',
     // borderColor: '#7F91A7',
+    // borderWidth: 0,
     // color: '#7F91A7',
   };
 
@@ -44,33 +52,40 @@ class QButton extends Component {
 //   }
 
   render() {
-    const caption = this.props.caption.toUpperCase();
-    console.log("We've entered QButton render.");
+    const title = this.props.title.toUpperCase();
+    var {backgroundColor, borderWidth, borderColor, color} = this.props;
+
+    if (this.state.selected) {
+        [ backgroundColor, color ] = [color, backgroundColor];
+    }
+
     let icon;
+
     if (this.props.icon) {
       console.log("there's an icon!");
       icon = <Image source={this.props.icon} style={styles.icon} />;
     }
+
     let content;
+
     if (this.props.type === 'primary') {
       content = (
-        <LinearGradient
-          start={{x:0.5, y:1}} end={{x:1, y:1}}
-          colors={['#6A6AD5', '#6F86D9']}
-          style={[styles.button, styles.primaryButton]}>
+        <View
+          style={[styles.button, styles.primaryButton, {borderWidth, borderColor, backgroundColor}]}>
           {icon}
-          <Text style={[styles.caption, styles.primaryCaption]}>
-            {caption}
+          <Text style={[styles.title, styles.primaryTitle, {color}]}>
+            {title}
           </Text>
-        </LinearGradient>
+      </View>
       );
+
     } else {
       var border = this.props.type === 'bordered' && styles.border;
       content = (
         <View style={[styles.button, border]}>
           {icon}
-          <Text style={[styles.caption, styles.secondaryCaption]}>
-            {caption}
+          <Text style={[styles.title, styles.secondaryTitle]}>
+            {title}
           </Text>
         </View>
       );
@@ -78,7 +93,8 @@ class QButton extends Component {
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={this.props.onPress}
+        onPress={() => {
+            this.setState({selected: !this.state.selected}); this.props.onPress();} }
         activeOpacity={0.8}
         style={[styles.container, this.props.style]}>
         {content}
@@ -88,7 +104,7 @@ class QButton extends Component {
 }
 
 
-const HEIGHT = 50;
+const HEIGHT = 38;
 
 var styles = StyleSheet.create({
   container: {
@@ -101,28 +117,28 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 40,
+    paddingHorizontal: 12,
   },
   border: {
     borderWidth: 1,
     borderColor: '#7F91A7',
-    borderRadius: HEIGHT / 4,
+//    borderRadius: HEIGHT / 2,
   },
   primaryButton: {
-    borderRadius: HEIGHT / 4,
+//    borderRadius: HEIGHT / 2,
     backgroundColor: 'transparent',
   },
   icon: {
     marginRight: 12,
   },
-  caption: {
+  title: {
     letterSpacing: 1,
     fontSize: 12,
   },
-  primaryCaption: {
+  primaryTitle: {
     color: 'white',
   },
-  secondaryCaption: {
+  secondaryTitle: {
     color: '#7F91A7',
 },
 });
