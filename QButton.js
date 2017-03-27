@@ -15,7 +15,7 @@ import { StyleSheet,
         Image,
       } from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
+// import LinearGradient from 'react-native-linear-gradient';
 
 class QButton extends Component {
     constructor(props) {
@@ -23,18 +23,35 @@ class QButton extends Component {
         this.state = { selected: false }
     }
 
-  props: {
-    type: 'primary' | 'secondary' | 'bordered';
-    icon?: number;
-    title: string;
-    style?: any;
-    backgroundColor?: string;
-    borderColor?: string;
-    borderWidth?: number;
-    borderRadius?: number;
-    color?: string;
-    onPress: () => mixed;
-  };
+  //   props: {
+  //   type: 'primary' | 'secondary' | 'bordered';
+  //   icon?: number;
+  //   title: string;
+  //   style?: any;
+  //   backgroundColor?: string;
+  //   borderColor?: string;
+  //   borderWidth?: number;
+  //   borderRadius?: number;
+  //   color?: string;
+  //   handleSelect?: () =>
+  //   //onPress: () => mixed;
+  // };
+
+    handlePress(e) {
+        const title = this.props.title;
+      if (this.state.selected) {
+        this.props.handleUnselect(title);
+        this.setState({selected: false});
+      } else {
+        const succeeded = this.props.handleSelect(title);
+        // The app has certain situations under which selecting further buttons should be disabled. Hence the check for success.
+        if (succeeded) {
+            this.setState({selected: true});
+        } else {
+            console.log(`Tried to select ${title} but it failed.`);
+        }
+      }
+    }
 
 //  static propTypes = {}
 
@@ -93,8 +110,7 @@ class QButton extends Component {
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={() => {
-            this.setState({selected: !this.state.selected}); this.props.onPress();} }
+        onPress={this.handlePress.bind(this)}
         activeOpacity={0.8}
         style={[styles.container, this.props.style]}>
         {content}
@@ -103,8 +119,8 @@ class QButton extends Component {
   }
 }
 
-
-const HEIGHT = 38;
+const BUTTON_FONT_SIZE = 11;
+const HEIGHT = BUTTON_FONT_SIZE*2.4;
 
 var styles = StyleSheet.create({
   container: {
@@ -133,7 +149,7 @@ var styles = StyleSheet.create({
   },
   title: {
     letterSpacing: 1,
-    fontSize: 12,
+    fontSize: BUTTON_FONT_SIZE,
   },
   primaryTitle: {
     color: 'white',

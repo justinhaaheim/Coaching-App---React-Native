@@ -30,21 +30,42 @@ export default class App extends React.Component {
     //     console.log(`You tapped the ${this.props[0]} button and produced ${e.target.toString()} event, and here's this title: ${this.props.title}`);
     // }
 
-    _onPressQuality(qname) {
-        // console.log(`_onPressQuality() with value of ${qname}`);
-        // console.log(`selected Qualities: ${this.selectedQualities}`);
-        // console.log(`Active Qualities Length: ${this.selectedQualities.length}`);
-
-        var index = this.selectedQualities.indexOf(qname);
-        if (index >= 0) {
-            console.log(`FOUND at ${index}`);
-            this.selectedQualities.splice(index, 1);
-        } else {
-            this.selectedQualities.push(qname);
+    onSelectQuality(title) {
+        if (this.selectedQualities.length >= 5) {
+            return false;
         }
-        // console.log(`selected Qualities: ${this.selectedQualities}`);
-        this.setState({ activeQualities: this.qualitiesList()});
+        const lowerTitle = title.toLowerCase();
+        this.selectedQualities.push(lowerTitle);
+        this.setState({
+            activeQualities: this.qualitiesList()
+        });
+        return true;
     }
+
+    onUnselectQuality(title) {
+        const lowerTitle = title.toLowerCase();
+        var index = this.selectedQualities.indexOf(lowerTitle);
+        if (index < 0) {
+            console.warn(`Trying to unselect quality ${lowerTitle} but it is not present in the array.`);
+        }
+        console.log(`Quality ${lowerTitle} FOUND at ${index}`);
+        this.selectedQualities.splice(index, 1);
+        this.setState({
+            activeQualities: this.qualitiesList()
+        });
+    }
+
+    // _onPressQuality(qname) {
+    //     var index = this.selectedQualities.indexOf(qname);
+    //     if (index >= 0) {
+    //         console.log(`FOUND at ${index}`);
+    //         this.selectedQualities.splice(index, 1);
+    //     } else {
+    //         this.selectedQualities.push(qname);
+    //     }
+    //     // console.log(`selected Qualities: ${this.selectedQualities}`);
+    //     this.setState({ activeQualities: this.qualitiesList()});
+    // }
 
     qualitiesList() {
         // console.log("qualitiesList() called!");
@@ -52,7 +73,7 @@ export default class App extends React.Component {
         var aq = this.selectedQualities.slice();
 //        console.log(`Type of aq: ${typeof(aq)}`);
         if (aq.length == 0) {
-            return '';
+            return '___';
         } else if (aq.length == 1) {
             return aq[0];
         } else {
@@ -60,8 +81,6 @@ export default class App extends React.Component {
             return aq.join(", ") + " and " + last;
         }
     }
-
-
 
     render() {
 
@@ -100,7 +119,7 @@ export default class App extends React.Component {
 
         let buttons = qualities.map((qname, index) => (
         <View key={`button-view${index}`}
-            style={{ margin: 5, }}
+            style={{ margin: 3, }}
             >
             <QButton
                 key={`button${index}`}
@@ -109,7 +128,8 @@ export default class App extends React.Component {
                 backgroundColor='white'
                 borderWidth={1}
                 borderColor='#e0e0e0'
-                onPress={(() => this._onPressQuality(qname)).bind(this) }
+                handleSelect={this.onSelectQuality.bind(this)}
+                handleUnselect={this.onUnselectQuality.bind(this)}
                 />
         </View>
         ));
@@ -122,15 +142,16 @@ export default class App extends React.Component {
                 <ScrollView
                     ref={(scrollView) => { _scrollView = scrollView; }}
                     automaticallyAdjustContentInsets={false}
-                    onScroll={() => { console.log('onScroll!'); }} scrollEventThrottle={200}
+                    onScroll={() => { console.log('onScroll!'); }} scrollEventThrottle={800}
+                    style={styles.scrollContainer}
                     >
 
 
                     <View style={{
                       flex: 1,
                       flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-start'
+                    justifyContent: 'flex-start',
+                    alignItems: 'stretch',
                     }}>
 
 
@@ -138,35 +159,43 @@ export default class App extends React.Component {
                         flexDirection: 'column',
                         justifyContent: 'flex-start',
                         alignSelf: 'flex-start',
-                        backgroundColor: 'pink',
-                        borderWidth: 1,
+                        backgroundColor: 'transparent',
+                        borderWidth: 0,
                         borderColor: '#373737',
-                        borderRadius: 10,
+                        borderRadius: 0,
+                        marginVertical: 5,
                     }}>
-                        <Text style={styles.title}>The Coaching Arena</Text>
+                        <Text style={styles.title}>THE COACHING ARENA</Text>
                     </View>
 
 
                     <View style={{
-                        flex: 3,
+                        flex: 1,
                         flexDirection: 'row',
                         justifyContent: 'flex-start',
-                        backgroundColor: '#eeeeee'
+                        alignItems: 'flex-start',
+                        alignSelf: 'flex-start',
+                        marginVertical: 10,
+                        backgroundColor: 'transparent',
                     }}>
+                    <View style={{
 
-                        <View style={{
-                            flex: 1,
                             flexDirection: 'column',
-                            justifyContent: 'flex-start'
+                            justifyContent: 'flex-start',
+                            alignItems: 'flex-start',
+                            borderWidth: 0,
+                            borderColor: 'black',
+
                         }}>
 
-                            {buttons.slice(0, 12)}
+                            {buttons.slice(0,12)}
 
                         </View>
                         <View style={{
-                            flex: 1,
+
                             flexDirection: 'column',
-                            justifyContent: 'flex-start'
+                            justifyContent: 'flex-start',
+                            alignItems: 'flex-start',
                         }}>
 
                             {buttons.slice(12)}
@@ -178,47 +207,68 @@ export default class App extends React.Component {
                     <View style={{
                         flex: 1,
                         flexDirection: 'column',
-                        alignItems: 'flex-start'
+                        alignItems: 'flex-start',
+                        marginVertical: 10,
                     }}>
+                        <Text style={styles.h2}>ARENA QUESTIONS</Text>
                         <Text style={styles.textQuestion}>1) {questionsMLE[1]}</Text>
-                        <Text style={styles.textQuestion}>{`I am willing to be ${this.qualitiesList()}.`}</Text>
+                        <Text style={[styles.qField, styles.textQuestion]}>{`I am willing to be ${this.qualitiesList()}.`}</Text>
                         <Text style={styles.textQuestion}>2) {questionsMLE[2]}</Text>
                         <Text style={styles.textQuestion}>3) {questionsMLE[3]}</Text>
                         <Text style={styles.textQuestion}>4) {questionsMLE[4]}</Text>
+                        <Text style={styles.copyright}>{`The Coaching Arena © 1997-${(new Date()).getFullYear()} The Academy for Coaching Excellence`}</Text>
                     </View>
 
                 </View>
                 </ScrollView>
-                <TouchableOpacity style={styles.button} onPress={() => {
-                    _scrollView.scrollTo({y: 0});
-                }}>
-                    <Text>Scroll to top</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => {
-                    _scrollView.scrollToEnd({animated: true});
-                }}>
-                    <Text>Scroll to bottom</Text>
-                </TouchableOpacity>
             </View>
         );
     }
 }
 
+const BODY_TEXT_SIZE = 17;
+
 const styles = StyleSheet.create({
     title: {
-        fontSize: 32
+        fontSize: BODY_TEXT_SIZE*1.6,
+    },
+    h2: {
+        fontSize: BODY_TEXT_SIZE*1.2,
+        marginBottom: 10,
     },
     textQuestion: {
         marginBottom: 10,
-        fontSize: 20
+        fontSize: BODY_TEXT_SIZE,
+    },
+    qField: {
+        paddingLeft: 18,
+        height: BODY_TEXT_SIZE*2,
+        fontStyle: 'italic',
+    },
+    copyright: {
+        fontSize: BODY_TEXT_SIZE*.8,
+        fontStyle: 'italic',
+        marginTop: 40,
     },
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'stretch',
-        justifyContent: 'center',
+        // alignItems: 'flex-start',
+        // justifyContent: 'center',
+    },
+    scrollContainer: {
         padding: 25,
-        paddingTop: 35,
-        paddingBottom: 35
+
     }
 });
+
+// <TouchableOpacity style={styles.button} onPress={() => {
+//     _scrollView.scrollTo({y: 0});
+// }}>
+//     <Text>Scroll to top</Text>
+// </TouchableOpacity>
+// <TouchableOpacity style={styles.button} onPress={() => {
+//     _scrollView.scrollToEnd({animated: true});
+// }}>
+//     <Text>Scroll to bottom</Text>
+// </TouchableOpacity>
