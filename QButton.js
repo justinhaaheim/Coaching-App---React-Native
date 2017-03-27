@@ -138,7 +138,7 @@ var styles = StyleSheet.create({
   border: {
     borderWidth: 1,
     borderColor: '#7F91A7',
-//    borderRadius: HEIGHT / 2,
+//    borderRadiu.zs: HEIGHT / 2,
   },
   primaryButton: {
 //    borderRadius: HEIGHT / 2,

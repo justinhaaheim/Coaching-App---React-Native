@@ -226,29 +226,37 @@ export default class App extends React.Component {
     }
 }
 
-const BODY_TEXT_SIZE = 17;
+const BODY_TEXT_SIZE = 18;
 
 const styles = StyleSheet.create({
     title: {
         fontSize: BODY_TEXT_SIZE*1.6,
+        color: '#555',
+        marginVertical: 10,
     },
     h2: {
-        fontSize: BODY_TEXT_SIZE*1.2,
+        fontSize: BODY_TEXT_SIZE*1.3,
         marginBottom: 10,
+        color: '#555',
     },
     textQuestion: {
         marginBottom: 10,
         fontSize: BODY_TEXT_SIZE,
+        color: '#555',
     },
     qField: {
+        flex: 1,
+        minHeight: BODY_TEXT_SIZE*4,
         paddingLeft: 18,
-        height: BODY_TEXT_SIZE*2,
+        //height: BODY_TEXT_SIZE*3,
         fontStyle: 'italic',
+        color: '#555',
     },
     copyright: {
         fontSize: BODY_TEXT_SIZE*.8,
         fontStyle: 'italic',
-        marginTop: 40,
+        marginTop: 30,
+        color: '#888',
     },
     container: {
         flex: 1,
