@@ -5,7 +5,6 @@ import {
     View,
     TouchableHighlight,
     TouchableOpacity,
-    LinearGradient,
     Button,
     ScrollView,
 } from 'react-native'

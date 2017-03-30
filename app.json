@@ -1,7 +1,4 @@
 {
-  "expo": {
-    "sdkVersion": "15.0.0"
-  },
   "name": "CoachingArenaApp",
   "displayName": "Coaching Arena"
 }
