@@ -1,4 +1,4 @@
-package com.coachingarena2;
+package com.empowerapp;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "CoachingArena2";
+        return "EmpowerApp";
     }
 }

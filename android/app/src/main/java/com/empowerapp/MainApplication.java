@@ -1,4 +1,4 @@
-package com.coachingarena2;
+package com.empowerapp;
 
 import android.app.Application;
 

@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "CoachingArena2.app"
-               BlueprintName = "CoachingArena2"
-               ReferencedContainer = "container:CoachingArena2.xcodeproj">
+               BuildableName = "EmpowerApp.app"
+               BlueprintName = "EmpowerApp"
+               ReferencedContainer = "container:EmpowerApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CoachingArena2Tests.xctest"
-               BlueprintName = "CoachingArena2Tests"
-               ReferencedContainer = "container:CoachingArena2.xcodeproj">
+               BuildableName = "EmpowerAppTests.xctest"
+               BlueprintName = "EmpowerAppTests"
+               ReferencedContainer = "container:EmpowerApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CoachingArena2Tests.xctest"
-               BlueprintName = "CoachingArena2Tests"
-               ReferencedContainer = "container:CoachingArena2.xcodeproj">
+               BuildableName = "EmpowerAppTests.xctest"
+               BlueprintName = "EmpowerAppTests"
+               ReferencedContainer = "container:EmpowerApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CoachingArena2.app"
-            BlueprintName = "CoachingArena2"
-            ReferencedContainer = "container:CoachingArena2.xcodeproj">
+            BuildableName = "EmpowerApp.app"
+            BlueprintName = "EmpowerApp"
+            ReferencedContainer = "container:EmpowerApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CoachingArena2.app"
-            BlueprintName = "CoachingArena2"
-            ReferencedContainer = "container:CoachingArena2.xcodeproj">
+            BuildableName = "EmpowerApp.app"
+            BlueprintName = "EmpowerApp"
+            ReferencedContainer = "container:EmpowerApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CoachingArena2.app"
-            BlueprintName = "CoachingArena2"
-            ReferencedContainer = "container:CoachingArena2.xcodeproj">
+            BuildableName = "EmpowerApp.app"
+            BlueprintName = "EmpowerApp"
+            ReferencedContainer = "container:EmpowerApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
