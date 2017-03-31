@@ -1,6 +1,8 @@
 # Empower App :high_brightness:
 An app that provides tools, resources and weekly notes to support you to realize your most important goals and dreams.
 
+  
+
 ## Background
 
 I started learning ReactJS / React Native, and love it. This is a learning / development project, drawing inspiration from Sam Lu's fabulous [100 Days of Swift](http://samvlu.com/index.html), and Wei Fang's [30 Days of React Native](https://github.com/fangwei716/30-days-of-react-native). Each day, I will be taking the lessons, concepts, frameworks and components I encounter and turning them into features and functionalities of a working app: Empower. 
