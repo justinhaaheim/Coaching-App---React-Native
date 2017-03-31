@@ -17,5 +17,7 @@ And to document my learning and make it accessible to others, I'll share screens
 
 I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: io at justin h dot org.
 
--Justin
+-Justin 🤓  
+
+*I am currently seeking employment. If you are a prospective employer or recruiter, don't hesitate to [get in touch](http://justinh.org/contact). You can find my full professional profile at [linkedin.com/in/justinhaaheim/](https://www.linkedin.com/in/justinhaaheim/)*
 
