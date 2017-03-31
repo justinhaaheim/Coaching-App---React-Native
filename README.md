@@ -1,7 +1,10 @@
 # Empower App :high_brightness:
 An app that provides tools, resources and weekly notes to support you to realize your most important goals and dreams.
 
-  
+<kbd><img src="docs/img/2017-03-31-screenshot-simulator-launchscreen.png" alt="Empower App Launch Screen" width=200 /></kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <kbd><img src="docs/img/2017-03-31-screenshot-simulator-mainarenapage.png" alt="Empower App Coaching Arena Screen" width=200 /></kbd>
+
+&nbsp;  
+&nbsp;  
 
 ## Background
 
@@ -23,7 +26,11 @@ I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](ht
 
 -Justin 🤓  
 
+&nbsp;  
+
 *I am currently seeking employment. If you are a prospective employer or recruiter, don't hesitate to [get in touch](http://justinh.org/contact). You can find my full professional profile at [linkedin.com/in/justinhaaheim/](https://www.linkedin.com/in/justinhaaheim/)*
+
+&nbsp;  
 
 ## Project Plan
 
