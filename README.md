@@ -25,6 +25,16 @@ I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](ht
 
 ## Project Plan
 
+#### Starting:
+- [x] Install node, watchman, react-native, yarn. Figure what the heck those things actually do.
+- [x] Evaluate viability/preferability of Expo development platform. 
+- [x] Hello world. Experiment with text layout
+- [x] Extend TouchableOpacity, drawing from F8 app button implementation, to create buttons that toggle (select and deselect)
+- [x] Determine best place for the relatively simple application logic, and how to make use of *state*.
+- [x] Hook up: buttons add and remove text to/from text field below.
+- [x] Compile and test on physical device.
+- [x] Add an app icon and a launch screen, because vanity.
+
 #### Next up:
 - [ ] Create a side "hamburger" menu
 - [ ] Create an About page, and list any necessary copyrights/attributions
@@ -32,6 +42,10 @@ I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](ht
 - [ ] Create setting to switch between two different versions of Arena
 - [ ] Implement file storage to save state between closings-openings of the app
 - [ ] Create a Reset button for the list of qualities
+
+#### Publishing:
+- [ ] Initiate process to get developer license.
+- [ ] Test the app on multiple different layouts. Do necessary scaling to accomodate larger/smaller devices.
 
 #### Second Screen/Route: 
 - [ ] Project: Create a second app screen/route that hosts the most recent Note from Justin, first just images, and then make it possible to display the textual note.
@@ -43,4 +57,8 @@ I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](ht
 
 #### Future:
 - [ ] Implement a swedish version of the app using localization files
+- [ ] Test and publish an Android version of the app, re-using as much of the codebase as possible.
+- [ ] Implement a screen to allow people to book a session.
+- [ ] Consider developing a way that coaches can distribute this app to their clients with a special code/account that directs them to their specific coach's booking page.
+
 
