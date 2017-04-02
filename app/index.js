@@ -1,3 +1,18 @@
+/**
+ * Name: app/index.js
+ *
+ * Description: This is the root of our app.
+ *
+ * Exports:
+ *
+ * Copyright (c) 2017-present Justin Haaheim
+ *
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
+ */
+
+"use strict";
+
 import NavigationBar from 'react-native-navbar'
 import React from 'react';
 import {
@@ -6,29 +21,30 @@ import {
     View,
     TouchableHighlight,
     TouchableOpacity,
-    Button,
     ScrollView,
 } from 'react-native'
 
-import QButton from './QButton';
+// import { Container, Content } from 'native-base/ui';
+import { Button, Container, Content } from 'native-base';
+
+import QButton from './components/QButton';
+import { arena } from './config/data';
+
+console.log("got to the top of index.js");
 
 export default class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            activeQualities: ''
-        }
+          arenaVersion: 'client',
+          activeQualities: '',
+        };
         this.selectedQualities = [];
-        // this._onPressButtonLog = this._onPressButtonLog.bind(this)
     }
 
     _onPressButton() {
         console.log("You tapped the button!");
     }
-
-    // _onPressButtonLog(e) {
-    //     console.log(`You tapped the ${this.props[0]} button and produced ${e.target.toString()} event, and here's this title: ${this.props.title}`);
-    // }
 
     onSelectQuality(title) {
         if (this.selectedQualities.length >= 5) {
@@ -55,18 +71,6 @@ export default class App extends React.Component {
         });
     }
 
-    // _onPressQuality(qname) {
-    //     var index = this.selectedQualities.indexOf(qname);
-    //     if (index >= 0) {
-    //         console.log(`FOUND at ${index}`);
-    //         this.selectedQualities.splice(index, 1);
-    //     } else {
-    //         this.selectedQualities.push(qname);
-    //     }
-    //     // console.log(`selected Qualities: ${this.selectedQualities}`);
-    //     this.setState({ activeQualities: this.qualitiesList()});
-    // }
-
     qualitiesList() {
         // console.log("qualitiesList() called!");
         // console.log(`Type of activeQualities: ${typeof(this.selectedQualities)}`);
@@ -84,50 +88,10 @@ export default class App extends React.Component {
 
     render() {
 
-        const qualities = [
-            'Alert',
-            'Attentive',
-            'Appreciative',
-            'Clear',
-            'Compassionate',
-            'Courageous',
-            'Creative',
-            'Empowering',
-            'Enthusiastic',
-            'Flexible',
-            'Focused',
-            'Generous',
-            'Gentle',
-            'Grateful',
-            'Joyous',
-            'Kind',
-            'Loving',
-            'Open',
-            'Present',
-            'Receptive',
-            'Supportive',
-            'Truthful',
-            'Vulnerable'
-        ];
-
-        const questionsMLE = {
-            1: "Who am I willing to be in order to produce an extraordinary result out of this interaction?",
-            2: "Am I willing to systematically dismantle my structure of knowing?",
-            3: "Am I willing to be a demand for coaching?",
-            4: "Am I willing to guarantee that whoever coaches me will be successful?"
-        };
-
-        const questionsClient = {
-            1: "There are some qualities I am willing to demonstrate in this interaction so we can both make sure we have an extraordinary result out of our session together:",
-            2: "During the session am I willing to set aside the opinions, beliefs, and thoughts that may be getting in the way of seeing something clearly?",
-            3: "Am I willing to be open minded and fully engaged in order to receive maximum benefit from this time together?",
-            4: "The result of coaching in this model is always action. Am I willing to see the most authentic action to take? If I am the person being coached, am I willing to promise to take it?"
-        }
-
         // defaulting to Client questions. Todo: build a setting where the user can switch this.
-        const questions = questionsClient;
+        const questions = (this.state.arenaVersion == 'mle') ? arena.questions.mle : arena.questions.client;
 
-        let buttons = qualities.map((qname, index) => (
+        let buttons = arena.qualities.map((qname, index) => (
         <View key={`button-view${index}`}
             style={{ margin: 3, }}
             >
@@ -148,13 +112,6 @@ export default class App extends React.Component {
 
         return (
             <View style={styles.container}>
-<NavigationBar
-  title={{ title: 'Title', tintColor: 'black', }}
-  leftButton={{ title: 'Back', }}
-  rightButton={{ title: 'Forward', }}
-  style={{ backgroundColor: "white", }}
-  statusBar={{ tintColor: "white", }}
-/>
                 <ScrollView
                     ref={(scrollView) => { _scrollView = scrollView; }}
                     automaticallyAdjustContentInsets={true}
@@ -216,6 +173,8 @@ export default class App extends React.Component {
 
                             {buttons.slice(12)}
 
+                            <Button buttonText="Great BUTTON!" />
+
                         </View>
                     </View>
 
@@ -261,8 +220,8 @@ const styles = StyleSheet.create({
         color: '#555',
     },
     qField: {
-        flex: 1,
-        minHeight: BODY_TEXT_SIZE*4,
+//        flex: 1,
+//        minHeight: BODY_TEXT_SIZE*4,
         paddingLeft: 18,
         //height: BODY_TEXT_SIZE*3,
         fontStyle: 'italic',
