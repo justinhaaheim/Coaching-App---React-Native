@@ -18,3 +18,16 @@ Edited *package.json* scripts with the following lines:
 ```
 
 Now the flow server can be started with `npm run flow` and stopped with `npm run flow-stop`.
+
+
+### GitHub / git
+
+I believe this `git push` command binds the local branch to the remote branch, rather than treating them as two separate branches (even if they have the same name).
+
+```
+➜  empower-app git:(restructuring) git push --set-upstream origin restructuring
+...
+To https://github.com/justinhaaheim/empower-app.git
+ * [new branch]      restructuring -> restructuring
+Branch restructuring set up to track remote branch restructuring from origin.
+```
