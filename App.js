@@ -1,3 +1,4 @@
+import NavigationBar from 'react-native-navbar'
 import React from 'react';
 import {
     StyleSheet,
@@ -147,10 +148,16 @@ export default class App extends React.Component {
 
         return (
             <View style={styles.container}>
-
+<NavigationBar
+  title={{ title: 'Title', tintColor: 'black', }}
+  leftButton={{ title: 'Back', }}
+  rightButton={{ title: 'Forward', }}
+  style={{ backgroundColor: "white", }}
+  statusBar={{ tintColor: "white", }}
+/>
                 <ScrollView
                     ref={(scrollView) => { _scrollView = scrollView; }}
-                    automaticallyAdjustContentInsets={false}
+                    automaticallyAdjustContentInsets={true}
                     onScroll={() => { console.log('onScroll!'); }} scrollEventThrottle={800}
                     style={styles.scrollContainer}
                     >
