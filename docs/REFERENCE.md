@@ -108,8 +108,22 @@ To https://github.com/justinhaaheim/empower-app.git
 Branch restructuring set up to track remote branch restructuring from origin.
 ```
 
+#### git errors
 
-#### react-native
+If you ever get this error:
+
+```
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: fatal error in commit_refs
+To https://github.com/justinhaaheim/empower-app.git
+ ! [remote rejected] reference-update -> reference-update (failure)
+error: failed to push some refs to 'https://github.com/justinhaaheim/empower-app.git'
+```
+
+It's quite possible you forgot to do `git pull --rebase`. Try that, and *then* `git push`.
+
+
+### react-native
 
 I installed react-native-git-upgrade, so now instead of `react-native upgrade` I should run `react-native-git-upgrade`. Apparently this is advantageous.
 
