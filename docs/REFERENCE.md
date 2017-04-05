@@ -22,6 +22,17 @@ Now the flow server can be started with `npm run flow` and stopped with `npm run
 
 ### GitHub / git
 
+My common git commands:
+
+`git add -Av` - When run in the root of the git project, this adds all files to the next commit.
+`git checkout <branch>` - Switch to branch...
+`git checkout -b <branch>` - Create branch <branch> and switch to it.
+`git merge <branch>` - Merges <branch> into current branch.
+`git push`
+`git pull`
+
+
+
 #### git add
 
 `git add` does not add empty directories. There's an excellent discussion of this on stack exchange: http://stackoverflow.com/questions/115983/how-can-i-add-an-empty-directory-to-a-git-repository/21422128#21422128
@@ -102,7 +113,7 @@ Branch restructuring set up to track remote branch restructuring from origin.
 
 I installed react-native-git-upgrade, so now instead of `react-native upgrade` I should run `react-native-git-upgrade`. Apparently this is advantageous.
 
-I originally tried installing this with `yarn global add react-native-git-upgrade`, but it didn't seem to install into any current PATH. After using npm it installed fine.  
+I originally tried installing this with `yarn global add react-native-git-upgrade`, but it didn't seem to install into any current PATH. After using npm it installed fine.
 
 ```
 You should consider using the new upgrade tool based on Git. It makes upgrades easier by resolving most conflicts automatically.
