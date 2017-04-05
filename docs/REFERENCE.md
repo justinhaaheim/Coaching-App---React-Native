@@ -96,3 +96,19 @@ To https://github.com/justinhaaheim/empower-app.git
  * [new branch]      restructuring -> restructuring
 Branch restructuring set up to track remote branch restructuring from origin.
 ```
+
+
+#### react-native
+
+I installed react-native-git-upgrade, so now instead of `react-native upgrade` I should run `react-native-git-upgrade`. Apparently this is advantageous.
+
+I originally tried installing this with `yarn global add react-native-git-upgrade`, but it didn't seem to install into any current PATH. After using npm it installed fine.  
+
+```
+You should consider using the new upgrade tool based on Git. It makes upgrades easier by resolving most conflicts automatically.
+To use it:
+- Go back to the old version of React Native
+- Run "npm install -g react-native-git-upgrade"
+- Run "react-native-git-upgrade"
+See https://facebook.github.io/react-native/docs/upgrading.html
+```

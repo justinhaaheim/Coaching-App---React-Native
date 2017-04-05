@@ -9,7 +9,7 @@
     "flow-stop": "node_modules/.bin/flow stop"
   },
   "dependencies": {
-    "native-base": "^2.1.0",
+    "native-base": "^2.1.1",
     "react": "~15.4.1",
     "react-native": "0.42.3",
     "react-native-navbar": "^1.7.1"

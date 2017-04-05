@@ -15,6 +15,7 @@
 "use strict";
 
 // Creates arena.qualities, arena.questions.mle and arena.questions.client
+// The arena content below is (c) 2017 Academy for Coaching Excellence, and may not be used or reproduced without permission of the Academy.
 export const arena = {
   qualities: [
       'Alert',
