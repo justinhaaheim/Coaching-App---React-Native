@@ -24,14 +24,43 @@ Now the flow server can be started with `npm run flow` and stopped with `npm run
 
 My common git commands:
 
-`git add -Av` - When run in the root of the git project, this adds all files to the next commit.
-`git checkout <branch>` - Switch to branch...
-`git checkout -b <branch>` - Create branch <branch> and switch to it.
-`git merge <branch>` - Merges <branch> into current branch.
-`git push`
-`git pull`
++ `git add -Av` - When run in the root of the git project, this adds all files to the next commit.
++ `git checkout <branch>` - Switch to branch...
++ `git checkout -b <branch>` - Create branch <branch> and switch to it.
++ `git merge <branch>` - Merges <branch> into current branch.
++ `git push`
++ `git pull`
 
+#### "Saving changes"
 
+Typical steps to take at the end of making some changes:
+
+```
+> git add -Av
+> git commit -m <commit text>
+> git pull --rebase
+> git push```
+
+Here's the dump from doing this the last time:
+
+```
+➜  empower-app git:(master) ✗ git add -Av
+add 'docs/REFERENCE.md'
+➜  empower-app git:(master) ✗ git commit -m "Ref update"
+[master efadb10] Ref update
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+➜  empower-app git:(master) git pull --rebase
+Current branch master is up to date.
+➜  empower-app git:(master) git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 633 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/justinhaaheim/empower-app.git
+   facfb47..efadb10  master -> master
+```
 
 #### git add
 
