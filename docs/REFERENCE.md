@@ -39,7 +39,8 @@ Typical steps to take at the end of making some changes:
 > git add -Av
 > git commit -m <commit text>
 > git pull --rebase
-> git push```
+> git push
+```
 
 Here's the dump from doing this the last time:
 
@@ -137,6 +138,16 @@ To https://github.com/justinhaaheim/empower-app.git
 Branch restructuring set up to track remote branch restructuring from origin.
 ```
 
+#### git pull
+
+The `git pull` I usually want is `git pull --rebase`.
+
+It's possible to set that as the default for git using this command:
+
+`git config --global pull.rebase true`
+
+See: https://coderwall.com/p/tnoiug/rebase-by-default-when-doing-git-pull
+
 #### git errors
 
 If you ever get this error:
@@ -153,6 +164,23 @@ It's quite possible you forgot to do `git pull --rebase`. Try that, and *then* `
 
 
 ### react-native
+
+#### issues
+
+It seems there is an issue where react-native looks for packages in the home directory instead of the project's directory.
+
+**Sometimes this error occurs simply because you do not have the package installed. First look for the package/try installing it with `npm install --save <package>`.**
+
+The commonly recommended way of "resetting" this is to do:
+
+1. Delete the node_modules folder - rm -rf node_modules && npm install
+2. Reset packager cache - rm -fr $TMPDIR/react-* or node_modules/react-native/packager/packager.sh --reset-cache
+3. Clear watchman watches - watchman watch-del-all
+4. ??? Recreate the project from scratch ???
+
+See: https://github.com/facebook/react-native/issues/4968
+
+#### react-native upgrade
 
 I installed react-native-git-upgrade, so now instead of `react-native upgrade` I should run `react-native-git-upgrade`. Apparently this is advantageous.
 
