@@ -24,12 +24,12 @@ import {
 } from 'react-native'
 
 // import { Container, Content } from 'native-base/ui';
-import { Button, Icon, Text as NBText, Container, Content } from 'native-base';
+// import { Button, Icon, Text as NBText, Container, Content } from 'native-base';
 
 import QButton from '../components/QButton';
 import { arena } from '../config/data';
 
-export default class App extends React.Component {
+export default class ArenaScene extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
