@@ -1,145 +1,65 @@
-![Pepperoni - Empowered by Futurice](/docs/pepperoni.png?v=2)
-Futurice React Native Starter Kit
-===
+# Empower App :high_brightness:
+An app that provides tools, resources and weekly notes to support you to realize your most important goals and dreams.
 
-[![Join the chat at https://gitter.im/futurice/pepperoni-app-kit](https://badges.gitter.im/futurice/pepperoni-app-kit.svg)](https://gitter.im/futurice/pepperoni-app-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/futurice/pepperoni-app-kit.svg?branch=master)](https://travis-ci.org/futurice/pepperoni-app-kit)
-[![React Native](https://img.shields.io/badge/react%20native-0.42.0-brightgreen.svg)](https://github.com/facebook/react-native)
-[![Sponsored](https://img.shields.io/badge/chilicorn-sponsored-brightgreen.svg)](http://spiceprogram.org/oss-sponsorship/)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/futurice/pepperoni-app-kit/blob/master/LICENSE)
+<kbd><img src="docs/img/2017-03-31-screenshot-simulator-launchscreen.png" alt="Empower App Launch Screen" width=200 /></kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <kbd><img src="docs/img/2017-03-31-screenshot-simulator-mainarenapage.png" alt="Empower App Coaching Arena Screen" width=200 /></kbd>
 
-We :green_heart: building apps with React Native, because it helps us create high quality products for both major mobile platforms quickly and cost-effectively.
+&nbsp;  
+&nbsp;  
 
-Getting started on a new app just takes too damn long, though. Most apps need the same basic building blocks and developer infrastructure, and we are bored of reinventing the wheel time and time again.
+## Background
 
-This Starter Kit reflects the best practices of React Native development we have discovered while building real-world applications for our customers. It is opinionated about tooling, patterns and development practices. It might not be a one-size-fits-all solution for everyone, but feel free to customize it for your needs, or just take inspiration from it.
+This is a learning / development project, drawing inspiration from Sam Lu's fabulous [100 Days of Swift](http://samvlu.com/index.html), and Wei Fang's [30 Days of React Native](https://github.com/fangwei716/30-days-of-react-native). Each day, I will be taking the lessons, concepts, frameworks and components I encounter and turning them into features and functionalities of a working app: Empower. 
 
-React Native Starter Kit is a part of [Pepperoni](http://getpepperoni.com), a framework for kickstarting digital product development.
+The app's subject matter draws upon my [writing](http://www.huffingtonpost.com/author/justin-haaheim) and work as a [Leadership Coach](http://justinh.org/coaching). Hence: *Empower*. 
 
-## tltr;
+As I go I will be collecting the most useful guides/tuturoials/reference pages I find and sharing them here.
 
-Sounds good and you just want to see how it works? Here is a quick start guide:
+I'm always glad to hear from folks or get pull requests. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: `io` at `justinh` dot `org`.
 
-```
-git clone https://github.com/futurice/pepperoni-app-kit.git
-cd pepperoni-app-kit
-yarn install
-react-native run-ios
-```
+-Justin 🤓  
 
-For further setup instructions please see our [Getting Started](#getting-started) section.
+&nbsp;  
 
-## Contents
+*I am currently seeking employment. If you are a prospective employer or recruiter, don't hesitate to [get in touch](http://justinh.org/contact). You can find my full professional profile at [linkedin.com/in/justinhaaheim/](https://www.linkedin.com/in/justinhaaheim/)*
 
-:warning: **WORK IN PROGRESS** |
-:star: **COMING SOON**
+&nbsp;  
 
-Not all of the below is yet fully implemented
+## Project Plan
 
-### Application Blueprint
+#### Starting:
+- [x] Install node, watchman, react-native, yarn. Figure what the heck those things actually do.
+- [x] Evaluate viability/preferability of Expo development platform. 
+- [x] Hello world. Experiment with text layout
+- [x] Extend TouchableOpacity, drawing from F8 app button implementation, to create buttons that toggle (select and deselect)
+- [x] Determine best place for the relatively simple application logic, and how to make use of *state*.
+- [x] Hook up: buttons add and remove text to/from text field below.
+- [x] Compile and test on physical device.
+- [x] Add an app icon and a launch screen, because vanity.
 
-* Always up-to-date [React Native](https://facebook.github.io/react-native/) scaffolding
-* Modular and well-documented structure for application code
-* [Redux](http://redux.js.org/) and [ImmutableJS](https://facebook.github.io/immutable-js/) for safe and **Reasonaboutable**:tm: state management
-* [Redux Loop](https://github.com/raisemarketplace/redux-loop) for Elm-style controlled side effects
-* [React Navigation](https://reactnavigation.org/) for awesome navigation with 60fps transitions
-* Disk-persisted application state caching for offline support and snappy startup performance
-* Clean and testable service layer for interacting with RESTful APIs
-* :warning: Sample app to show how to wire it all together
-* :star: JSON Web Token authentication
-* :star: Multi-environment configuration (dev, staging, production) for iOS and Android
-* :star: Built-in error handling and customizable error screens
+#### Next up:
+- [ ] Create a side "hamburger" menu
+- [ ] Create an About page, and list any necessary copyrights/attributions
+- [ ] Add an explanation of the arena, and the purpose of the app
+- [ ] Create setting to switch between two different versions of Arena
+- [ ] Implement file storage to save state between closings-openings of the app
+- [ ] Create a Reset button for the list of qualities
 
-### Testing Setup
+#### Publishing:
+- [ ] Initiate process to get developer license.
+- [ ] Test the app on multiple different layouts. Do necessary scaling to accomodate larger/smaller devices.
 
-* [Jest](https://facebook.github.io/jest/) for unit testing application code and providing coverage information.
-* [Enzyme](https://github.com/airbnb/enzyme) and fully mocked React Native for unit testing UI components
-* Utilities for end-to-end integration testing Redux state, including side effects and asynchronous actions
+#### Second Screen/Route: 
+- [ ] Project: Create a second app screen/route that hosts the most recent Note from Justin, first just images, and then make it possible to display the textual note.
+- [ ] Create a setting for the user to enter their first name, to customize the notes
 
-### Development & Deployment Infrastructure
+#### Visual/animation:
+- [ ] Use Shoutem or a comparable project to make the app more beautiful
+- [ ] Create beautiful transitions and effects using the react animate library. Special button effect when tapping on a quality? Or a shake/bounce when the qualities are cleared?
 
-* [Auth0](https://auth0.com/) for ready-to-use login and signup screens, user authentication and identity management
-* [Bitrise.io](https://www.bitrise.io) configurations for Continuous Integration and beta app distribution
-* :warning: [Google Tag Manager](https://www.google.com/analytics/tag-manager/) analytics
-* [Travis CI](https://travis-ci.org/futurice/pepperoni-app-kit) example [configuration](https://github.com/futurice/pepperoni-app-kit/blob/master/.travis.yml) for Android, iOS and Javascript tests.
+#### Future:
+- [ ] Implement a swedish version of the app using localization files
+- [ ] Test and publish an Android version of the app, re-using as much of the codebase as possible.
+- [ ] Implement a screen to allow people to book a session.
+- [ ] Consider developing a way that coaches can distribute this app to their clients with a special code/account that directs them to their specific coach's booking page.
 
 
-### Roadmap
-
-* **TODO** :star: [Microsoft Code Push](http://microsoft.github.io/code-push) for instant JavaScript and images update
-* **TODO** Crash reporting
-* **TODO** Android and iOS UI Testing with Calaba.sh?
-* **TODO** Feature flags?
-
-## Getting started
-
-To build your own app on top of the Starter Kit, fork or mirror this repository. For serious use we recommend [mirroring using these instructions](https://help.github.com/articles/duplicating-a-repository/), since you can't make a fork of a public repository private on GitHub. To contribute to Starter Kit development or just playing around, forking is the way to go.
-
-First, give your application a name by running `./support/rename.sh YourAppName`.
-
-Once you have the code downloaded, follow the **[Setup guide](docs/SETUP.md)** to get started.
-
-## Development workflow
-
-After you have set up the project using above instructions, you can use your favorite IDE or text editor to write code, and run the application from the command line. Turn on React Native hot module reloading in the app developer menu to update your application as you code.
-
-To learn how to structure your application and use the Redux application architecture, read the **[Architecture guide](docs/ARCHITECTURE.md)** for more details.
-
-##### Start the application in iOS simulator
-```
-$ react-native run-ios
-```
-
-##### Start the application in Android simulator
-(If using the stock emulator, the emulator must be running)
-```
-$ react-native run-android
-```
-
-##### Run unit tests
-```
-$ npm test
-```
-
-##### Run tests every time code changes
-```
-$ npm run test:watch
-```
-
-##### Generate code coverage report
-```
-$ npm run coverage
-```
-
-Read the **[Testing guide](docs/TESTING.md)** for more information about writing tests.
-
-## Debugging
-
-For standard debugging select *Debug JS Remotely* from the React Native Development context menu (To open the context menu, press *CMD+D* in iOS or *D+D* in Android). This will open a new Chrome tab under [http://localhost:8081/debugger-ui](http://localhost:8081/debugger-ui) and prints all actions to the console.
-
-For advanced debugging under **macOS** we suggest using the standalone [React Native Debugger](https://github.com/jhen0409/react-native-debugger), which is based on the official debugger of React Native.
-It includes the React Inspector and Redux DevTools so you can inspect React views and get a detailed history of the Redux state.
-
-You can install it via [brew](https://brew.sh/) and run it as a standalone app:
-```
-$ brew update && brew cask install react-native-debugger
-```
-> Note: Make sure you close all active chrome debugger tabs and then restart the debugger from the React Native Development context menu.
-
-## Deployment
-
-Read the **[Deployment guide](docs/DEPLOYMENT.md)** to learn how to deploy the application to test devices, app stores, and how to use Code Push to push updates to your users immediately.
-
-## Contributing
-
-If you find any problems, please [open an issue](https://github.com/futurice/pepperoni-app-kit/issues/new) or submit a fix as a pull request.
-
-We welcome new features, but for large changes let's discuss first to make sure the changes can be accepted and integrated smoothly.
-
-## License
-
-[MIT License](LICENSE)
-
-## Credits
-
-This project was initially motivated by [Snowflake](https://github.com/bartonhammond/snowflake), a React Native boilerplate by Barton Hammond. It shares some features and design principles for Pepperoni, but it wasn't the right fit for our needs. At this time Snowflake is more mature, so if you like Pepperoni but didn't agree with something we are doing, you should check it out to see if it's a good fit for your app.
