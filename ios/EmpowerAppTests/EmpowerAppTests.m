@@ -16,11 +16,11 @@
 #define TIMEOUT_SECONDS 180
 #define TEXT_TO_LOOK_FOR @"Increment counter"
 
-@interface PepperoniAppTemplateTests : XCTestCase
+@interface EmpowerAppTests : XCTestCase
 
 @end
 
-@implementation PepperoniAppTemplateTests
+@implementation EmpowerAppTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

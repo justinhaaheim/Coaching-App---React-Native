@@ -1,4 +1,4 @@
-package com.pepperoniapptemplate;
+package com.empowerapp;
 
 import android.app.Application;
 
