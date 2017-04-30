@@ -4,9 +4,11 @@ import includes from 'lodash/includes';
 
 import AppNavigator from './Navigator';
 
+// *** This was called NavigatorReducer
 export default function NavigatorReducer(state, action) {
   // Initial state
   if (!state) {
+    console.log("wtf is going on");
     return fromJS(AppNavigator.router.getStateForAction(action, state));
   }
 

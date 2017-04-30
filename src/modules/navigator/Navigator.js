@@ -3,6 +3,8 @@ import {TabNavigator, StackNavigator} from 'react-navigation';
 
 import CounterViewContainer from '../counter/CounterViewContainer';
 import ColorViewContainer from '../colors/ColorViewContainer';
+import SettingsViewContainer from '../settings/SettingsViewContainer';
+import ArenaView from '../arena/ArenaView';
 
 const headerColor = '#39babd';
 const activeColor = 'white';
@@ -10,7 +12,9 @@ const activeColor = 'white';
 // TabNavigator is nested inside StackNavigator
 export const MainScreenNavigator = TabNavigator({
   Counter: {screen: CounterViewContainer},
-  Color: {screen: ColorViewContainer}
+  Color: {screen: ColorViewContainer},
+  Settings: {screen: SettingsViewContainer},
+  Arena: {screen: ArenaView}
 }, {
   tabBarOptions: {
     ...Platform.select({
@@ -24,7 +28,7 @@ export const MainScreenNavigator = TabNavigator({
 });
 
 MainScreenNavigator.navigationOptions = {
-  title: 'Pepperoni App Template',
+  title: 'Empower App',
   header: {
     titleStyle: {color: 'white'},
     style: {
