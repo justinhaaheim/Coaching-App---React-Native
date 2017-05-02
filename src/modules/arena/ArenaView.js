@@ -195,22 +195,22 @@ class ArenaView extends React.Component {
   }
 }
 
-const BODY_TEXT_SIZE = 18;
+// const BODY_TEXT_SIZE = 18;
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: BODY_TEXT_SIZE*1.6,
+//        fontSize: BODY_TEXT_SIZE*1.6,
         color: '#555',
         marginVertical: 10,
     },
     h2: {
-        fontSize: BODY_TEXT_SIZE*1.3,
+//        fontSize: BODY_TEXT_SIZE*1.3,
         marginBottom: 10,
         color: '#555',
     },
     textQuestion: {
         marginBottom: 10,
-        fontSize: BODY_TEXT_SIZE,
+        // fontSize: BODY_TEXT_SIZE,
         color: '#555',
     },
     qField: {
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
         color: '#555',
     },
     copyright: {
-        fontSize: BODY_TEXT_SIZE*.8,
+        // fontSize: BODY_TEXT_SIZE*.8,
         fontStyle: 'italic',
         marginTop: 30,
         color: '#888',

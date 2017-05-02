@@ -38,7 +38,6 @@ class SettingsView extends Component {
   }
 
   static propTypes = {
-    arenaVersion: PropTypes.string.isRequired,
     mleEnabled: PropTypes.bool.isRequired,
     settingsStateActions: PropTypes.shape({
       toggleArenaVersion: PropTypes.func.isRequired
