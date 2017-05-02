@@ -19,6 +19,8 @@ import AppViewContainer from './src/modules/AppViewContainer';
 import React, {Component} from 'react';
 import {AppRegistry} from 'react-native';
 
+
+
 class EmpowerApp extends Component {
   render() {
     return (

@@ -28,7 +28,7 @@ export const MainScreenNavigator = TabNavigator({
 });
 
 MainScreenNavigator.navigationOptions = {
-  title: 'Empower App',
+  title: 'EmpowerApp',
   header: {
     titleStyle: {color: 'white'},
     style: {
