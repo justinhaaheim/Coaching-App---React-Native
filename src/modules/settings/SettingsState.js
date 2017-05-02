@@ -17,25 +17,25 @@ import {Map} from 'immutable';
 
 // Initial state
 const initialState = Map({
-  arenaVersion: 'client'
+  mleEnabled: false,
 });
 
 // Actions
-const SET_ARENA_VERSION = 'SettingsState/SET_ARENA_VERSION';
+const TOGGLE_ARENA_VERSION = "SettingsState/TOGGLE_ARENA_VERSION";
 
 // Action creators
-export function setArenaVersion(ver = 'client') {
+export function toggleArenaVersion() {
   return {
-    type: SET_ARENA_VERSION,
-    payload: ver
-  };
+    type: TOGGLE_ARENA_VERSION,
+  }
 }
 
 // Reducer
 export default function SettingsStateReducer(state = initialState, action = {}) {
   switch (action.type) {
-    case SET_ARENA_VERSION:
-      return state.set('arenaVersion', action.payload);
+    case TOGGLE_ARENA_VERSION:
+      console.log("Entered TOGGLE_ARENA_VERSION");
+      return state.update('mleEnabled', value => !value);
     default:
       return state;
   }

@@ -4,19 +4,19 @@ import {TabNavigator, StackNavigator} from 'react-navigation';
 import CounterViewContainer from '../counter/CounterViewContainer';
 import ColorViewContainer from '../colors/ColorViewContainer';
 import SettingsViewContainer from '../settings/SettingsViewContainer';
-import ArenaView from '../arena/ArenaView';
+import ArenaViewContainer from '../arena/ArenaViewContainer';
 
 const headerColor = '#39babd';
 const activeColor = 'white';
 
 // TabNavigator is nested inside StackNavigator
 export const MainScreenNavigator = TabNavigator({
-  Counter: {screen: CounterViewContainer},
-  Color: {screen: ColorViewContainer},
+  Arena: {screen: ArenaViewContainer },
   Settings: {screen: SettingsViewContainer},
-  Arena: {screen: ArenaView}
 }, {
+  animationEnabled: true,
   tabBarOptions: {
+
     ...Platform.select({
       android: {
         activeTintColor: activeColor,
@@ -28,11 +28,11 @@ export const MainScreenNavigator = TabNavigator({
 });
 
 MainScreenNavigator.navigationOptions = {
-  title: 'EmpowerApp',
+//  title: 'EmpowerApp',
   header: {
-    titleStyle: {color: 'white'},
+//    titleStyle: {color: 'white'},
     style: {
-      backgroundColor: headerColor,
+//      backgroundColor: headerColor,
       elevation: 0 // disable header elevation when TabNavigator visible
     }
   }

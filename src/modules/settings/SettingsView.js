@@ -18,7 +18,8 @@ import {
   TouchableOpacity,
   Image,
   Text,
-  View
+  View,
+  Switch
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -28,41 +29,37 @@ class SettingsView extends Component {
   static displayName = 'SettingsView';
 
   static navigationOptions = {
-    title: 'Settings Title',
+    title: 'Settings',
     tabBar: () => ({
       icon: (props) => (
-        <Icon name='plus-one' size={24} color={props.tintColor} />
+        <Icon name='settings' size={24} color={props.tintColor} />
       )
     })
   }
 
   static propTypes = {
     arenaVersion: PropTypes.string.isRequired,
+    mleEnabled: PropTypes.bool.isRequired,
     settingsStateActions: PropTypes.shape({
-      setArenaVersion: PropTypes.func.isRequired
+      toggleArenaVersion: PropTypes.func.isRequired
     }).isRequired,
     navigate: PropTypes.func.isRequired
   };
 
   render() {
-      const {setArenaVersion} = this.props.settingsStateActions;
-      const {arenaVersion} = this.props;
+      const {toggleArenaVersion} = this.props.settingsStateActions;
+      const {mleEnabled} = this.props;
 
     return (
       <View style={styles.container}>
 
         <Text>
-            {`arena version is ${this.props.arenaVersion}`}
+            {`Arena Version: ${mleEnabled ? 'MLE' : 'Client'}`}
         </Text>
-        <TouchableOpacity
-            accessible={true}
-            accessibilityLabel={'Change arena'}
-            onPress={ () => { setArenaVersion(arenaVersion === 'client' ? 'mle' : 'client') } }>
-          <Text style={styles.linkButton}>
-            Change arena
-          </Text>
-        </TouchableOpacity>
-
+        <Switch
+          onValueChange={() => toggleArenaVersion()}
+          style={{marginBottom: 10}}
+          value={mleEnabled} />
       </View>
     );
   }
