@@ -17,12 +17,29 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  Text,
+//  Text,
   View,
-  Switch
+//  Switch,
+//  List,
+//  ListItem,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {
+  Container,
+  Content,
+  List,
+  ListItem,
+  Text,
+  Icon,
+  Badge,
+  Left,
+  Body,
+  Right,
+  Separator,
+  Switch
+} from 'native-base';
+
+ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 class SettingsView extends Component {
   // What does this do? Part of react-navigation ??
@@ -32,7 +49,7 @@ class SettingsView extends Component {
     title: 'Settings',
     tabBar: () => ({
       icon: (props) => (
-        <Icon name='settings' size={24} color={props.tintColor} />
+        <MaterialIcon name='settings' size={24} color={props.tintColor} />
       )
     })
   }
@@ -46,20 +63,34 @@ class SettingsView extends Component {
   };
 
   render() {
-      const {toggleArenaVersion} = this.props.settingsStateActions;
-      const {mleEnabled} = this.props;
+    const {toggleArenaVersion} = this.props.settingsStateActions;
+    const {mleEnabled} = this.props;
 
     return (
-      <View style={styles.container}>
-
-        <Text>
-            {`Arena Version: ${mleEnabled ? 'MLE' : 'Client'}`}
-        </Text>
-        <Switch
-          onValueChange={() => toggleArenaVersion()}
-          style={{marginBottom: 10}}
-          value={mleEnabled} />
-      </View>
+      <Container style={styles.container}>
+        <Content>
+        <List style={styles.whiteBg}>
+          <ListItem itemDivider>
+            <Text>
+              Coaching Arena
+            </Text>
+          </ListItem>
+              <ListItem icon>
+                  <Left>
+                      <Icon name="wifi" />
+                  </Left>
+                  <Body>
+                    <Text>MLE/TCI Version</Text>
+                  </Body>
+                  <Right>
+                    <Switch
+                      onValueChange={() => toggleArenaVersion()}
+                      value={mleEnabled} />
+                  </Right>
+              </ListItem>
+          </List>
+        </Content>
+        </Container>
     );
   }
 }
@@ -71,45 +102,18 @@ const circle = {
   height: 80
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white'
+    // flex: 1,
+    // flexDirection: 'column',
+    // justifyContent: 'flex-start',
+    // alignItems: 'stretch',
+    // alignSelf: 'flex-start',
+    // backgroundColor: 'white'
   },
-  userContainer: {
-    justifyContent: 'center',
-    alignItems: 'center'
+  whiteBg: {
+    backgroundColor: 'white',
   },
-  userProfilePhoto: {
-    ...circle,
-    alignSelf: 'center'
-  },
-  counterButton: {
-    ...circle,
-    backgroundColor: '#349d4a',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 20
-  },
-  counter: {
-    color: 'white',
-    fontSize: 20,
-    textAlign: 'center'
-  },
-  welcome: {
-    textAlign: 'center',
-    color: 'black',
-    marginBottom: 5,
-    padding: 5
-  },
-  linkButton: {
-    textAlign: 'center',
-    color: '#CCCCCC',
-    marginBottom: 10,
-    padding: 5
-  }
-});
+};
 
 export default SettingsView;

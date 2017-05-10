@@ -5,13 +5,15 @@ import CounterViewContainer from '../counter/CounterViewContainer';
 import ColorViewContainer from '../colors/ColorViewContainer';
 import SettingsViewContainer from '../settings/SettingsViewContainer';
 import ArenaViewContainer from '../arena/ArenaViewContainer';
+import PlannerViewContainer from '../planner/PlannerViewContainer';
 
 const headerColor = '#39babd';
 const activeColor = 'white';
 
 // TabNavigator is nested inside StackNavigator
 export const MainScreenNavigator = TabNavigator({
-  Arena: {screen: ArenaViewContainer },
+  Arena: {screen: ArenaViewContainer},
+  Planner: {screen: PlannerViewContainer},
   Settings: {screen: SettingsViewContainer},
 }, {
   animationEnabled: true,

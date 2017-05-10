@@ -4,6 +4,7 @@ import {loop, combineReducers} from 'redux-loop-symbol-ponyfill';
 import CounterStateReducer from '../modules/counter/CounterState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
+import PlannerStateReducer from '../modules/planner/PlannerState';
 
 const reducers = {
   // Counter sample app state. This can be removed in a live application
@@ -12,9 +13,11 @@ const reducers = {
   // // Navigator states
   // navigatorState: NavigatorReducer,
 
+  planner: PlannerStateReducer,
+
   session: SessionStateReducer,
 
-  settings: SettingsStateReducer
+  settings: SettingsStateReducer,
 
 };
 

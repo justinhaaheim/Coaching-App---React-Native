@@ -15,10 +15,10 @@
 
 import React, { Component, PropTypes } from 'react'; //Do I need to import Component?
 import {
-    StyleSheet,
-    Text,
-    View,
-    ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
