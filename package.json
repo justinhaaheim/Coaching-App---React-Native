@@ -11,10 +11,7 @@
   },
   "keywords": [
     "React Native",
-    "Starter Kit",
-    "Bitrise",
-    "Redux",
-    "Auth0"
+    "Redux"
   ],
   "version": "1.0.0",
   "private": false,
@@ -22,6 +19,7 @@
     "run-ios": "react-native run-ios",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "bundle:ios": "node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --entry-file index.ios.js --bundle-output ios/EmpowerApp/main.jsbundle --dev=false --verbose",
+    "release:ios": "react-native run-ios --configuration Release",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src test",
