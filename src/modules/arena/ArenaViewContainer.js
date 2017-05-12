@@ -16,16 +16,18 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import ArenaView from './ArenaView';
 import {NavigationActions} from 'react-navigation';
+import * as ArenaStateActions from '../arena/ArenaState';
 // import * as SettingsStateActions from '../settings/SettingsState';
 
 export default connect(
   state => ({
-    arenaVersion: state.getIn(['settings', 'arenaVersion']),
     mleEnabled: state.getIn(['settings', 'mleEnabled']),
+    buttons: state.getIn(['arena', 'buttons'])
   }),
   dispatch => {
     return {
-      navigate: bindActionCreators(NavigationActions.navigate, dispatch)
+      navigate: bindActionCreators(NavigationActions.navigate, dispatch),
+      arenaStateActions: bindActionCreators(ArenaStateActions, dispatch)
       // settingsStateActions: bindActionCreators(SettingsStateActions, dispatch)
     };
   }

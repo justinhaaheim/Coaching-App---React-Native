@@ -5,8 +5,12 @@ import CounterStateReducer from '../modules/counter/CounterState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
 import PlannerStateReducer from '../modules/planner/PlannerState';
+import ArenaStateReducer from '../modules/arena/ArenaState';
 
 const reducers = {
+
+  arena: ArenaStateReducer,
+
   // Counter sample app state. This can be removed in a live application
   counter: CounterStateReducer,
 

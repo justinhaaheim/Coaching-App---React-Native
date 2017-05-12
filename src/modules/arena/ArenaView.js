@@ -16,7 +16,7 @@
 import React, { Component, PropTypes } from 'react'; //Do I need to import Component?
 import {
   StyleSheet,
-  Text,
+//  Text,
   View,
   ScrollView,
 } from 'react-native';
@@ -26,8 +26,23 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Container, Content } from 'native-base/ui';
 // import { Button, Icon, Text as NBText, Container, Content } from 'native-base';
 
-import QButton from '../../components/QButton';
+// import QButton from '../../components/QButton';
 import { arena } from '../../config/data';
+
+import {
+  Button,
+  Container,
+  Content,
+  List,
+  ListItem,
+  Text,
+  Badge,
+  Left,
+  Body,
+  Right,
+  Separator,
+  Switch
+} from 'native-base';
 
 class ArenaView extends React.Component {
   // What does this do? Part of react-navigation ??
@@ -45,153 +60,70 @@ class ArenaView extends React.Component {
   static propTypes = {
     navigate: PropTypes.func.isRequired,
     mleEnabled: PropTypes.bool.isRequired,
+//    buttons:
   };
-
-  constructor(props) {
-      super(props)
-      this.state = {
-        activeQualities: '',
-      };
-      this.selectedQualities = [];
-  }
 
   _onPressButton() {
       console.log("You tapped the button!");
   }
 
-  onSelectQuality(title) {
-      if (this.selectedQualities.length >= 5) {
-          return false;
-      }
-      const lowerTitle = title.toLowerCase();
-      this.selectedQualities.push(lowerTitle);
-      this.setState({
-          activeQualities: this.qualitiesList()
-      });
-      return true;
-  }
-
-  onUnselectQuality(title) {
-      const lowerTitle = title.toLowerCase();
-      var index = this.selectedQualities.indexOf(lowerTitle);
-      if (index < 0) {
-          console.warn(`Trying to unselect quality ${lowerTitle} but it is not present in the array.`);
-      }
-      console.log(`Quality ${lowerTitle} FOUND at ${index}`);
-      this.selectedQualities.splice(index, 1);
-      this.setState({
-          activeQualities: this.qualitiesList()
-      });
-  }
-
   qualitiesList() {
-      // console.log("qualitiesList() called!");
-      // console.log(`Type of activeQualities: ${typeof(this.selectedQualities)}`);
-      var aq = this.selectedQualities.slice();
-//        console.log(`Type of aq: ${typeof(aq)}`);
-      if (aq.length == 0) {
-          return '___';
-      } else if (aq.length == 1) {
-          return aq[0];
-      } else {
-          var last = aq.pop();
-          return aq.join(", ") + " and " + last;
-      }
+    const { buttons } = this.props;
+    const names = buttons.filter(b => b.selected).map(b => b.name)
+    if (names.length == 0) {
+        return '___';
+    } else if (names.length == 1) {
+        return names[0];
+    } else {
+        var last = names.pop();
+        return names.join(", ") + " and " + last;
+    }
   }
 
   render() {
 
-      // defaulting to Client questions. Todo: build a setting where the user can switch this.
-      const questions = this.props.mleEnabled ? arena.questions.mle : arena.questions.client;
+    // defaulting to Client questions. Todo: build a setting where the user can switch this.
+    const questions = this.props.mleEnabled ? arena.questions.mle : arena.questions.client;
+    const {toggleButton} = this.props.arenaStateActions;
 
-      let buttons = arena.qualities.map((qname, index) => (
-      <View key={`button-view${index}`}
-          style={{ margin: 3, }}
-          >
-          <QButton
-              key={`button${index}`}
-              title={qname}
-              color='#373737'
-              backgroundColor='white'
-              borderWidth={1}
-              borderColor='#e0e0e0'
-              handleSelect={this.onSelectQuality.bind(this)}
-              handleUnselect={this.onUnselectQuality.bind(this)}
-              />
-      </View>
-      ));
+    let { buttons } = this.props;
 
-      var _scrollView : ScrollView;
 
-      return (
-          <View style={styles.container}>
-              <ScrollView
-                  ref={(scrollView) => { _scrollView = scrollView; }}
-                  automaticallyAdjustContentInsets={true}
-                  scrollEventThrottle={800}
-                  style={styles.scrollContainer}
-                  >
+    const buttonComponents = buttons.map((b, index) => (
+      <Button
+        key={index}
+        light={ !b.selected }
+        dark={ b.selected }
+        onPress={() => toggleButton(b.name)}
+        >
+        <Text>{b.name}xx</Text>
+      </Button>
+    ));
 
-                  <View style={{
-                    flex: 1,
-                    flexDirection: 'column',
-                    justifyContent: 'flex-start',
-                    alignItems: 'stretch',
-                  }}>
+    console.log(`buttons type = ${typeof(buttons)}`);
+    console.log(buttons);
 
-                  <View style={{
-                      flex: 1,
-                      flexDirection: 'row',
-                      justifyContent: 'flex-start',
-                      alignItems: 'flex-start',
-                      alignSelf: 'flex-start',
-                      marginVertical: 10,
-                      backgroundColor: 'transparent',
-                  }}>
-                  <View style={{
+    return (
+      <Container>
+        <Content>
+          {buttonComponents}
 
-                          flexDirection: 'column',
-                          justifyContent: 'flex-start',
-                          alignItems: 'flex-start',
-                          borderWidth: 0,
-                          borderColor: 'black',
+            <Text >ARENA QUESTIONS</Text>
+            <Text >1) {questions[1]}</Text>
+            <Text>
+              {`I am willing to be ${this.qualitiesList()}.`}
+            </Text>
+            <Text>2) {questions[2]}</Text>
+            <Text>3) {questions[3]}</Text>
+            <Text>4) {questions[4]}</Text>
+            <Text>
+            {`The Coaching Arena © 1997-${(new Date()).getFullYear()} The Academy for Coaching Excellence`}
+            </Text>
 
-                      }}>
 
-                          {buttons.slice(0,12)}
-
-                      </View>
-                      <View style={{
-
-                          flexDirection: 'column',
-                          justifyContent: 'flex-start',
-                          alignItems: 'flex-start',
-                      }}>
-
-                          {buttons.slice(12)}
-
-                      </View>
-                  </View>
-
-                  <View style={{
-                      flex: 1,
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      marginVertical: 10,
-                  }}>
-                      <Text style={styles.h2}>ARENA QUESTIONS</Text>
-                      <Text style={styles.textQuestion}>1) {questions[1]}</Text>
-                      <Text style={[styles.qField, styles.textQuestion]}>{`I am willing to be ${this.qualitiesList()}.`}</Text>
-                      <Text style={styles.textQuestion}>2) {questions[2]}</Text>
-                      <Text style={styles.textQuestion}>3) {questions[3]}</Text>
-                      <Text style={styles.textQuestion}>4) {questions[4]}</Text>
-                      <Text style={styles.copyright}>{`The Coaching Arena © 1997-${(new Date()).getFullYear()} The Academy for Coaching Excellence`}</Text>
-                  </View>
-
-              </View>
-              </ScrollView>
-          </View>
-      );
+        </Content>
+      </Container>
+    );
   }
 }
 
