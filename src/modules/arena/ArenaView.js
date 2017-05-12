@@ -13,21 +13,21 @@
 
 "use strict";
 
-import React, { Component, PropTypes } from 'react'; //Do I need to import Component?
+import React, { Component, PropTypes } from "react"; //Do I need to import Component?
 import {
   StyleSheet,
-//  Text,
+  //  Text,
   View,
-  ScrollView,
-} from 'react-native';
+  ScrollView
+} from "react-native";
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 // import { Container, Content } from 'native-base/ui';
 // import { Button, Icon, Text as NBText, Container, Content } from 'native-base';
 
 // import QButton from '../../components/QButton';
-import { arena } from '../../config/data';
+import { arena } from "../../config/data";
 
 import {
   Button,
@@ -42,84 +42,84 @@ import {
   Right,
   Separator,
   Switch
-} from 'native-base';
+} from "native-base";
 
 class ArenaView extends React.Component {
   // What does this do? Part of react-navigation ??
-  static displayName = 'ArenaView';
+  static displayName = "ArenaView";
 
   static navigationOptions = {
-    title: 'Coaching Arena',
+    title: "Coaching Arena",
     tabBar: () => ({
-      icon: (props) => (
-        <Icon name='speaker-notes' size={24} color={props.tintColor} />
+      icon: props => (
+        <Icon name="speaker-notes" size={24} color={props.tintColor} />
       )
     })
-  }
+  };
 
   static propTypes = {
     navigate: PropTypes.func.isRequired,
-    mleEnabled: PropTypes.bool.isRequired,
-//    buttons:
+    mleEnabled: PropTypes.bool.isRequired
+    //    buttons:
   };
 
   _onPressButton() {
-      console.log("You tapped the button!");
+    console.log("You tapped the button!");
   }
 
   qualitiesList() {
     const { buttons } = this.props;
-    const names = buttons.filter(b => b.selected).map(b => b.name)
+    const names = buttons.filter(b => b.selected).map(b => b.name);
     if (names.length == 0) {
-        return '___';
+      return "___";
     } else if (names.length == 1) {
-        return names[0];
+      return names[0];
     } else {
-        var last = names.pop();
-        return names.join(", ") + " and " + last;
+      var last = names.pop();
+      return names.join(", ") + " and " + last;
     }
   }
 
   render() {
-
     // defaulting to Client questions. Todo: build a setting where the user can switch this.
-    const questions = this.props.mleEnabled ? arena.questions.mle : arena.questions.client;
-    const {toggleButton} = this.props.arenaStateActions;
+    const questions = this.props.mleEnabled
+      ? arena.questions.mle
+      : arena.questions.client;
+    const { toggleButton } = this.props.arenaStateActions;
 
     let { buttons } = this.props;
-
 
     const buttonComponents = buttons.map((b, index) => (
       <Button
         key={index}
-        light={ !b.selected }
-        dark={ b.selected }
-        onPress={() => toggleButton(b.name)}
-        >
+        light={!b.selected}
+        dark={b.selected}
+        onPress={() => toggleButton(index)}
+      >
         <Text>{b.name}xx</Text>
       </Button>
     ));
 
-    console.log(`buttons type = ${typeof(buttons)}`);
+    console.log(`buttons type = ${typeof buttons}`);
     console.log(buttons);
 
     return (
       <Container>
         <Content>
+
           {buttonComponents}
 
-            <Text >ARENA QUESTIONS</Text>
-            <Text >1) {questions[1]}</Text>
-            <Text>
-              {`I am willing to be ${this.qualitiesList()}.`}
-            </Text>
-            <Text>2) {questions[2]}</Text>
-            <Text>3) {questions[3]}</Text>
-            <Text>4) {questions[4]}</Text>
-            <Text>
-            {`The Coaching Arena © 1997-${(new Date()).getFullYear()} The Academy for Coaching Excellence`}
-            </Text>
-
+          <Text>ARENA QUESTIONS</Text>
+          <Text>1) {questions[1]}</Text>
+          <Text>
+            {`I am willing to be ${this.qualitiesList()}.`}
+          </Text>
+          <Text>2) {questions[2]}</Text>
+          <Text>3) {questions[3]}</Text>
+          <Text>4) {questions[4]}</Text>
+          <Text>
+            {`The Coaching Arena © 1997-${new Date().getFullYear()} The Academy for Coaching Excellence`}
+          </Text>
 
         </Content>
       </Container>
@@ -130,45 +130,44 @@ class ArenaView extends React.Component {
 // const BODY_TEXT_SIZE = 18;
 
 const styles = StyleSheet.create({
-    title: {
-//        fontSize: BODY_TEXT_SIZE*1.6,
-        color: '#555',
-        marginVertical: 10,
-    },
-    h2: {
-//        fontSize: BODY_TEXT_SIZE*1.3,
-        marginBottom: 10,
-        color: '#555',
-    },
-    textQuestion: {
-        marginBottom: 10,
-        // fontSize: BODY_TEXT_SIZE,
-        color: '#555',
-    },
-    qField: {
-//        flex: 1,
-//        minHeight: BODY_TEXT_SIZE*4,
-        paddingLeft: 18,
-        //height: BODY_TEXT_SIZE*3,
-        fontStyle: 'italic',
-        color: '#555',
-    },
-    copyright: {
-        // fontSize: BODY_TEXT_SIZE*.8,
-        fontStyle: 'italic',
-        marginTop: 30,
-        color: '#888',
-    },
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        // alignItems: 'flex-start',
-        // justifyContent: 'center',
-    },
-    scrollContainer: {
-        padding: 25,
-
-    }
+  title: {
+    //        fontSize: BODY_TEXT_SIZE*1.6,
+    color: "#555",
+    marginVertical: 10
+  },
+  h2: {
+    //        fontSize: BODY_TEXT_SIZE*1.3,
+    marginBottom: 10,
+    color: "#555"
+  },
+  textQuestion: {
+    marginBottom: 10,
+    // fontSize: BODY_TEXT_SIZE,
+    color: "#555"
+  },
+  qField: {
+    //        flex: 1,
+    //        minHeight: BODY_TEXT_SIZE*4,
+    paddingLeft: 18,
+    //height: BODY_TEXT_SIZE*3,
+    fontStyle: "italic",
+    color: "#555"
+  },
+  copyright: {
+    // fontSize: BODY_TEXT_SIZE*.8,
+    fontStyle: "italic",
+    marginTop: 30,
+    color: "#888"
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+    // alignItems: 'flex-start',
+    // justifyContent: 'center',
+  },
+  scrollContainer: {
+    padding: 25
+  }
 });
 
 export default ArenaView;
