@@ -23,7 +23,7 @@ class AppView extends Component {
         console.log("Snapshot:", snapshot);
 
         //if (snapshot) {
-        if (false) { // for debugging
+        if (snapshot) { // for debugging
           console.log("Resetting session state from snapshot.");
           dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
 
@@ -51,7 +51,6 @@ class AppView extends Component {
     return (
       <View style={{flex: 1}}>
         <AppNavigator />
-        {__DEV__ && <DeveloperMenu />}
       </View>
     );
   }
