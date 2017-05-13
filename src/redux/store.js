@@ -1,11 +1,11 @@
 import {applyMiddleware, createStore, compose} from 'redux';
-import * as reduxLoop from 'redux-loop-symbol-ponyfill';
+// import * as reduxLoop from 'redux-loop-symbol-ponyfill';
 import middleware from './middleware';
 import reducer from './reducer';
 
 const enhancers = [
-  applyMiddleware(...middleware),
-  reduxLoop.install()
+  applyMiddleware(...middleware)
+//  reduxLoop.install()
 ];
 
 /* Enable redux dev tools only in development.
@@ -21,7 +21,6 @@ const enhancer = composeEnhancers(...enhancers);
 // create the store
 const store = createStore(
   reducer,
-  null,
   enhancer
 );
 

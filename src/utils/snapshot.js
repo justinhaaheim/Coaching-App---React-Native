@@ -1,18 +1,19 @@
 import {AsyncStorage} from 'react-native';
-import {fromJS} from 'immutable';
+// import {fromJS} from 'immutable';
 const STATE_STORAGE_KEY = 'EmpowerAppAppState:Latest';
 
 export async function resetSnapshot() {
   const state = await rehydrate();
   if (state) {
-    return fromJS(state);
+    return state;
   }
 
   return null;
 }
 
 export async function saveSnapshot(state) {
-  await persist(state.toJS());
+  console.log("saving snapshot... ", state);
+  await persist(state);
 }
 
 export async function clearSnapshot() {

@@ -1,6 +1,6 @@
-import {Map} from 'immutable';
+// import {Map} from 'immutable';
 
-let configuration = Map();
+let configuration = {};
 
 export function setConfiguration(name, value) {
   configuration = configuration.set(name, value);

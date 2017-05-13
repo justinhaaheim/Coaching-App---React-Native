@@ -1,9 +1,10 @@
-import {Map} from 'immutable';
+// import {Map} from 'immutable';
 
-export const RESET_STATE = 'SessionState/RESET';
+export const RESET_STATE = 'SessionState/RESET_STATE';
 export const INITIALIZE_STATE = 'SessionState/INITIALIZE';
+
 // Initial state
-const initialState = Map({isReady: true});
+const initialState = {isReady: false};
 
 export function resetSessionStateFromSnapshot(state) {
   return {
@@ -22,9 +23,11 @@ export function initializeSessionState() {
 export default function SessionStateReducer(state = initialState, action = {}) {
   switch (action.type) {
     case INITIALIZE_STATE:
+      // continue into next case...
     case RESET_STATE:
-      return state.set('isReady', true);
-
+      return Object.assign({}, state, {
+        isReady: true
+      });
     default:
       return state;
   }

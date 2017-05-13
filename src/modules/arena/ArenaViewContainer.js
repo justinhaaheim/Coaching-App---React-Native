@@ -21,14 +21,13 @@ import * as ArenaStateActions from '../arena/ArenaState';
 
 export default connect(
   state => ({
-    mleEnabled: state.getIn(['settings', 'mleEnabled']),
-    buttons: state.getIn(['arena', 'buttons'])
+    mleEnabled: state.settings.mleEnabled,
+    buttons: state.arena.buttons
   }),
   dispatch => {
     return {
       navigate: bindActionCreators(NavigationActions.navigate, dispatch),
       arenaStateActions: bindActionCreators(ArenaStateActions, dispatch)
-      // settingsStateActions: bindActionCreators(SettingsStateActions, dispatch)
     };
   }
 )(ArenaView);

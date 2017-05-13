@@ -44,6 +44,7 @@ import {
   Switch
 } from "native-base";
 
+
 class ArenaView extends React.Component {
   // What does this do? Part of react-navigation ??
   static displayName = "ArenaView";
@@ -68,16 +69,20 @@ class ArenaView extends React.Component {
   }
 
   qualitiesList() {
-    const { buttons } = this.props;
-    const names = buttons.filter(b => b.selected).map(b => b.name);
-    if (names.length == 0) {
+    if (this.props.buttons.length > 0) {
+    const buttons = this.props.buttons;
+    console.log("buttons: ");
+    console.log(buttons);
+    const selectedNames = buttons.filter(b => b.selected).map(b => b.name);
+    if (selectedNames.length == 0) {
       return "___";
-    } else if (names.length == 1) {
-      return names[0];
+    } else if (selectedNames.length == 1) {
+      return selectedNames[0];
     } else {
-      var last = names.pop();
-      return names.join(", ") + " and " + last;
+      var last = selectedNames.pop();
+      return selectedNames.join(", ") + " and " + last;
     }
+  }
   }
 
   render() {
@@ -85,29 +90,42 @@ class ArenaView extends React.Component {
     const questions = this.props.mleEnabled
       ? arena.questions.mle
       : arena.questions.client;
-    const { toggleButton } = this.props.arenaStateActions;
+    const { toggleButton, resetArena } = this.props.arenaStateActions;
 
-    let { buttons } = this.props;
+    const { buttons } = this.props;
+    console.log("ArenaView Render, buttons = ", buttons);
 
     const buttonComponents = buttons.map((b, index) => (
       <Button
         key={index}
         light={!b.selected}
         dark={b.selected}
+        small
         onPress={() => toggleButton(index)}
       >
-        <Text>{b.name}xx</Text>
+        <Text>{b.name}</Text>
       </Button>
     ));
 
     console.log(`buttons type = ${typeof buttons}`);
-    console.log(buttons);
 
     return (
       <Container>
-        <Content>
+        <Content padder>
 
           {buttonComponents}
+
+          <Button
+            warning
+            bordered
+            small
+            onPress={() => resetArena()}
+            >
+              <Text>
+                Reset
+              </Text>
+            </Button>
+
 
           <Text>ARENA QUESTIONS</Text>
           <Text>1) {questions[1]}</Text>
@@ -129,45 +147,45 @@ class ArenaView extends React.Component {
 
 // const BODY_TEXT_SIZE = 18;
 
-const styles = StyleSheet.create({
-  title: {
-    //        fontSize: BODY_TEXT_SIZE*1.6,
-    color: "#555",
-    marginVertical: 10
-  },
-  h2: {
-    //        fontSize: BODY_TEXT_SIZE*1.3,
-    marginBottom: 10,
-    color: "#555"
-  },
-  textQuestion: {
-    marginBottom: 10,
-    // fontSize: BODY_TEXT_SIZE,
-    color: "#555"
-  },
-  qField: {
-    //        flex: 1,
-    //        minHeight: BODY_TEXT_SIZE*4,
-    paddingLeft: 18,
-    //height: BODY_TEXT_SIZE*3,
-    fontStyle: "italic",
-    color: "#555"
-  },
-  copyright: {
-    // fontSize: BODY_TEXT_SIZE*.8,
-    fontStyle: "italic",
-    marginTop: 30,
-    color: "#888"
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#fff"
-    // alignItems: 'flex-start',
-    // justifyContent: 'center',
-  },
-  scrollContainer: {
-    padding: 25
-  }
-});
+// const styles = StyleSheet.create({
+//   title: {
+//     //        fontSize: BODY_TEXT_SIZE*1.6,
+//     color: "#555",
+//     marginVertical: 10
+//   },
+//   h2: {
+//     //        fontSize: BODY_TEXT_SIZE*1.3,
+//     marginBottom: 10,
+//     color: "#555"
+//   },
+//   textQuestion: {
+//     marginBottom: 10,
+//     // fontSize: BODY_TEXT_SIZE,
+//     color: "#555"
+//   },
+//   qField: {
+//     //        flex: 1,
+//     //        minHeight: BODY_TEXT_SIZE*4,
+//     paddingLeft: 18,
+//     //height: BODY_TEXT_SIZE*3,
+//     fontStyle: "italic",
+//     color: "#555"
+//   },
+//   copyright: {
+//     // fontSize: BODY_TEXT_SIZE*.8,
+//     fontStyle: "italic",
+//     marginTop: 30,
+//     color: "#888"
+//   },
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff"
+//     // alignItems: 'flex-start',
+//     // justifyContent: 'center',
+//   },
+//   scrollContainer: {
+//     padding: 25
+//   }
+// });
 
 export default ArenaView;
