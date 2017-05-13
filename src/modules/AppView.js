@@ -20,10 +20,17 @@ class AppView extends Component {
       .then(snapshot => {
         const {dispatch} = this.props;
 
-        if (snapshot) {
+        console.log("Snapshot:", snapshot);
+
+        //if (snapshot) {
+        if (snapshot) { // for debugging
+          console.log("Resetting session state from snapshot.");
           dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
+
         } else {
+          console.log("Initializing State.");
           dispatch(SessionStateActions.initializeSessionState());
+
         }
 
         store.subscribe(() => {
@@ -43,9 +50,7 @@ class AppView extends Component {
 
     return (
       <View style={{flex: 1}}>
-        <StatusBar />
         <AppNavigator />
-        {__DEV__ && <DeveloperMenu />}
       </View>
     );
   }

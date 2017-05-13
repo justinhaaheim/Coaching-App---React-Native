@@ -20,8 +20,8 @@ import * as SettingsStateActions from '../settings/SettingsState';
 
 export default connect(
   state => ({
-    arenaVersion: state.getIn(['settings', 'arenaVersion']),
-    mleEnabled: state.getIn(['settings', 'mleEnabled'])
+    arenaVersion: state.settings.arenaVersion,
+    mleEnabled: state.settings.mleEnabled
   }),
   dispatch => {
     return {

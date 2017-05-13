@@ -12,16 +12,16 @@
 
 ********************************************** */
 
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
   Image,
-//  Text,
+  //  Text,
   View,
-//  Switch,
-//  List,
-//  ListItem,
+  //  Switch,
+  //  List,
+  //  ListItem,
 } from 'react-native';
 
 import {
@@ -36,10 +36,10 @@ import {
   Body,
   Right,
   Separator,
-  Switch
+  Switch,
 } from 'native-base';
 
- import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 class SettingsView extends Component {
   // What does this do? Part of react-navigation ??
@@ -48,49 +48,77 @@ class SettingsView extends Component {
   static navigationOptions = {
     title: 'Settings',
     tabBar: () => ({
-      icon: (props) => (
-        <MaterialIcon name='settings' size={24} color={props.tintColor} />
-      )
-    })
-  }
+      icon: props => <MaterialIcon name="settings" size={24} color={props.tintColor} />,
+    }),
+  };
 
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
     settingsStateActions: PropTypes.shape({
-      toggleArenaVersion: PropTypes.func.isRequired
+      toggleArenaVersion: PropTypes.func.isRequired,
     }).isRequired,
-    navigate: PropTypes.func.isRequired
+    navigate: PropTypes.func.isRequired,
   };
 
   render() {
-    const {toggleArenaVersion} = this.props.settingsStateActions;
-    const {mleEnabled} = this.props;
+    const { toggleArenaVersion } = this.props.settingsStateActions;
+    const { mleEnabled } = this.props;
 
     return (
       <Container style={styles.container}>
         <Content>
-        <List style={styles.whiteBg}>
-          <ListItem itemDivider>
-            <Text>
-              Coaching Arena
-            </Text>
-          </ListItem>
-              <ListItem icon>
-                  <Left>
-                      <Icon name="wifi" />
-                  </Left>
-                  <Body>
-                    <Text>MLE/TCI Version</Text>
-                  </Body>
-                  <Right>
-                    <Switch
-                      onValueChange={() => toggleArenaVersion()}
-                      value={mleEnabled} />
-                  </Right>
-              </ListItem>
+          <List style={styles.whiteBg}>
+            <ListItem itemDivider>
+              <Text>
+                Coaching Arena
+              </Text>
+            </ListItem>
+            <ListItem icon>
+              <Left>
+                <Icon name="wifi" />
+              </Left>
+              <Body>
+                <Text>MLE/TCI Version</Text>
+              </Body>
+              <Right>
+                <Switch onValueChange={() => toggleArenaVersion()} value={mleEnabled} />
+              </Right>
+            </ListItem>
+            <ListItem icon>
+              <Left>
+                <Icon name="wifi" />
+              </Left>
+              <Body>
+                <Text>Placeholder</Text>
+              </Body>
+              <Right>
+                <Switch />
+              </Right>
+            </ListItem>
+            <ListItem icon>
+              <Left>
+                <Icon name="wifi" />
+              </Left>
+              <Body>
+                <Text>Placeholder</Text>
+              </Body>
+              <Right>
+                <Switch />
+              </Right>
+            </ListItem>
+            <ListItem itemDivider>
+              <Text>
+                Acknowledgements
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Body>
+                <Text>(Icon acknowledgement)</Text>
+              </Body>
+            </ListItem>
           </List>
         </Content>
-        </Container>
+      </Container>
     );
   }
 }
@@ -99,7 +127,7 @@ const circle = {
   borderWidth: 0,
   borderRadius: 40,
   width: 80,
-  height: 80
+  height: 80,
 };
 
 const styles = {

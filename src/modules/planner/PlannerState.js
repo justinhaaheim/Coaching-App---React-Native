@@ -12,13 +12,13 @@
 
 ********************************************** */
 
-import {Map} from 'immutable';
+// import {Map} from 'immutable';
 // import {loop, Effects} from 'redux-loop-symbol-ponyfill';
 
 // Initial state
-const initialState = Map({
+const initialState = {
   mleEnabled: false,
-});
+};
 
 // Actions
 const TOGGLE_ARENA_VERSION = "SettingsState/TOGGLE_ARENA_VERSION";
@@ -35,7 +35,9 @@ export default function PlannerStateReducer(state = initialState, action = {}) {
   switch (action.type) {
     case TOGGLE_ARENA_VERSION:
       console.log("Entered TOGGLE_ARENA_VERSION");
-      return state.update('mleEnabled', value => !value);
+      return Object.assign({}, state, {
+        mleEnabled: !state.mleEnabled
+      });
     default:
       return state;
   }
