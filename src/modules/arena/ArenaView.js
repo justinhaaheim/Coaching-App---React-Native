@@ -66,21 +66,32 @@ class ArenaView extends React.Component {
     console.log('You tapped the button!');
   }
 
-  qualitiesList() {
-    if (this.props.buttons.length > 0) {
-      const buttons = this.props.buttons;
-      console.log('buttons: ');
-      console.log(buttons);
-      const selectedNames = buttons.filter(b => b.selected).map(b => b.name);
-      if (selectedNames.length == 0) {
-        return '___';
-      } else if (selectedNames.length == 1) {
-        return selectedNames[0];
-      } else {
-        var last = selectedNames.pop();
-        return selectedNames.join(', ') + ' and ' + last;
-      }
+  // qualitiesList() {
+  //   if (this.props.buttons.length > 0) {
+  //     const buttons = this.props.buttons;
+  //     console.log('buttons: ');
+  //     console.log(buttons);
+  //     const selectedNames = buttons.filter(b => b.selected).map(b => b.name);
+  //     if (selectedNames.length == 0) {
+  //       return '___';
+  //     } else if (selectedNames.length == 1) {
+  //       return selectedNames[0];
+  //     } else {
+  //       var last = selectedNames.pop();
+  //       return selectedNames.join(', ') + ' and ' + last;
+  //     }
+  //   }
+  // }
+
+  formatQualitiesList(list) {
+    list = list.map(s => s.toLowerCase())
+    if (list.length == 0) {
+      return '___';
+    } else if (list.length == 1) {
+      return list[0];
     }
+    var last = list.pop();
+    return list.join(', ') + ' and ' + last;
   }
 
   render() {
@@ -92,7 +103,7 @@ class ArenaView extends React.Component {
     console.log('ArenaView Render, buttons = ', buttons);
 
     const buttonComponents = buttons.map((b, index) => (
-      <View style={styles.buttonWrapper}>
+      <View style={styles.buttonWrapper} key={index}>
         <Button
           key={index}
           light={!b.selected}
@@ -114,11 +125,11 @@ class ArenaView extends React.Component {
             style={{
               flex: 1,
               flexDirection: 'row',
-            }}
+              justifyContent: 'flex-start',
+              }}
           >
             <View
               style={{
-                flex: 1,
                 flexDirection: 'column',
               }}
             >
@@ -126,7 +137,6 @@ class ArenaView extends React.Component {
             </View>
             <View
               style={{
-                flex: 1,
                 flexDirection: 'column',
               }}
             >
@@ -144,7 +154,9 @@ class ArenaView extends React.Component {
           <H2 style={styles.h2}>ARENA QUESTIONS</H2>
           <Text style={styles.bodyText}>1) {questions[1]}</Text>
           <Text style={styles.bodyText}>
-            {`I am willing to be ${this.qualitiesList()}.`}
+            {`I am willing to be ${
+              this.formatQualitiesList(this.props.qualitiesList)
+            }.`}
           </Text>
           <Text style={styles.bodyText}>2) {questions[2]}</Text>
           <Text style={styles.bodyText}>3) {questions[3]}</Text>
@@ -176,11 +188,11 @@ const styles = {
     marginBottom: 6,
   },
   bodyText: {
-    fontSize: 12,
+    fontSize: 15,
     marginBottom: 8,
   },
   copyright: {
-    fontSize: 12,
+    fontSize: 15,
     fontStyle: 'italic',
     marginVertical: 12,
   },

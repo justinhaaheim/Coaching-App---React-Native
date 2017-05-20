@@ -17,12 +17,15 @@ import {bindActionCreators} from 'redux';
 import ArenaView from './ArenaView';
 import {NavigationActions} from 'react-navigation';
 import * as ArenaStateActions from '../arena/ArenaState';
+import { getQualitiesList } from '../../redux/reducer';
 // import * as SettingsStateActions from '../settings/SettingsState';
+
 
 export default connect(
   state => ({
     mleEnabled: state.settings.mleEnabled,
-    buttons: state.arena.buttons
+    buttons: state.arena.buttons,
+    qualitiesList: getQualitiesList(state)
   }),
   dispatch => {
     return {

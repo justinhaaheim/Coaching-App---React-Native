@@ -113,3 +113,9 @@ export default function ArenaStateReducer(state = initialState, action = {}) {
     }
   }
 }
+
+
+// Selectors
+export const getQualitiesList = (state) => {
+  return state.buttons.filter(b => b.selected).map(b => b.name);
+}

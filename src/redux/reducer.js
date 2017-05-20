@@ -7,7 +7,7 @@ import CounterStateReducer from '../modules/counter/CounterState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
 import PlannerStateReducer from '../modules/planner/PlannerState';
-import ArenaStateReducer from '../modules/arena/ArenaState';
+import ArenaStateReducer, * as fromArenaState from '../modules/arena/ArenaState';
 
 const reducers = {
 
@@ -48,4 +48,13 @@ export default function mainReducer(state, action) {
     : namespacedReducer(state || void 0, action);
 
   return nextState;
+}
+
+// Global Selectors
+// this arrangement allows us to keep functions that depend on the structure
+// of the store in the same file where they're defined.
+export const getQualitiesList = (state) => {
+  console.log("getQualitiesList");
+  console.log(state);
+  return fromArenaState.getQualitiesList(state.arena);
 }
