@@ -22,8 +22,12 @@ class AppView extends Component {
 
         console.log("Snapshot:", snapshot);
 
-        //if (snapshot) {
-        if (snapshot) { // for debugging
+        // There's a problem here. If the snapshot is a different shape than
+        // the currently defined initial state, we end up getting the older
+        // version
+
+        if (snapshot) {
+        // if (false) { // for debugging
           console.log("Resetting session state from snapshot.");
           dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
 

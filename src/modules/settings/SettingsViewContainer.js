@@ -14,19 +14,21 @@
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import SettingsView from './SettingsView';
 import {NavigationActions} from 'react-navigation';
 import * as SettingsStateActions from '../settings/SettingsState';
+import SettingsView from './SettingsView';
 
 export default connect(
   state => ({
     arenaVersion: state.settings.arenaVersion,
-    mleEnabled: state.settings.mleEnabled
+    mleEnabled: state.settings.mleEnabled,
+    liList: state.settings.liList
   }),
   dispatch => {
     return {
       navigate: bindActionCreators(NavigationActions.navigate, dispatch),
       settingsStateActions: bindActionCreators(SettingsStateActions, dispatch)
+//      onUpdate: bindActionCreators(updateLi, dispatch)
     };
   }
 )(SettingsView);

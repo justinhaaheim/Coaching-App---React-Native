@@ -1,20 +1,33 @@
 import {Platform} from 'react-native';
 import {TabNavigator, StackNavigator} from 'react-navigation';
 
-import CounterViewContainer from '../counter/CounterViewContainer';
-import ColorViewContainer from '../colors/ColorViewContainer';
 import SettingsViewContainer from '../settings/SettingsViewContainer';
 import ArenaViewContainer from '../arena/ArenaViewContainer';
 import PlannerViewContainer from '../planner/PlannerViewContainer';
+import LiViewContainer from '../li/LiViewContainer';
+import TextEntry from '../../components/TextEntry';
 
 const headerColor = '#39babd';
 const activeColor = 'white';
 
+
+// Root navigator is a StackNavigator
+const SettingsNavigator = StackNavigator({
+  Main: { screen: SettingsViewContainer },
+  LiEntry: {
+    screen: TextEntry,
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.title}`,
+    }),
+  }
+});
+
 // TabNavigator is nested inside StackNavigator
-export const MainScreenNavigator = TabNavigator({
+export const AppNavigator = TabNavigator({
   Arena: {screen: ArenaViewContainer},
-  Planner: {screen: PlannerViewContainer},
-  Settings: {screen: SettingsViewContainer},
+  Li: {screen: LiViewContainer},
+//  Planner: {screen: PlannerViewContainer},
+  Settings: { screen: SettingsNavigator },
 }, {
   animationEnabled: true,
   tabBarOptions: {
@@ -29,7 +42,7 @@ export const MainScreenNavigator = TabNavigator({
   }
 });
 
-MainScreenNavigator.navigationOptions = {
+AppNavigator.navigationOptions = {
 //  title: 'EmpowerApp',
   header: {
 //    titleStyle: {color: 'white'},
@@ -39,11 +52,5 @@ MainScreenNavigator.navigationOptions = {
     }
   }
 };
-
-// Root navigator is a StackNavigator
-const AppNavigator = StackNavigator({
-  Home: {screen: MainScreenNavigator},
-  InfiniteColorStack: {screen: ColorViewContainer}
-});
 
 export default AppNavigator;

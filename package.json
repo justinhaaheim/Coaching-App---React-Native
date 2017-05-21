@@ -24,6 +24,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint src test",
     "coverage": "rimraf coverage && jest --coverage",
+    "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "version": "support/version-ios.sh"
   },
   "jest": {

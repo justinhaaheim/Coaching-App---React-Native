@@ -3,7 +3,6 @@
 
 import { combineReducers } from 'redux';
 // import NavigatorReducer from '../modules/navigator/NavigatorState';
-import CounterStateReducer from '../modules/counter/CounterState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
 import PlannerStateReducer from '../modules/planner/PlannerState';

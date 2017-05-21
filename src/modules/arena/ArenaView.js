@@ -45,6 +45,7 @@ import {
   Switch,
 } from 'native-base';
 
+
 class ArenaView extends React.Component {
   // What does this do? Part of react-navigation ??
   static displayName = 'ArenaView';

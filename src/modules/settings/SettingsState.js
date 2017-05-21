@@ -18,15 +18,24 @@
 // Initial state
 const initialState = {
   mleEnabled: false,
+  liList: "",
 };
 
 // Actions
 const TOGGLE_ARENA_VERSION = "SettingsState/TOGGLE_ARENA_VERSION";
+const UPDATE_LI = "SettingsState/UPDATE_LI";
 
 // Action creators
 export function toggleArenaVersion() {
   return {
     type: TOGGLE_ARENA_VERSION,
+  }
+}
+
+export function updateLi(text) {
+  return {
+    type: UPDATE_LI,
+    text
   }
 }
 
@@ -37,6 +46,10 @@ export default function SettingsStateReducer(state = initialState, action = {}) 
       console.log("Entered TOGGLE_ARENA_VERSION");
       return Object.assign({}, state, {
         mleEnabled: !state.mleEnabled
+      });
+    case UPDATE_LI:
+      return Object.assign({}, state, {
+        liList: action.text
       });
     default:
       return state;
