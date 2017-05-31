@@ -1,5 +1,8 @@
 import {AsyncStorage} from 'react-native';
+// import throttle from 'lodash.throttle';
+
 // import {fromJS} from 'immutable';
+
 const STATE_STORAGE_KEY = 'EmpowerAppAppState:Latest';
 
 export async function resetSnapshot() {

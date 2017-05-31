@@ -49,14 +49,9 @@ import material from '../../native-base-theme/variables/material';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 class LiView extends Component {
-  // What does this do? Part of react-navigation ??
-  static displayName = 'LiView';
 
   static navigationOptions = {
     title: "Life's Intentions",
-    tabBar: () => ({
-      icon: props => <MaterialIcon name="settings" size={24} color={props.tintColor} />,
-    }),
   };
 
   // static propTypes = {
@@ -66,7 +61,9 @@ class LiView extends Component {
   render() {
     console.log("liList", this.props.liList);
 
-    const liRows = this.props.liList.split("\n");
+    const liListSafe = this.props.liList || "";
+
+    const liRows = liListSafe.split("\n");
     const liComponents = liRows.map( (line, index) =>
       <Text key={`li${index}`} style={{ marginLeft: 15 }}>
         {`• ${line}`}

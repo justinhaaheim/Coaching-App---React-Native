@@ -55,6 +55,7 @@ class AppView extends Component {
     return (
       <View style={{flex: 1}}>
         <AppNavigator />
+        <DeveloperMenu />
       </View>
     );
   }

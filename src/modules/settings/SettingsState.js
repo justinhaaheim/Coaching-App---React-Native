@@ -43,7 +43,6 @@ export function updateLi(text) {
 export default function SettingsStateReducer(state = initialState, action = {}) {
   switch (action.type) {
     case TOGGLE_ARENA_VERSION:
-      console.log("Entered TOGGLE_ARENA_VERSION");
       return Object.assign({}, state, {
         mleEnabled: !state.mleEnabled
       });

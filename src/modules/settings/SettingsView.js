@@ -40,8 +40,6 @@ import {
   Switch,
 } from 'native-base';
 
-
-
 import getTheme from '../../native-base-theme/components';
 // import material from '../../native-base-theme/variables/material';
 
@@ -54,9 +52,6 @@ class SettingsView extends Component {
 
   static navigationOptions = {
     title: 'Settings',
-    tabBar: () => ({
-      icon: props => <MaterialIcon name="settings" size={24} color={props.tintColor} />,
-    }),
   };
 
   static propTypes = {
@@ -78,15 +73,15 @@ class SettingsView extends Component {
           <Content>
             <List style={styles.whiteBg}>
 
-              <ListItem itemDivider>
+              <Separator bordered>
                 <Text>
-                  Coaching Arena
+                  COACHING ARENA
                 </Text>
-              </ListItem>
+              </Separator>
 
               <ListItem icon>
                 <Left>
-                  <Icon name="wifi" />
+                  <Icon name="ios-list-box-outline" />
                 </Left>
                 <Body>
                   <Text>MLE/TCI Version</Text>
@@ -100,11 +95,11 @@ class SettingsView extends Component {
                 </Right>
               </ListItem>
 
+              <Separator bordered />
+
               <ListItem
                 icon
                 onPress={ () => {
-                  console.log("LI item pressed");
-                  console.log(this.props.navigation);
                   this.props.navigation.navigate('LiEntry', {
                     title: "Life's Intentions",
                     content: () => liList, // Buggy - doesn't update after navigation?
@@ -113,39 +108,33 @@ class SettingsView extends Component {
                 }}
                 >
                 <Left>
-                  <Icon name="wifi" />
+                  <Icon name="ios-body" />
                 </Left>
                 <Body>
-                  <Text>Life's Intentions</Text>
+                  <Text>Edit Life's Intentions</Text>
                 </Body>
                 <Right>
                   <Icon name="arrow-forward" />
                 </Right>
               </ListItem>
 
-              <Separator bordered></Separator>
+              <Separator bordered />
 
-              <ListItem icon>
+              <ListItem
+                icon
+                onPress={ () => {
+                  this.props.navigation.navigate('Credits');
+                }}
+                >
                 <Left>
-                  <Icon name="wifi" />
+                  <Icon name="ios-ribbon" />
                 </Left>
                 <Body>
-                  <Text>Placeholder</Text>
+                  <Text>Credits & Acknowledgements</Text>
                 </Body>
                 <Right>
-                  <Switch />
+                  <Icon name="arrow-forward" />
                 </Right>
-              </ListItem>
-
-              <ListItem itemDivider>
-                <Text>
-                  Acknowledgements
-                </Text>
-              </ListItem>
-              <ListItem>
-                <Body>
-                  <Text>(Icon acknowledgement)</Text>
-                </Body>
               </ListItem>
             </List>
           </Content>
@@ -169,7 +158,7 @@ const styles = {
     // justifyContent: 'flex-start',
     // alignItems: 'stretch',
     // alignSelf: 'flex-start',
-    // backgroundColor: 'white'
+    backgroundColor: '#F0EFF5'
   },
   whiteBg: {
     backgroundColor: 'white',

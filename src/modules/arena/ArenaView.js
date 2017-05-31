@@ -33,7 +33,7 @@ import {
   Button,
   Container,
   Content,
-  H2,
+  H3,
   List,
   ListItem,
   Text,
@@ -47,14 +47,9 @@ import {
 
 
 class ArenaView extends React.Component {
-  // What does this do? Part of react-navigation ??
-  static displayName = 'ArenaView';
 
   static navigationOptions = {
     title: 'Coaching Arena',
-    tabBar: () => ({
-      icon: props => <Icon name="speaker-notes" size={24} color={props.tintColor} />,
-    }),
   };
 
   static propTypes = {
@@ -122,6 +117,7 @@ class ArenaView extends React.Component {
     return (
       <Container style={styles.windowContainer}>
         <Content padder>
+          <H3 style={styles.h2}>QUALITIES OF BEING</H3>
           <View
             style={{
               flex: 1,
@@ -152,7 +148,7 @@ class ArenaView extends React.Component {
             </View>
           </View>
 
-          <H2 style={styles.h2}>ARENA QUESTIONS</H2>
+          <H3 style={styles.h2}>ARENA QUESTIONS</H3>
           <Text style={styles.bodyText}>1) {questions[1]}</Text>
           <Text style={styles.bodyText}>
             {`I am willing to be ${
@@ -185,8 +181,8 @@ const styles = {
     backgroundColor: 'white',
   },
   h2: {
-    marginTop: 12,
-    marginBottom: 6,
+    marginTop: 14,
+    marginBottom: 8,
   },
   bodyText: {
     fontSize: 15,

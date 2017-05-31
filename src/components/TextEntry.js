@@ -29,7 +29,6 @@ class TextEntry extends Component {
   // };
 
   render() {
-    console.log("params: ", this.props.navigation.params)
     const { onUpdate } = this.props.navigation.state.params;
     const { content } = this.props;
 
@@ -42,7 +41,6 @@ class TextEntry extends Component {
             autoFocus
             onChangeText={text => onUpdate(text)}
             value={content}
-            defaultValue="Enter your Life's Intentions here, one per line."
           />
         </View>
     );
