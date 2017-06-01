@@ -96,7 +96,6 @@ class ArenaView extends React.Component {
     const { toggleButton, resetArena } = this.props.arenaStateActions;
 
     const { buttons } = this.props;
-    console.log('ArenaView Render, buttons = ', buttons);
 
     const buttonComponents = buttons.map((b, index) => (
       <View style={styles.buttonWrapper} key={index}>
@@ -111,8 +110,6 @@ class ArenaView extends React.Component {
         </Button>
       </View>
     ));
-
-    console.log(`buttons type = ${typeof buttons}`);
 
     return (
       <Container style={styles.windowContainer}>

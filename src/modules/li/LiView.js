@@ -59,8 +59,6 @@ class LiView extends Component {
   // };
 
   render() {
-    console.log("liList", this.props.liList);
-
     const liListSafe = this.props.liList || "";
 
     const liRows = liListSafe.split("\n");
@@ -69,7 +67,6 @@ class LiView extends Component {
         {`• ${line}`}
       </Text>
     );
-    console.log("liComponents", liComponents);
 
     return (
       <StyleProvider style={getTheme()}>

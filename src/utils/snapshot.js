@@ -1,5 +1,5 @@
 import {AsyncStorage} from 'react-native';
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 // import {fromJS} from 'immutable';
 
@@ -13,6 +13,11 @@ export async function resetSnapshot() {
 
   return null;
 }
+
+// export function saveSnapshotThrottled(state) {
+//   const throttled = throttle(saveSnapshot, 4000);
+//   return throttled(state);
+// }
 
 export async function saveSnapshot(state) {
   console.log("saving snapshot... ", state);

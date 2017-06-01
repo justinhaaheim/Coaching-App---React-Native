@@ -7,6 +7,8 @@ import * as SessionStateActions from '../modules/session/SessionState';
 import store from '../redux/store';
 import DeveloperMenu from '../components/DeveloperMenu';
 
+import throttle from 'lodash.throttle';
+
 class AppView extends Component {
   static displayName = 'AppView';
 
@@ -37,8 +39,13 @@ class AppView extends Component {
 
         }
 
+        const throttledTest = throttle(() => console.log("This should be throttled."), 5000);
+        const saveSnapshotThrottled = throttle(snapshotUtil.saveSnapshot, 5000);
+
         store.subscribe(() => {
-          snapshotUtil.saveSnapshot(store.getState());
+          saveSnapshotThrottled(store.getState());
+          throttledTest();
+          // snapshotUtil.saveSnapshot(store.getState());
         });
       });
   }
