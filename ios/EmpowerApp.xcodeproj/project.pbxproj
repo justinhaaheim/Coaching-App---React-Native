@@ -79,6 +79,7 @@
 		E3D27849EA684841ABF90A47 /* Andale Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79DD1524CF8A441898883448 /* Andale Mono.ttf */; };
 		E3F2017B2DEF487B8E98AEC7 /* SanFrancisco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 661EF11FDF9F4B1B9D805A2A /* SanFrancisco.ttf */; };
 		E61B0A2A56C94063B7D5BE82 /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 567C74C6FDA548CCB23A2042 /* Arial Black.ttf */; };
+		E92A9AAD1EF6F81600BC7DCF /* libRNNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92A9AAB1EF6F78700BC7DCF /* libRNNotifications.a */; };
 		F10B14A302754791AC4887C2 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6448131701643E2ABD08175 /* Zocial.ttf */; };
 		F1B654895CAB482EBD2DFAE2 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDA6171205D54FFFADB4A7B8 /* Rubik-Italic.ttf */; };
 		F26FD0677D024A0DAC562F8F /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35484E2A66BD465499DCF007 /* Ionicons.ttf */; };
@@ -226,6 +227,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		E92A9AAA1EF6F78700BC7DCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNNotifications;
+		};
 		E97AF9551EB8531C0008EB21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
@@ -351,6 +359,8 @@
 		E4C8A004D2204A7E920B37BA /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../node_modules/native-base/Fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		E801D98EF7004D37A214F2C7 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		E8A5AFE025224C24818BB65A /* Comic Sans MS.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Comic Sans MS.ttf"; path = "../node_modules/native-base/Fonts/Comic Sans MS.ttf"; sourceTree = "<group>"; };
+		E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNotifications.xcodeproj; path = "../node_modules/react-native-notifications/RNNotifications/RNNotifications.xcodeproj"; sourceTree = "<group>"; };
+		E92A9AAE1EF736ED00BC7DCF /* EmpowerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EmpowerApp.entitlements; path = EmpowerApp/EmpowerApp.entitlements; sourceTree = "<group>"; };
 		EB1284A186AA4DCA8DE0E79D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		ED092326CDA049839F548044 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		F0516F33BD29489CB3254D35 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../node_modules/native-base/Fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -371,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92A9AAD1EF6F81600BC7DCF /* libRNNotifications.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* (null) in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -553,6 +564,7 @@
 		13B07FAE1A68108700A75B9A /* EmpowerApp */ = {
 			isa = PBXGroup;
 			children = (
+				E92A9AAE1EF736ED00BC7DCF /* EmpowerApp.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -591,6 +603,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */,
 				01DC710C1E3C150E0081C922 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -636,6 +649,14 @@
 				00E356EE1AD99517003FC87E /* EmpowerAppTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* EmpowerApp-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* EmpowerApp-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E92A9A8E1EF6F78700BC7DCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E92A9AAB1EF6F78700BC7DCF /* libRNNotifications.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -739,6 +760,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = UFL7WNR5T5;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -807,6 +833,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = E92A9A8E1EF6F78700BC7DCF /* Products */;
+					ProjectRef = E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */;
 				},
 				{
 					ProductGroup = EE2BEE551E2EDFE9008A6295 /* Products */;
@@ -948,6 +978,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E92A9AAB1EF6F78700BC7DCF /* libRNNotifications.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNNotifications.a;
+			remoteRef = E92A9AAA1EF6F78700BC7DCF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E97AF9561EB8531C0008EB21 /* libRCTImage-tvOS.a */ = {
@@ -1234,6 +1271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = EmpowerApp/EmpowerApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1243,6 +1281,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = EmpowerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1264,6 +1303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = EmpowerApp/EmpowerApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UFL7WNR5T5;
@@ -1272,6 +1312,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = EmpowerApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

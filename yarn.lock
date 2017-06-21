@@ -4128,6 +4128,13 @@ react-native-mock@~0.2.5:
     react-timer-mixin "^0.13.3"
     warning "^2.1.0"
 
+react-native-notifications@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/react-native-notifications/-/react-native-notifications-1.1.11.tgz#681fe37498e16d21c9ff7919ec13dee8befc5f52"
+  dependencies:
+    core-js "^1.0.0"
+    uuid "^2.0.3"
+
 react-native-scrollable-tab-view@^0.7.1:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.7.4.tgz#623a047cbfab35a27b8689095af524e9aac74b62"

@@ -24,6 +24,8 @@ import {
   //  ListItem,
 } from 'react-native';
 
+import NotificationsIOS from 'react-native-notifications';
+
 import {
   Container,
   Content,
@@ -62,6 +64,20 @@ class SettingsView extends Component {
     }).isRequired,
     navigate: PropTypes.func.isRequired,
   };
+
+  fireLocalNotification() {
+    let localNotification = NotificationsIOS.localNotification({
+      fireDate: new Date(Date.now() + (2 * 1000)).toISOString(),
+        alertBody: "Local notificiation!",
+        alertTitle: "Local Notification Title",
+        alertAction: "Click here to open",
+        soundName: "chime.aiff",
+        foreground: true,
+        category: "SOME_CATEGORY",
+        userInfo: { }
+      });
+  }
+
 
   render() {
     const { toggleArenaVersion, updateLi } = this.props.settingsStateActions;
@@ -122,9 +138,24 @@ class SettingsView extends Component {
 
               <ListItem
                 icon
-                onPress={ () => {
-                  this.props.navigation.navigate('Credits');
-                }}
+                onPress={ this.fireLocalNotification.bind(this) }
+                >
+                <Left>
+                  <Icon name="ios-body" />
+                </Left>
+                <Body>
+                  <Text>Test Notification</Text>
+                </Body>
+                <Right>
+                  <Icon name="arrow-forward" />
+                </Right>
+              </ListItem>
+
+              <Separator bordered />
+
+              <ListItem
+                icon
+                onPress={ this.fireLocalNotification.bind(this) }
                 >
                 <Left>
                   <Icon name="ios-ribbon" />
