@@ -15,21 +15,19 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {NavigationActions} from 'react-navigation';
-import * as SettingsStateActions from '../settings/SettingsState';
-import SettingsView from './SettingsView';
+// import * as NotifierStateActions from '../Notifier/NotifierState';
+import NotifierView from './NotifierView';
 
 export default connect(
   state => ({
-    arenaVersion: state.settings.arenaVersion,
-    mleEnabled: state.settings.mleEnabled,
-    // liList: state.settings.liList
     notificationsEnabled: state.settings.notificationsEnabled,
+    // arenaVersion: state.settings.arenaVersion,
   }),
   dispatch => {
     return {
-      navigate: bindActionCreators(NavigationActions.navigate, dispatch),
-      settingsStateActions: bindActionCreators(SettingsStateActions, dispatch)
+      // navigate: bindActionCreators(NavigationActions.navigate, dispatch),
+      // settingsStateActions: bindActionCreators(NotifierStateActions, dispatch)
 //      onUpdate: bindActionCreators(updateLi, dispatch)
     };
   }
-)(SettingsView);
+)(NotifierView);

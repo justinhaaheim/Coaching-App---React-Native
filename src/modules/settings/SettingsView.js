@@ -58,7 +58,7 @@ class SettingsView extends Component {
 
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
-    liList: PropTypes.string.isRequired,
+    // liList: PropTypes.string.isRequired,
     settingsStateActions: PropTypes.shape({
       toggleArenaVersion: PropTypes.func.isRequired,
     }).isRequired,
@@ -80,8 +80,8 @@ class SettingsView extends Component {
 
 
   render() {
-    const { toggleArenaVersion, updateLi } = this.props.settingsStateActions;
-    const { mleEnabled, liList } = this.props;
+    const { toggleArenaVersion, toggleNotifications, updateLi } = this.props.settingsStateActions;
+    const { mleEnabled, notificationsEnabled } = this.props;
 
     return (
       <StyleProvider style={getTheme()}>
@@ -111,6 +111,22 @@ class SettingsView extends Component {
                 </Right>
               </ListItem>
 
+              <ListItem icon>
+                <Left>
+                  <Icon name="ios-notifications" />
+                </Left>
+                <Body>
+                  <Text>Remind me to set the arena</Text>
+                </Body>
+                <Right>
+                  <Switch
+                    onValueChange={ () =>
+                      toggleNotifications()
+                    }
+                    value={notificationsEnabled} />
+                </Right>
+              </ListItem>
+
               <Separator bordered />
 
               <ListItem
@@ -118,7 +134,7 @@ class SettingsView extends Component {
                 onPress={ () => {
                   this.props.navigation.navigate('LiEntry', {
                     title: "Life's Intentions",
-                    content: () => liList, // Buggy - doesn't update after navigation?
+                    // content: () => liList, // Buggy - doesn't update after navigation?
                     onUpdate: updateLi,  // already bound to dispatch
                   });
                 }}

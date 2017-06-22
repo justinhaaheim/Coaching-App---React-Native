@@ -66,17 +66,14 @@ export default function ArenaStateReducer(state = initialState, action = {}) {
       return initialState;
     }
     case TOGGLE_BUTTON: {
-      console.log('TOGGLE_BUTTON action is being taken.');
-      console.log(`action.type=${action.type} and action.payload=${action.payload}`);
+      // console.log('TOGGLE_BUTTON action is being taken.');
+      // console.log(`action.type=${action.type} and action.payload=${action.payload}`);
       // payload is an index into the button array
       // Does this need to be .getIn(['arena', 'buttons'])?
       // const { buttons } = state;
-      console.log("action: ", action);
-      console.log(typeof action.payload);
+      // console.log("action: ", action);
+      // console.log(typeof action.payload);
       // console.log(state.buttons[action.payload].selected);
-
-
-
 
       const newButtons = state.buttons.map((bttn, index) =>
         index === action.payload ?
@@ -90,8 +87,6 @@ export default function ArenaStateReducer(state = initialState, action = {}) {
           return state;
         }
       }
-
-      console.log("newButtons = ", newButtons);
 
       return Object.assign({}, state, {
         buttons: newButtons
