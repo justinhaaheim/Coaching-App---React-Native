@@ -1,6 +1,6 @@
 {
   "name": "EmpowerApp",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "author": "Justin Haaheim",
   "description": "",
   "license": "MIT",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "lodash.throttle": "^4.1.1",
     "native-base": "^2.1.5",
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.1",
