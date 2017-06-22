@@ -1,10 +1,31 @@
 {
   "name": "EmpowerApp",
   "version": "0.0.1",
-  "private": true,
+  "author": "Justin Haaheim",
+  "description": "",
+  "license": "MIT",
+  "homepage": "http://justinh.org",
+  "bugs": "https://github.com/justinhaaheim/empower-app/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinhaaheim/empower-app"
+  },
+  "keywords": [
+    "React Native",
+    "Redux",
+    "Coaching",
+    "React"
+  ],
+  "private": false,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "run-ios": "react-native run-ios",
+    "release:ios": "react-native run-ios --configuration Release",
+    "lint": "eslint src test",
+    "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache verify",
+    "cleanmodules": "rm -rf node_modules && yarn"
   },
   "dependencies": {
     "lodash": "^4.17.4",

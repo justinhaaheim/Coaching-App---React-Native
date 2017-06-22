@@ -1,53 +1,32 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+  Name: /index.ios.js
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+  Description: This is the root/entry point for the iOS build of our app.
 
-export default class EmpowerApp extends Component {
+  TODO:
+
+  Copyright (c) 2017-present Justin Haaheim
+
+  This file is subject to the terms and conditions defined in
+  file 'LICENSE', which is part of this source code package.
+
+********************************************** */
+
+import {Provider} from 'react-redux';
+import store from './src/redux/store';
+import AppViewContainer from './src/modules/AppViewContainer';
+
+import React, {Component} from 'react';
+import {AppRegistry} from 'react-native';
+
+class EmpowerApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Provider store={store}>
+        <AppViewContainer />
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('EmpowerApp', () => EmpowerApp);
