@@ -10,7 +10,7 @@ These are the dependencies I'm adding to the project in addition to what is crea
 (non-dev)
 "lodash": "^4.11.0",
 "lodash.throttle": "^4.1.1",
-"moment": "^2.12.0",
+// "moment": "^2.12.0",
 "native-base": "^2.1.3",
 "react-native-notifications": "^1.1.11",
 "react-native-vector-icons": "^4.0.0",
@@ -47,3 +47,7 @@ These are the dependencies I'm adding to the project in addition to what is crea
 //	"rimraf": "^2.5.2"
 }
 ```
+
+If I want to use a non-alpha version of react, I should use:
+react-native@0.42.3
+react@~15.4.1
