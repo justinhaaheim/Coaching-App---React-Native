@@ -4,10 +4,10 @@
   "description": "",
   "license": "MIT",
   "homepage": "http://justinh.org",
-  "bugs": "",
+  "bugs": "https://github.com/justinhaaheim/empower-app/issues",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/justinhaaheim/empower-app"
   },
   "keywords": [
     "React Native",
@@ -24,7 +24,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint src test",
     "coverage": "rimraf coverage && jest --coverage",
-    "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
+    "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache verify",
+    "cleanmodules": "rm -rf node_modules && yarn",
     "version": "support/version-ios.sh"
   },
   "jest": {
@@ -45,7 +46,7 @@
     "moment": "^2.12.0",
     "native-base": "^2.1.3",
     "react": "16.0.0-alpha.12",
-    "react-dom": "~15.4.2",
+    "react-dom": "^15.6.1",
     "react-native": "0.45.1",
     "react-native-notifications": "^1.1.11",
     "react-native-vector-icons": "^4.0.0",
