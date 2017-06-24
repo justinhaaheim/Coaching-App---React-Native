@@ -14,9 +14,6 @@
 .*/Libraries/react-native/React.js
 .*/Libraries/react-native/ReactNative.js
 
-; react-navigation isn't compatible with the newest flow version, ignore it
-.*/node_modules/react-navigation*
-
 [include]
 
 [libs]
