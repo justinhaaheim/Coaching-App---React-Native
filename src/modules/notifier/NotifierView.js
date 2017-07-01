@@ -14,6 +14,7 @@
 
 import React, {PropTypes, Component} from 'react';
 import NotificationsIOS from 'react-native-notifications';
+import random from 'lodash.random';
 
 class NotifierView extends Component {
 
@@ -21,7 +22,7 @@ class NotifierView extends Component {
     super()
     NotificationsIOS.addEventListener('remoteNotificationsRegistered', this.onPushRegistered.bind(this));
     NotificationsIOS.addEventListener('remoteNotificationsRegistrationFailed', this.onPushRegistrationFailed.bind(this));
-    NotificationsIOS.requestPermissions();
+    // NotificationsIOS.requestPermissions();
     NotificationsIOS.consumeBackgroundQueue(); // Process all notifications that happened before javascript engine went online
   }
 
@@ -32,15 +33,17 @@ class NotifierView extends Component {
     // Clear all scheduled notifications
     NotificationsIOS.cancelAllLocalNotifications();
 
-    // If notifications are enabled, schedule them
     if (notificationsEnabled) {
+      console.log("Requesting Permissions...");
+      // Request permissions only if notifications are enabled.
+      NotificationsIOS.requestPermissions();
+
+      // If notifications are enabled, schedule them
       this.scheduleNotifications();
     }
   }
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {
     // prevent memory leaks!
@@ -48,43 +51,67 @@ class NotifierView extends Component {
     NotificationsIOS.removeEventListener('remoteNotificationsRegistrationFailed', this.onPushRegistrationFailed.bind(this));
   }
 
+  // Schedule for two weeks out, currently
   scheduleNotifications() {
     console.log("Scheduling notifications...");
-    this.scheduleNotificationForTime({hours: 8, minutes: 50});
-    this.scheduleNotificationForTime({hours: 12, minutes: 50});
-    this.scheduleNotificationForTime({hours: 4, minutes: 50});
+
+    if (__DEV__) {
+      this.scheduleNotificationForTime({offset: 10 *1000}); // 10s from now
+    }
+
+    for (let i = 0; i < 14; i++) {  // For the next 14 days
+      this.scheduleNotificationForTime({
+        hours: random(8, 11),
+        minutes: random(0, 59),
+        dayOffset: i
+      });
+      this.scheduleNotificationForTime({
+        hours: random(12, 6),
+        minutes: random(0, 59),
+        dayOffset: i
+      });
+    }
+    // this.scheduleNotificationForTime({hours: 8, minutes: 50});
+    // this.scheduleNotificationForTime({hours: 12, minutes: 50});
+    // this.scheduleNotificationForTime({hours: 16, minutes: 50});
   }
 
-  scheduleNotificationForTime(time) {
+  scheduleNotificationForTime({
+    hours = undefined,
+    minutes = undefined,
+    dayOffset = 0,
+    offset = undefined
+  }) {
     // time = {  // 9:30am
     //   hours: 9,
     //   minutes: 30,
+    //   dayOffset: 0  // 0 = today, 1 = tomorrow
     // }
 
-    let fireDate = new Date();
-    if (time.hours) {
-      fireDate.setHours(time.hours);
-      fireDate.setMinutes(time.minutes);
-      if (fireDate < Date.now()) {
-        // add 24 hours
-        fireDate = new Date(fireDate.valueOf() + 24 * 60 * 60 * 1000);
-      }
-    } else if (time.offset) {
-      fireDate = new Date(fireDate.valueOf() + time.offset)
+    let fireDate = new Date(Date.now() + dayOffset * (24 * 60 * 60 * 1000));
+
+    if (hours && minutes) {
+      fireDate.setHours(hours);
+      fireDate.setMinutes(minutes);
+    }
+    if (offset) {
+      fireDate = new Date(fireDate.valueOf() + offset);
     }
 
     // At some point I may want to keep track of these in the application state
-    let localNotification = NotificationsIOS.localNotification({
+    const options = {
       fireDate: fireDate.toISOString(),
       alertBody: "Bring clarity, focus, ease and grace to this moment.",
       alertTitle: "Is it time to set the Coaching Arena?",
       alertAction: "Click here to open Empower App",
       soundName: "chime.aiff",
       category: "ARENA_REMINDER",
-      repeatInterval: "day",
+      // repeatInterval: "day",
       // userInfo: {}
-    });
-    console.log(localNotification);
+    };
+
+    let localNotification = NotificationsIOS.localNotification(options);
+    console.log(`Notification scheduled for ${options.fireDate}`);
   }
 
   onPushRegistered(deviceToken) {
