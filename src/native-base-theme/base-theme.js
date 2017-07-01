@@ -122,7 +122,7 @@ export default {
   toolbarInverseBg: '#222',
   toolbarTextColor: (Platform.OS === 'ios') ? '#000' : '#fff',
   get statusBarColor() {
-    return color(this.toolbarDefaultBg).darken(0.2).hex();
+    return color(this.toolbarDefaultBg).darken(0.2).hexString();
   },
 
 
@@ -183,7 +183,7 @@ export default {
   radioColor: '#7e7e7e',
 
   get radioSelectedColor() {
-    return color(this.radioColor).darken(0.2).hex();
+    return color(this.radioColor).darken(0.2).hexString();
   },
 
 
@@ -215,7 +215,7 @@ export default {
   contentPadding: 10,
 
   get darkenHeader() {
-    return color(this.tabBgColor).darken(0.03).hex();
+    return color(this.tabBgColor).darken(0.03).hexString();
   },
 
   dropdownBg: '#000',
