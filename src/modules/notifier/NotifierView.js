@@ -55,7 +55,8 @@ class NotifierView extends Component {
   scheduleNotifications() {
     console.log("Scheduling notifications...");
 
-    if (__DEV__) {
+    // if (__DEV__) {
+    if (true) {
       this.scheduleNotificationForTime({offset: 10 *1000}); // 10s from now
     }
 
