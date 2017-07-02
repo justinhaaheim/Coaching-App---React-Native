@@ -133,6 +133,7 @@ Along the way I have encountered some truly awesome resources/guides for learnin
 - [ ] Add google analytics
 - [ ] Add fabric.io integration (or other CI/beta testing platform)
 - [ ] Add CodePush to project for direct updates to users
+- [ ] Update license to one that retains some rights for me
 
 ## Publish to iOS App Store
 
