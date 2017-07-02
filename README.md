@@ -10,6 +10,28 @@ A mobile app built in React Native + Redux that provides leadership coaching res
   <img src="docs/img/2017-05-31-arena-page.png" alt="Empower App Coaching Arena Screen" width="200">
 </kbd>
 
+# Background
+
+_Empower_ is a project to build and publish an iOS app in React Native + Redux that demonstrates best practices in UI design, app functionality, state management, project structure, usage of popular libraries, documentation, testing, and JavaScript code style. I tackle each of these in an incremental way, building out a few new features (and usually fixing a few new bugs) every week. See below for the [project roadmap](#project-roadmap).
+
+The app's subject matter draws upon my [writing](http://www.huffingtonpost.com/author/justin-haaheim) and work as a [Leadership Coach](http://justinh.org/coaching). Hence: _Empower_.
+
+The app's core functionality is a tool called the "Coaching Arena" from the [Academy for Coaching Excellence](https://acecoachtraining.com/) that coaches use with their clients everyday, so its meaning may not be entirely self-evident. Feel free to ask me about it!
+
+I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: `io` at `justinh` dot `org`.
+
+-Justin 🤓
+
+# Why am I doing this?
+
+In July 2016 I married the woman of my dreams, Mnikesa. In addition to being a middle school English teacher and a [celebrated founder](http://www.courant.com/hometown-heroes/hc-hero-mnikesa-whitaker-20150425-story.html) of a dance program for inner-city dancers of color, "Kesa" (like Lisa with a K) suffers from a rare and life-threatening autoimmune disease called Systemic Scleroderma.
+
+We don't know how much time we have left. For the time we _do_ have, I want to help give her the best possible life I can. I have worked as a professional leadership coach and trainer for eight years, and built two successful coaching businesses from the ground up. But when Kesa had to retire from teaching, it became clear that solo entrepreneurship was no longer the right fit for the life we want to live.
+
+I turned to software engineering, a life-long passion. It was my vocation before becoming a coach: I have a B.A. in Computer Science and my experience includes numerous internships and professional projects. I knew that even if I wasn't up-to-date on all the latest practices and frameworks, potential employers will value my years in the workforce, my experience working with clients and managing projects, and my speed in picking things up.
+
+That's where this project comes in. I fell in love with React because of its embrace of functional programming principles, and because of how supportive the community is. I learn best when I'm _producing_ something valuable. **Empower** is both a learning project and an app people will use. Thanks for checking it out!
+
 # Setup
 
 ## Pre-requisites
@@ -41,28 +63,6 @@ Run the following command to compile and launch the app:
 ```bash
 react-native run-ios
 ```
-
-# Background
-
-_Empower_ is a project to build and publish an iOS app in React Native + Redux that demonstrates best practices in UI design, app functionality, state management, project structure, usage of popular libraries, documentation, testing, and JavaScript code style. I tackle each of these in an incremental way, building out a few new features (and usually fixing a few new bugs) every week. See below for the [project roadmap](#project-roadmap).
-
-The app's subject matter draws upon my [writing](http://www.huffingtonpost.com/author/justin-haaheim) and work as a [Leadership Coach](http://justinh.org/coaching). Hence: _Empower_.
-
-The app's core functionality is a tool called the "Coaching Arena" from the [Academy for Coaching Excellence](https://acecoachtraining.com/) that coaches use with their clients everyday, so its meaning may not be entirely self-evident. Feel free to ask me about it!
-
-I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: `io` at `justinh` dot `org`.
-
--Justin 🤓
-
-# Why am I doing this?
-
-In July 2016 I married the woman of my dreams, Mnikesa. In addition to being a middle school English teacher and a [celebrated founder](http://www.courant.com/hometown-heroes/hc-hero-mnikesa-whitaker-20150425-story.html) of a dance program for inner-city dancers of color, "Kesa" (like Lisa with a K) suffers from a rare and life-threatening autoimmune disease called Systemic Scleroderma.
-
-We don't know how much time we have left. For the time we _do_ have, I want to help give her the best possible life I can. I have worked as a professional leadership coach and trainer for eight years, and built two successful coaching businesses from the ground up. But when Kesa had to retire from teaching, it became clear that solo entrepreneurship was no longer the right fit for the life we want to live.
-
-I turned to software engineering, a life-long passion. It was my vocation before becoming a coach: I have a B.A. in Computer Science and my experience includes numerous internships and professional projects. I knew that even if I wasn't up-to-date on all the latest practices and frameworks, potential employers will value my years in the workforce, my experience working with clients and managing projects, and my speed in picking things up.
-
-That's where this project comes in. I fell in love with React because of its embrace of functional programming principles, and because of how supportive the community is. I learn best when I'm _producing_ something valuable. **Empower** is both a learning project and an app people will use. Thanks for checking it out!
 
 # Awesome React Native Resources
 
