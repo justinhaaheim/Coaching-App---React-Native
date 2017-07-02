@@ -1,13 +1,13 @@
 # Empower App :high_brightness:
 
-An app built in React Native + Redux that provides coaching resources to coaches and clients affiliated with the [Academy for Coaching Excellence](https://acecoachtraining.com/).
+A mobile app built in React Native + Redux that provides leadership coaching resources.
 
 <kbd>
   <img src="docs/img/2017-03-31-screenshot-simulator-launchscreen.png" alt="Empower App Launch Screen" width="200">
 </kbd>
 
 <kbd>
-  <img src="docs/img/2017-03-31-screenshot-simulator-mainarenapage.png" alt="Empower App Coaching Arena Screen" width="200">
+  <img src="docs/img/2017-05-31-arena-page.png" alt="Empower App Coaching Arena Screen" width="200">
 </kbd>
 
 # Setup
@@ -48,7 +48,7 @@ _Empower_ is a project to build and publish an iOS app in React Native + Redux t
 
 The app's subject matter draws upon my [writing](http://www.huffingtonpost.com/author/justin-haaheim) and work as a [Leadership Coach](http://justinh.org/coaching). Hence: _Empower_.
 
-The app's core functionality is a tool called the "Coaching Arena" that coaches use with their clients everyday, so its meaning may not be entirely self-evident. Feel free to ask me about it!
+The app's core functionality is a tool called the "Coaching Arena" from the [Academy for Coaching Excellence](https://acecoachtraining.com/) that coaches use with their clients everyday, so its meaning may not be entirely self-evident. Feel free to ask me about it!
 
 I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: `io` at `justinh` dot `org`.
 
