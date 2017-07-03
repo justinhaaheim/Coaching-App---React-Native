@@ -57,7 +57,7 @@ class NotifierView extends Component {
 
     // if (__DEV__) {
     if (true) {
-      this.scheduleNotificationForTime({offset: 10 *1000}); // 10s from now
+      this.scheduleNotificationForTime({offset: 10 * 1000}); // 10s from now
     }
 
     for (let i = 0; i < 14; i++) {  // For the next 14 days
