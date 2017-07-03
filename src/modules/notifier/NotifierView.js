@@ -11,30 +11,36 @@
   file 'LICENSE', which is part of this source code package.
 
 ********************************************** */
+// @flow
 
-import React, {PropTypes, Component} from 'react';
+import React, { Component } from 'react';
 import NotificationsIOS from 'react-native-notifications';
 import random from 'lodash.random';
 
 class NotifierView extends Component {
-
   constructor() {
-    super()
-    NotificationsIOS.addEventListener('remoteNotificationsRegistered', this.onPushRegistered.bind(this));
-    NotificationsIOS.addEventListener('remoteNotificationsRegistrationFailed', this.onPushRegistrationFailed.bind(this));
+    super();
+    NotificationsIOS.addEventListener(
+      'remoteNotificationsRegistered',
+      this.onPushRegistered.bind(this),
+    );
+    NotificationsIOS.addEventListener(
+      'remoteNotificationsRegistrationFailed',
+      this.onPushRegistrationFailed.bind(this),
+    );
     // NotificationsIOS.requestPermissions();
     NotificationsIOS.consumeBackgroundQueue(); // Process all notifications that happened before javascript engine went online
   }
 
   componentDidUpdate() {
-    console.log("Notifier component updated.");
-    const {notificationsEnabled} = this.props;
+    console.log('Notifier component updated.');
+    const { notificationsEnabled } = this.props;
 
     // Clear all scheduled notifications
     NotificationsIOS.cancelAllLocalNotifications();
 
     if (notificationsEnabled) {
-      console.log("Requesting Permissions...");
+      console.log('Requesting Permissions...');
       // Request permissions only if notifications are enabled.
       NotificationsIOS.requestPermissions();
 
@@ -43,33 +49,38 @@ class NotifierView extends Component {
     }
   }
 
-  componentDidMount() {}
-
   componentWillUnmount() {
     // prevent memory leaks!
-    NotificationsIOS.removeEventListener('remoteNotificationsRegistered', this.onPushRegistered.bind(this));
-    NotificationsIOS.removeEventListener('remoteNotificationsRegistrationFailed', this.onPushRegistrationFailed.bind(this));
+    NotificationsIOS.removeEventListener(
+      'remoteNotificationsRegistered',
+      this.onPushRegistered.bind(this),
+    );
+    NotificationsIOS.removeEventListener(
+      'remoteNotificationsRegistrationFailed',
+      this.onPushRegistrationFailed.bind(this),
+    );
   }
 
   // Schedule for two weeks out, currently
   scheduleNotifications() {
-    console.log("Scheduling notifications...");
+    console.log('Scheduling notifications...');
 
     // if (__DEV__) {
     if (true) {
-      this.scheduleNotificationForTime({offset: 10 * 1000}); // 10s from now
+      this.scheduleNotificationForTime({ offset: 10 * 1000 }); // 10s from now
     }
 
-    for (let i = 0; i < 14; i++) {  // For the next 14 days
+    for (let i = 0; i < 14; i++) {
+      // For the next 14 days
       this.scheduleNotificationForTime({
         hours: random(8, 11),
         minutes: random(0, 59),
-        dayOffset: i
+        dayOffset: i,
       });
       this.scheduleNotificationForTime({
         hours: random(12, 6),
         minutes: random(0, 59),
-        dayOffset: i
+        dayOffset: i,
       });
     }
     // this.scheduleNotificationForTime({hours: 8, minutes: 50});
@@ -81,7 +92,7 @@ class NotifierView extends Component {
     hours = undefined,
     minutes = undefined,
     dayOffset = 0,
-    offset = undefined
+    offset = undefined,
   }) {
     // time = {  // 9:30am
     //   hours: 9,
@@ -102,11 +113,11 @@ class NotifierView extends Component {
     // At some point I may want to keep track of these in the application state
     const options = {
       fireDate: fireDate.toISOString(),
-      alertBody: "Bring clarity, focus, ease and grace to this moment.",
-      alertTitle: "Is it time to set the Coaching Arena?",
-      alertAction: "Click here to open Empower App",
-      soundName: "chime.aiff",
-      category: "ARENA_REMINDER",
+      alertBody: 'Bring clarity, focus, ease and grace to this moment.',
+      alertTitle: 'Is it time to set the Coaching Arena?',
+      alertAction: 'Click here to open Empower App',
+      soundName: 'chime.aiff',
+      category: 'ARENA_REMINDER',
       // repeatInterval: "day",
       // userInfo: {}
     };
@@ -116,7 +127,7 @@ class NotifierView extends Component {
   }
 
   onPushRegistered(deviceToken) {
-    console.log("Push Notifications - Device Token Received", deviceToken);
+    console.log('Push Notifications - Device Token Received', deviceToken);
   }
 
   onPushRegistrationFailed(error) {
