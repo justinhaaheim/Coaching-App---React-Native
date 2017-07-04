@@ -11,7 +11,12 @@
     "type": "git",
     "url": "https://github.com/justinhaaheim/empower-app"
   },
-  "keywords": ["React Native", "Redux", "Coaching", "React"],
+  "keywords": [
+    "React Native",
+    "Redux",
+    "Coaching",
+    "React"
+  ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
@@ -33,6 +38,7 @@
     "native-base": "2.1.3",
     "react": "~15.4.1",
     "react-native": "0.42.3",
+    "react-native-code-push": "^3.0.0-beta",
     "react-native-notifications": "^1.1.11",
     "react-native-vector-icons": "^4.2.0",
     "react-navigation": "^1.0.0-beta.11",

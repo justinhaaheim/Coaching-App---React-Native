@@ -11,13 +11,17 @@
   file 'LICENSE', which is part of this source code package.
 
 ********************************************** */
+// @flow
 
-import {Provider} from 'react-redux';
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import codePush from 'react-native-code-push';
+
+import { Provider } from 'react-redux';
 import store from './src/redux/store';
 import AppViewContainer from './src/modules/AppViewContainer';
 
-import React, {Component} from 'react';
-import {AppRegistry} from 'react-native';
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
 
 class EmpowerApp extends Component {
   render() {
@@ -28,5 +32,7 @@ class EmpowerApp extends Component {
     );
   }
 }
+
+EmpowerApp = codePush(codePushOptions)(EmpowerApp);
 
 AppRegistry.registerComponent('EmpowerApp', () => EmpowerApp);
