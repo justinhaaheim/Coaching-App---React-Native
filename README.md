@@ -123,13 +123,13 @@ Along the way I have encountered some truly awesome resources/guides for learnin
 
 ## Testing
 
-- [ ] * Add snapshot tests of important components using Jest
+- [ ] **Add snapshot tests of important components using Jest**
 
 ## General dev
 
 - [x] Upgrade to React Native 0.45
 - [x] Make fresh start using React Native 0.42.3 due to bugs in 0.45 and React 16-alpha, pulling out unneeded packages from the project
-- [ ] * Add modal or splash screen to orient users to app's purpose
+- [ ] **Add modal or splash screen to orient users to app's purpose**
 - [ ] Add google analytics
 - [ ] Add fabric.io or Mobile Center integration (or other CI/beta testing platform)
 - [x] Add CodePush to project for direct updates to users
@@ -146,7 +146,7 @@ Along the way I have encountered some truly awesome resources/guides for learnin
 
 ## Possible extensions:
 
-- [ ] * Project: Create a second app screen/route that hosts the most recent Note from Justin, first just images, and then make it possible to display the textual note.
+- [ ] **Project: Create a second app screen/route that hosts the most recent Note from Justin, first just images, and then make it possible to display the textual note.**
 - [ ] Create a setting for the user to enter their first name, to customize the notes
 - [ ] Create beautiful transitions and effects using the react animate library. Special button effect when tapping on a quality? Or a shake/bounce when the qualities are cleared?
 - [ ] Implement a Swedish version of the app using localization
