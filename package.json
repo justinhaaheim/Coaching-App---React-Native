@@ -22,14 +22,16 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "run-ios": "react-native run-ios",
-    "release:ios": "react-native run-ios --configuration Release",
+    "run-ios:release": "react-native run-ios --configuration Release",
     "lint": "eslint src test",
     "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache verify",
     "cleanmodules": "rm -rf node_modules && yarn",
     "flow:start": "flow start",
     "flow:stop": "flow stop",
     "flow:status": "flow status",
-    "flow:coverage": "flow coverage"
+    "flow:coverage": "flow coverage",
+    "deployments": "code-push deployment ls empower-app",
+    "pushrelease:ios": "code-push release-react empower-app ios"
   },
   "dependencies": {
     "lodash": "^4.17.4",
