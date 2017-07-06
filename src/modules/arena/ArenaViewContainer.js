@@ -29,7 +29,6 @@ export default connect(
   }),
   dispatch => {
     return {
-      navigate: bindActionCreators(NavigationActions.navigate, dispatch),
       arenaStateActions: bindActionCreators(ArenaStateActions, dispatch)
     };
   }
