@@ -47,9 +47,7 @@ import getTheme from '../../native-base-theme/components';
 
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
-
 class SettingsView extends Component {
-  // What does this do? Part of react-navigation ??
   static displayName = 'SettingsView';
 
   static navigationOptions = {
@@ -65,20 +63,6 @@ class SettingsView extends Component {
     navigate: PropTypes.func.isRequired,
   };
 
-  fireLocalNotification() {
-    let localNotification = NotificationsIOS.localNotification({
-      fireDate: new Date(Date.now() + (2 * 1000)).toISOString(),
-        alertBody: "Local notificiation!",
-        alertTitle: "Local Notification Title",
-        alertAction: "Click here to open",
-        soundName: "chime.aiff",
-        foreground: true,
-        category: "SOME_CATEGORY",
-        userInfo: { }
-      });
-  }
-
-
   render() {
     const { toggleArenaVersion, toggleNotifications, updateLi } = this.props.settingsStateActions;
     const { mleEnabled, notificationsEnabled } = this.props;
@@ -88,11 +72,8 @@ class SettingsView extends Component {
         <Container style={styles.container}>
           <Content>
             <List style={styles.whiteBg}>
-
               <Separator bordered>
-                <Text>
-                  COACHING ARENA
-                </Text>
+                <Text>COACHING ARENA</Text>
               </Separator>
 
               <ListItem icon>
@@ -103,11 +84,7 @@ class SettingsView extends Component {
                   <Text>MLE/TCI Version</Text>
                 </Body>
                 <Right>
-                  <Switch
-                    onValueChange={ () =>
-                      toggleArenaVersion()
-                    }
-                    value={mleEnabled} />
+                  <Switch onValueChange={() => toggleArenaVersion()} value={mleEnabled} />
                 </Right>
               </ListItem>
 
@@ -120,10 +97,9 @@ class SettingsView extends Component {
                 </Body>
                 <Right>
                   <Switch
-                    onValueChange={ () =>
-                      toggleNotifications()
-                    }
-                    value={notificationsEnabled} />
+                    onValueChange={() => toggleNotifications()}
+                    value={notificationsEnabled}
+                  />
                 </Right>
               </ListItem>
 
@@ -131,14 +107,14 @@ class SettingsView extends Component {
 
               <ListItem
                 icon
-                onPress={ () => {
+                onPress={() => {
                   this.props.navigation.navigate('LiEntry', {
                     title: "Life's Intentions",
                     // content: () => liList, // Buggy - doesn't update after navigation?
-                    onUpdate: updateLi,  // already bound to dispatch
+                    onUpdate: updateLi, // already bound to dispatch
                   });
                 }}
-                >
+              >
                 <Left>
                   <Icon name="ios-body" />
                 </Left>
@@ -152,27 +128,7 @@ class SettingsView extends Component {
 
               <Separator bordered />
 
-              <ListItem
-                icon
-                onPress={ this.fireLocalNotification.bind(this) }
-                >
-                <Left>
-                  <Icon name="ios-body" />
-                </Left>
-                <Body>
-                  <Text>Test Notification</Text>
-                </Body>
-                <Right>
-                  <Icon name="arrow-forward" />
-                </Right>
-              </ListItem>
-
-              <Separator bordered />
-
-              <ListItem
-                icon
-                onPress={ this.fireLocalNotification.bind(this) }
-                >
+              <ListItem icon>
                 <Left>
                   <Icon name="ios-ribbon" />
                 </Left>
@@ -186,7 +142,7 @@ class SettingsView extends Component {
             </List>
           </Content>
         </Container>
-    </StyleProvider>
+      </StyleProvider>
     );
   }
 }
@@ -205,7 +161,7 @@ const styles = {
     // justifyContent: 'flex-start',
     // alignItems: 'stretch',
     // alignSelf: 'flex-start',
-    backgroundColor: '#F0EFF5'
+    backgroundColor: '#F0EFF5',
   },
   whiteBg: {
     backgroundColor: 'white',
