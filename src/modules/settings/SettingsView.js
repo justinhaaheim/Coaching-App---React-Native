@@ -64,7 +64,7 @@ class SettingsView extends Component {
   };
 
   render() {
-    const { toggleArenaVersion, toggleNotifications, updateLi } = this.props.settingsStateActions;
+    const { toggleArenaVersion, toggleNotifications } = this.props.settingsStateActions;
     const { mleEnabled, notificationsEnabled } = this.props;
 
     return (
@@ -110,8 +110,6 @@ class SettingsView extends Component {
                 onPress={() => {
                   this.props.navigation.navigate('LiEntry', {
                     title: "Life's Intentions",
-                    // content: () => liList, // Buggy - doesn't update after navigation?
-                    onUpdate: updateLi, // already bound to dispatch
                   });
                 }}
               >

@@ -29,7 +29,6 @@ export default connect(
     return {
       navigate: bindActionCreators(NavigationActions.navigate, dispatch),
       settingsStateActions: bindActionCreators(SettingsStateActions, dispatch)
-//      onUpdate: bindActionCreators(updateLi, dispatch)
     };
   }
 )(SettingsView);

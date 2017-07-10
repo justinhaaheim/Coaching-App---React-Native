@@ -4,13 +4,13 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
-import IntroViewContainer from '../intro/IntroViewContainer';
 import SettingsViewContainer from '../settings/SettingsViewContainer';
 import ArenaViewContainer from '../arena/ArenaViewContainer';
-import PlannerViewContainer from '../planner/PlannerViewContainer';
 import LiViewContainer from '../li/LiViewContainer';
-import TextEntry from '../../components/TextEntry';
+import LiEntry from '../settings/LiEntry';
 import Credits from '../settings/Credits';
+// import PlannerViewContainer from '../planner/PlannerViewContainer';
+// import IntroViewContainer from '../intro/IntroViewContainer';
 
 const headerColor = '#39babd';
 const activeColor = 'white';
@@ -24,7 +24,7 @@ const SettingsNavigator = StackNavigator({
   },
 
   LiEntry: {
-    screen: TextEntry,
+    screen: LiEntry,
     navigationOptions: ({ navigation }) => ({ title: `${navigation.state.params.title}` }),
   },
 
@@ -33,10 +33,6 @@ const SettingsNavigator = StackNavigator({
   },
 });
 
-// SettingsNavigator.navigationOptions = {
-//   tabBarIcon: ({ tintColor }) =>
-//     (<MaterialIcon name="settings" size={24} color={tintColor} />)
-// }
 
 const AppTabNavigator = TabNavigator(
   {
@@ -92,19 +88,22 @@ const AppTabNavigator = TabNavigator(
   },
 );
 
-const AppIntroNavigator = StackNavigator({
-  Main: {
-    screen: AppTabNavigator,
-    // navigationOptions: {
-    //   title: 'Settings',
-    // },
-  },
-  IntroScreen: {
-    screen: IntroViewContainer,
-    mode: 'modal',
-    headerMode: 'none',
-    // navigationOptions: ({ navigation }) => ({ title: `${navigation.state.params.title}` }),
-  },
-});
+// const AppIntroNavigator = StackNavigator({
+//   Main: {
+//     screen: AppTabNavigator,
+//     headerMode: 'none',
+//     // navigationOptions: {
+//     //   title: 'Settings',
+//     // },
+//   },
+//   IntroScreen: {
+//     screen: IntroViewContainer,
+//     mode: 'modal',
+//     headerMode: 'none',
+//     // navigationOptions: ({ navigation }) => ({ title: `${navigation.state.params.title}` }),
+//   },
+// });
+//
+// export default AppIntroNavigator;
 
-export default AppIntroNavigator;
+export default AppTabNavigator;

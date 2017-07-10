@@ -1,36 +1,21 @@
-/**
-  Name: TextEntry.jsx
-
-  Description: A 'dumb' component screen for text entry.
-
-  TODO:
-
-  Copyright (c) 2017-present Justin Haaheim
-
-  This file is subject to the terms and conditions defined in
-  file 'LICENSE', which is part of this source code package.
-
-********************************************** */
-
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 
 import { Container, Content, H3, Item, Input } from "native-base";
 
-import { updateLi } from '../modules/settings/SettingsState';
+import { updateLi } from './SettingsState';
 
 
-class TextEntry extends Component {
+class LiEntry extends Component {
   // static propTypes = {
   //   onUpdate: PropTypes.func.isRequired,
   //   content: PropTypes.string.isRequired
   // };
 
   render() {
-    const { onUpdate } = this.props.navigation.state.params;
-    const { content } = this.props;
+    const { onUpdate, content } = this.props;
 
     return (
         <View style={{ backgroundColor: 'transparent', padding: 25 }}>
@@ -41,7 +26,6 @@ class TextEntry extends Component {
               borderColor: '#373737',
               borderWidth: 4,
               padding: 5,
-
               fontSize: 18,
             }}
             multiline
@@ -54,10 +38,11 @@ class TextEntry extends Component {
   }
 }
 
-// Currently this component is specific to life's intentions. Is there a way
-// "Dumb" it down - or generalize it?
 export default connect(
   state => ({
     content: state.settings.liList,
+  }),
+  dispatch => ({
+    onUpdate: bindActionCreators(updateLi, dispatch),
   })
-)(TextEntry);
+)(LiEntry);

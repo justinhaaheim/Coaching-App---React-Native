@@ -133,6 +133,7 @@ Along the way I have encountered some truly awesome resources/guides for learnin
 - [ ] Add google analytics
 - [ ] Add fabric.io or Mobile Center integration (or other CI/beta testing platform)
 - [x] Add CodePush to project for direct updates to users
+- [ ] Move navigation specification to modules, out of Navigator.js
 
 ## Publish to iOS App Store
 
