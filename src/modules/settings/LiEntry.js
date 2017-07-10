@@ -22,11 +22,11 @@ class LiEntry extends Component {
           <H3>Enter your Life's Intentions here, one per line:</H3>
           <TextInput
             style={{
-              height: '100%',
-              borderColor: '#373737',
-              borderWidth: 4,
+              height: '90%',
+              borderColor: '#777777',
+              borderWidth: 1,
               padding: 5,
-              fontSize: 18,
+              fontSize: 16,
             }}
             multiline
             autoFocus

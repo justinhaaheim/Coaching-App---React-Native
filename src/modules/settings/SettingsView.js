@@ -13,18 +13,6 @@
 ********************************************** */
 
 import React, { PropTypes, Component } from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  //  Text,
-  View,
-  //  Switch,
-  //  List,
-  //  ListItem,
-} from 'react-native';
-
-import NotificationsIOS from 'react-native-notifications';
 
 import {
   Container,
@@ -33,7 +21,6 @@ import {
   ListItem,
   Text,
   Icon,
-  Badge,
   Left,
   Body,
   Right,
@@ -92,10 +79,10 @@ class SettingsView extends Component {
                 <Left>
                   <Icon name="ios-notifications" />
                 </Left>
-                <Body>
+                <Body                style={{borderBottomWidth: 0}}>
                   <Text>Remind me to set the arena</Text>
                 </Body>
-                <Right>
+                <Right                style={{borderBottomWidth: 0}}>
                   <Switch
                     onValueChange={() => toggleNotifications()}
                     value={notificationsEnabled}
@@ -116,24 +103,28 @@ class SettingsView extends Component {
                 <Left>
                   <Icon name="ios-body" />
                 </Left>
-                <Body>
-                  <Text>Edit Life's Intentions</Text>
+                <Body style={{borderBottomWidth: 0}}>
+                  <Text>
+                    {"Edit Life's Intentions"}
+                  </Text>
                 </Body>
-                <Right>
+                <Right                 style={{borderBottomWidth: 0}}>
                   <Icon name="arrow-forward" />
                 </Right>
               </ListItem>
 
               <Separator bordered />
 
-              <ListItem icon>
+              <ListItem
+                icon
+                onPress={() => this.props.navigation.navigate('Credits')}>
                 <Left>
                   <Icon name="ios-ribbon" />
                 </Left>
-                <Body>
+                <Body style={{borderBottomWidth: 0}}>
                   <Text>Credits & Acknowledgements</Text>
                 </Body>
-                <Right>
+                <Right style={{ borderBottomWidth: 0}}>
                   <Icon name="arrow-forward" />
                 </Right>
               </ListItem>

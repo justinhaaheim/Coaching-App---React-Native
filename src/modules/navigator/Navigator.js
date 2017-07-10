@@ -33,7 +33,6 @@ const SettingsNavigator = StackNavigator({
   },
 });
 
-
 const AppTabNavigator = TabNavigator(
   {
     Arena: {
