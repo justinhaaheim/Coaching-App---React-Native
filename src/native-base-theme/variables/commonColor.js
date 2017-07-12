@@ -46,7 +46,7 @@ export default {
   segmentActiveTextColor: '#3F51B5',
   segmentBorderColor: '#fff',
   segmentBorderColorMain: '#3F51B5',
-  
+
     // New Variable
   get defaultTextColor() {
     return this.textColor;
@@ -122,7 +122,7 @@ export default {
 
     // Font
   fontFamily: (platform === 'ios') ? 'System' : 'Roboto',
-  fontSizeBase: 15,
+  fontSizeBase: 45,
 
   get fontSizeH1() {
     return this.fontSizeBase * 1.8;

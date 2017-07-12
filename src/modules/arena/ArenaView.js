@@ -25,12 +25,7 @@ class ArenaView extends Component {
 
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
-    //    buttons:
   };
-
-  _onPressButton() {
-    console.log('You tapped the button!');
-  }
 
   formatQualitiesList(list) {
     list = list.map(s => s.toLowerCase());
@@ -68,12 +63,13 @@ class ArenaView extends Component {
     return (
       <Container style={styles.windowContainer}>
         <Content padder>
-          <H3 style={styles.h2}>QUALITIES OF BEING</H3>
+          <H3 style={styles.h3}>QUALITIES OF BEING</H3>
           <View
             style={{
               flex: 1,
               flexDirection: 'row',
               justifyContent: 'flex-start',
+              marginBottom: 20,
             }}
           >
             <View
@@ -97,11 +93,11 @@ class ArenaView extends Component {
             </View>
           </View>
 
-          <H3 style={styles.h2}>ARENA QUESTIONS</H3>
+          <H3 style={styles.h3}>ARENA QUESTIONS</H3>
           <Text style={styles.bodyText}>
             1) {questions[1]}
           </Text>
-          <Text style={styles.bodyText}>
+          <Text style={styles.bodyTextItalic} >
             {`I am willing to be ${this.formatQualitiesList(this.props.qualitiesList)}.`}
           </Text>
           <Text style={styles.bodyText}>
@@ -122,7 +118,6 @@ class ArenaView extends Component {
   }
 }
 
-
 // TODO: Use react stylesheet library
 const styles = {
   buttonWrapper: {
@@ -134,13 +129,18 @@ const styles = {
   windowContainer: {
     backgroundColor: 'white',
   },
-  h2: {
-    marginTop: 14,
+  h3: {
+    marginTop: 18,
     marginBottom: 8,
   },
   bodyText: {
     fontSize: 15,
     marginBottom: 8,
+  },
+  bodyTextItalic: {
+    fontSize: 15,
+    marginBottom: 8,
+    fontStyle: 'italic',
   },
   copyright: {
     fontSize: 15,
@@ -155,7 +155,7 @@ const styles = {
 //     color: "#555",
 //     marginVertical: 10
 //   },
-//   h2: {
+//   h3: {
 //     //        fontSize: BODY_TEXT_SIZE*1.3,
 //     marginBottom: 10,
 //     color: "#555"

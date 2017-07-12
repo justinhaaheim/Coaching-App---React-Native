@@ -15,14 +15,6 @@
 import React, { PropTypes, Component } from 'react';
 import {
   StyleSheet,
-  TouchableOpacity,
-  Image,
-  ListView,
-  //  Text,
-  View,
-  //  Switch,
-  //  List,
-  //  ListItem,
 } from 'react-native';
 
 import {
@@ -63,46 +55,42 @@ class LiView extends Component {
 
     const liRows = liListSafe.split("\n");
     const liComponents = liRows.map( (line, index) =>
-      <Text key={`li${index}`} style={{ marginLeft: 15 }}>
-        {`• ${line}`}
+      <Text key={`li${index}`} style={styles.bodyText}>
+        {`${line}`}
       </Text>
     );
 
     return (
       <StyleProvider style={getTheme()}>
         <Container style={styles.container}>
-          <Content>
+
             <H2 style={styles.h2}>These Are My Life's Intentions</H2>
-            <Text>I am willing to be...</Text>
+            <Text style={styles.bodyText}>{"I am willing to be...\n"}</Text>
             {liComponents}
-          </Content>
+
         </Container>
       </StyleProvider>
     );
   }
 }
 
-const circle = {
-  borderWidth: 0,
-  borderRadius: 40,
-  width: 80,
-  height: 80,
-};
 
 const styles = {
   container: {
-    // flex: 1,
-    // flexDirection: 'column',
-    // justifyContent: 'flex-start',
-    // alignItems: 'stretch',
-    // alignSelf: 'flex-start',
     backgroundColor: 'white',
     padding: 25,
     paddingTop: 40,
+    alignItems: 'center',
   },
   h2: {
     alignSelf: 'center',
-    marginBottom: 15,
+    textAlign: 'center',
+    marginBottom: 20,
+    marginHorizontal: 55,
+    fontWeight: 'bold'
+  },
+  bodyText: {
+    fontSize: 18,
   },
   whiteBg: {
     backgroundColor: 'white',

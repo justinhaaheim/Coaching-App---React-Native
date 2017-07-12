@@ -9,7 +9,6 @@ import ArenaViewContainer from '../arena/ArenaViewContainer';
 import LiViewContainer from '../li/LiViewContainer';
 import LiEntry from '../settings/LiEntry';
 import Credits from '../settings/Credits';
-// import PlannerViewContainer from '../planner/PlannerViewContainer';
 // import IntroViewContainer from '../intro/IntroViewContainer';
 
 const headerColor = '#39babd';
@@ -20,16 +19,29 @@ const SettingsNavigator = StackNavigator({
     screen: SettingsViewContainer,
     navigationOptions: {
       title: 'Settings',
+      headerStyle: {
+        backgroundColor: '#f7f7f8',
+      },
     },
   },
 
   LiEntry: {
     screen: LiEntry,
-    navigationOptions: ({ navigation }) => ({ title: `${navigation.state.params.title}` }),
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.title}`,
+      headerStyle: {
+        backgroundColor: '#f7f7f8',
+      },
+    }),
   },
 
   Credits: {
     screen: Credits,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f7f7f8',
+      },
+    }
   },
 });
 
@@ -39,6 +51,11 @@ const AppTabNavigator = TabNavigator(
       screen: StackNavigator({
         default: {
           screen: ArenaViewContainer,
+          navigationOptions: {
+            headerStyle: {
+              backgroundColor: '#f7f7f8',
+            },
+          }
         },
       }),
       navigationOptions: {
@@ -51,6 +68,11 @@ const AppTabNavigator = TabNavigator(
       screen: StackNavigator({
         default: {
           screen: LiViewContainer,
+          navigationOptions: {
+            headerStyle: {
+              backgroundColor: '#f7f7f8',
+            },
+          }
         },
       }),
       navigationOptions: {

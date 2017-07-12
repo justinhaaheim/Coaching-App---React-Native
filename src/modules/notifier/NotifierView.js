@@ -28,8 +28,9 @@ class NotifierView extends Component {
       'remoteNotificationsRegistrationFailed',
       this.onPushRegistrationFailed.bind(this),
     );
-    // NotificationsIOS.requestPermissions();
-    NotificationsIOS.consumeBackgroundQueue(); // Process all notifications that happened before javascript engine went online
+
+    // Process all notifications that happened before javascript engine went online
+    NotificationsIOS.consumeBackgroundQueue();
   }
 
   componentDidUpdate() {
