@@ -33,7 +33,6 @@ class SettingsView extends Component {
       toggleNotifications: PropTypes.func.isRequired,
     }).isRequired,
     navigate: PropTypes.func.isRequired,
-    toggleNotifications: PropTypes.func.isRequired,
   };
 
   render() {
