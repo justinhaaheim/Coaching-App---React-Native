@@ -25,6 +25,18 @@ class ArenaView extends Component {
 
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
+    arenaStateActions: PropTypes.shape({
+      toggleButton: PropTypes.func.isRequired,
+      resetArena: PropTypes.func.isRequired,
+    }).isRequired,
+    qualitiesList: PropTypes.array.isRequired,
+    buttons: PropTypes.array.isRequired,
+    // buttons: PropTypes.array([
+    //   PropTypes.shape({
+    //     name: PropTypes.string.isRequired,
+    //     selected: PropTypes.bool.isRequired,
+    //   }).isRequired,
+    // ]).isRequired,
   };
 
   formatQualitiesList(list) {

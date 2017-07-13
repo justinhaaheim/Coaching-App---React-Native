@@ -12,7 +12,6 @@ export default connect(
     notificationsEnabled: state.settings.notificationsEnabled,
   }),
   dispatch => ({
-    navigate: bindActionCreators(NavigationActions.navigate, dispatch),
     settingsStateActions: bindActionCreators(SettingsStateActions, dispatch),
   }),
 )(SettingsView);

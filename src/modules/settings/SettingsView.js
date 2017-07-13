@@ -32,12 +32,15 @@ class SettingsView extends Component {
       toggleArenaVersion: PropTypes.func.isRequired,
       toggleNotifications: PropTypes.func.isRequired,
     }).isRequired,
-    navigate: PropTypes.func.isRequired,
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired,
+    }).isRequired,
   };
 
   render() {
     const { toggleArenaVersion, toggleNotifications } = this.props.settingsStateActions;
     const { mleEnabled, notificationsEnabled } = this.props;
+    const { navigate } = this.props.navigation;
 
     return (
       <StyleProvider style={getTheme(commonColor)}>
@@ -80,7 +83,7 @@ class SettingsView extends Component {
               <ListItem
                 icon
                 onPress={() => {
-                  this.props.navigation.navigate('LiEntry', {
+                  navigate('LiEntry', {
                     title: "Life's Intentions",
                   });
                 }}
@@ -100,7 +103,7 @@ class SettingsView extends Component {
 
               <Separator style={{ backgroundColor: '#efeff3' }} bordered />
 
-              <ListItem icon onPress={() => this.props.navigation.navigate('Credits')}>
+              <ListItem icon onPress={() => navigate('Credits')}>
                 <Left>
                   <Icon name="ios-ribbon" />
                 </Left>

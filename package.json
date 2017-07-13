@@ -39,7 +39,7 @@
       "<rootDir>/support/test/setup.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|native-base-shoutem-theme|@shoutem|)"
     ]
   },
   "dependencies": {
