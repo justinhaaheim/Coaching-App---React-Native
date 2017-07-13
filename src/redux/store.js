@@ -1,17 +1,10 @@
-import {applyMiddleware, createStore, compose} from 'redux';
-// import * as reduxLoop from 'redux-loop-symbol-ponyfill';
+import { applyMiddleware, createStore, compose } from 'redux';
 import middleware from './middleware';
 import reducer from './reducer';
 
-const enhancers = [
-  applyMiddleware(...middleware)
-//  reduxLoop.install()
-];
+const enhancers = [applyMiddleware(...middleware)];
 
-/* Enable redux dev tools only in development.
- * We suggest using the standalone React Native Debugger extension:
- * https://github.com/jhen0409/react-native-debugger
- */
+// Enable redux dev tools only in development.
 /* eslint-disable no-undef */
 const composeEnhancers = (__DEV__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 /* eslint-enable no-undef */
@@ -19,9 +12,6 @@ const composeEnhancers = (__DEV__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 const enhancer = composeEnhancers(...enhancers);
 
 // create the store
-const store = createStore(
-  reducer,
-  enhancer
-);
+const store = createStore(reducer, enhancer);
 
 export default store;

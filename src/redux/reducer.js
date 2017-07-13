@@ -1,50 +1,27 @@
-// import {Map, fromJS} from 'immutable';
-// import {loop, combineReducers} from 'redux-loop-symbol-ponyfill';
-
 import { combineReducers } from 'redux';
-// import NavigatorReducer from '../modules/navigator/NavigatorState';
-import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
+
+import SessionStateReducer, { RESET_STATE } from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
-import PlannerStateReducer from '../modules/planner/PlannerState';
 import ArenaStateReducer, * as fromArenaState from '../modules/arena/ArenaState';
 
 const reducers = {
-
   arena: ArenaStateReducer,
-
-  // Counter sample app state. This can be removed in a live application
-//  counter: CounterStateReducer,
-
-  // // Navigator states
-  // navigatorState: NavigatorReducer,
-
-  planner: PlannerStateReducer,
 
   session: SessionStateReducer,
 
-  settings: SettingsStateReducer
-
+  settings: SettingsStateReducer,
 };
 
-// initial state, accessor and mutator for supporting root-level
-// immutable data with redux-loop reducer combinator
-// const immutableStateContainer = Map();
-// const getImmutable = (child, key) => child ? child.get(key) : void 0;
-// const setImmutable = (child, key, value) => child.set(key, value);
+const namespacedReducer = combineReducers(reducers);
 
-const namespacedReducer = combineReducers(
-  reducers
-  // {},
-  // TODO: do we need the rest of these: ??
-  // immutableStateContainer,
-  // getImmutable,
-  // setImmutable
-);
-
+// TODO: this is a dangerous way to do rehydrate the store. If we change the
+// shape of our store, it will likely get overwritten by the snapshot store.
+// Find a way to validate the store that is loaded from async storage.
 export default function mainReducer(state, action) {
-  const nextState = action.type === RESET_STATE
-    ? namespacedReducer(action.payload, action)
-    : namespacedReducer(state || void 0, action);
+  const nextState =
+    action.type === RESET_STATE
+      ? namespacedReducer(action.payload, action)
+      : namespacedReducer(state || void 0, action);
 
   return nextState;
 }
@@ -52,6 +29,4 @@ export default function mainReducer(state, action) {
 // Global Selectors
 // this arrangement allows us to keep functions that depend on the structure
 // of the store in the same file where they're defined.
-export const getQualitiesList = (state) => {
-  return fromArenaState.getQualitiesList(state.arena);
-}
+export const getQualitiesList = state => fromArenaState.getQualitiesList(state.arena);
