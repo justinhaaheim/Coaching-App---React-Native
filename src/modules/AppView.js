@@ -26,7 +26,6 @@ class AppView extends Component {
 
       // TODO: Address issue here where snapshot is a different shapen than the
       // currently defined initial state.
-
       if (snapshot) {
         console.log('Resetting session state from snapshot.');
         dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
