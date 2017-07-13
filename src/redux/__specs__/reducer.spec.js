@@ -1,20 +1,19 @@
-/*eslint-disable max-nested-callbacks, no-unused-expressions*/
+/* eslint-disable max-nested-callbacks, no-unused-expressions*/
 
-import {initialState, dispatch} from '../../../test/state';
+import { initialState, dispatch } from '../../../support/test/state';
 import * as SessionState from '../../modules/session/SessionState';
+import { toggleButton } from '../../modules/arena/ArenaState';
 
 describe('reducer', () => {
   describe('mainReducer', () => {
-    it('resets state with RESET_STATE action', () => {
-      // Use auth.isLoggedIn as an example. isReady is changed in the
-      // SessionState reducer, so the entire store state is not reset.
-      const newState = initialState.setIn(['counter', 'value'], 9);
-      const resetStateAction = SessionState.resetSessionStateFromSnapshot(newState);
+    it('resets state with RESET_STATE action given a snapshot', () => {
+      const snapshotMock = dispatch(initialState, toggleButton(0));
+      const resetStateAction = SessionState.resetSessionStateFromSnapshot(snapshotMock);
 
-      const [nextState] = dispatch(initialState, resetStateAction);
+      const statePostReset = dispatch(initialState, resetStateAction);
 
-      expect(initialState.getIn(['counter', 'value'])).toBe(0);
-      expect(nextState.getIn(['counter', 'value'])).toBe(9);
+      expect(initialState.arena.buttons[0].selected).toBe(false);
+      expect(statePostReset.arena.buttons[0].selected).toBe(true);
     });
   });
 });
