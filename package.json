@@ -33,6 +33,15 @@
     "deployments": "code-push deployment ls empower-app",
     "pushrelease:ios": "code-push release-react empower-app ios"
   },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/support/test/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ]
+  },
   "dependencies": {
     "lodash": "^4.17.4",
     "lodash.random": "^3.2.0",
@@ -60,6 +69,7 @@
     "babel-preset-react-native": "^2.0.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
+    "enzyme": "^2.2.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.2.0",
@@ -69,9 +79,7 @@
     "eslint-plugin-react": "^7.1.0",
     "flow-bin": "^0.45.0",
     "jest": "^20.0.4",
-    "react-test-renderer": "^15.6.1"
-  },
-  "jest": {
-    "preset": "react-native"
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.5.2"
   }
 }
