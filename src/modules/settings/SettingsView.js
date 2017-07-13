@@ -1,17 +1,3 @@
-/**
-  Name: SettingsView
-
-  Description:
-
-  TODO:
-
-  Copyright (c) 2017-present Justin Haaheim
-
-  This file is subject to the terms and conditions defined in
-  file 'LICENSE', which is part of this source code package.
-
-********************************************** */
-
 import React, { PropTypes, Component } from 'react';
 import { StyleSheet } from 'react-native';
 import {
@@ -41,11 +27,13 @@ class SettingsView extends Component {
 
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
-    // liList: PropTypes.string.isRequired,
+    notificationsEnabled: PropTypes.bool.isRequired,
     settingsStateActions: PropTypes.shape({
       toggleArenaVersion: PropTypes.func.isRequired,
+      toggleNotifications: PropTypes.func.isRequired,
     }).isRequired,
     navigate: PropTypes.func.isRequired,
+    toggleNotifications: PropTypes.func.isRequired,
   };
 
   render() {
@@ -113,9 +101,7 @@ class SettingsView extends Component {
 
               <Separator style={{ backgroundColor: '#efeff3' }} bordered />
 
-              <ListItem icon onPress={() =>
-                this.props.navigation.navigate('Credits')
-              }>
+              <ListItem icon onPress={() => this.props.navigation.navigate('Credits')}>
                 <Left>
                   <Icon name="ios-ribbon" />
                 </Left>

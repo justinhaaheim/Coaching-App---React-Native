@@ -1,30 +1,30 @@
-import React, { Component, PropTypes } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { TextInput } from 'react-native';
 
-import { Container, Content, H3, Item, Input } from "native-base";
+import { Container, Content, H3 } from 'native-base';
 
 import { updateLi } from './SettingsState';
 
-
 class LiEntry extends Component {
-  // static propTypes = {
-  //   onUpdate: PropTypes.func.isRequired,
-  //   content: PropTypes.string.isRequired
-  // };
+  static propTypes = {
+    onUpdate: PropTypes.func.isRequired,
+    content: PropTypes.string.isRequired,
+  };
 
   render() {
     const { onUpdate, content } = this.props;
 
     return (
-        <View style={{ backgroundColor: 'transparent', padding: 25 }}>
+      <Container>
+        <Content style={{ backgroundColor: 'white', padding: 25 }}>
           <H3>Enter your Life's Intentions here, one per line:</H3>
           <TextInput
             style={{
-              height: '90%',
+              height: 400, // TODO: make this relative to screen size
               borderColor: '#777777',
-              borderWidth: 1,
+              borderWidth: 1.5,
               padding: 5,
               fontSize: 16,
             }}
@@ -33,7 +33,8 @@ class LiEntry extends Component {
             onChangeText={text => onUpdate(text)}
             value={content}
           />
-        </View>
+        </Content>
+      </Container>
     );
   }
 }
@@ -44,5 +45,5 @@ export default connect(
   }),
   dispatch => ({
     onUpdate: bindActionCreators(updateLi, dispatch),
-  })
+  }),
 )(LiEntry);
