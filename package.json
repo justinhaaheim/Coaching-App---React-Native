@@ -39,7 +39,7 @@
       "<rootDir>/support/test/setup.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|native-base-shoutem-theme|@shoutem|)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|native-base-shoutem-theme|@shoutem|react-native-vector-icons|native-base)"
     ]
   },
   "dependencies": {
@@ -79,6 +79,7 @@
     "eslint-plugin-react": "^7.1.0",
     "flow-bin": "^0.45.0",
     "jest": "^20.0.4",
+    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "rimraf": "^2.5.2"
   }

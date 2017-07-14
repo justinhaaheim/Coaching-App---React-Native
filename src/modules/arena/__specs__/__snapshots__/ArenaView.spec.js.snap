@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
         }
         virtual={undefined}
       >
-        QUALITIES OF BEING
+        Qualities of Being
       </Text>
       <View
         style={
@@ -237,7 +237,7 @@ exports[`renders correctly 1`] = `
         }
         virtual={undefined}
       >
-        ARENA QUESTIONS
+        Arena Questions
       </Text>
       <Text
         accessible={true}

@@ -1,19 +1,5 @@
-/**
- * Name:
- *
- * Description: This is the view (page/screen) that shows the Coaching Arena
- *
- * Exports:
- *
- * Copyright (c) 2017-present Justin Haaheim
- *
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE.txt', which is part of this source code package.
- */
-
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
-
 import { Button, Container, Content, H3, Text } from 'native-base';
 
 import { arena } from '../../config/data';
@@ -30,34 +16,28 @@ class ArenaView extends Component {
       resetArena: PropTypes.func.isRequired,
     }).isRequired,
     qualitiesList: PropTypes.array.isRequired,
+    // TODO: specify exact shape of buttons array
     buttons: PropTypes.array.isRequired,
-    // buttons: PropTypes.array([
-    //   PropTypes.shape({
-    //     name: PropTypes.string.isRequired,
-    //     selected: PropTypes.bool.isRequired,
-    //   }).isRequired,
-    // ]).isRequired,
   };
 
   formatQualitiesList(list) {
-    list = list.map(s => s.toLowerCase());
-    if (list.length == 0) {
+    const listLower = list.map(s => s.toLowerCase());
+    if (listLower.length === 0) {
       return '___';
-    } else if (list.length == 1) {
-      return list[0];
+    } else if (listLower.length === 1) {
+      return listLower[0];
     }
-    const last = list.pop();
-    return `${list.join(', ')} and ${last}`;
+    const last = listLower.pop();
+    return `${listLower.join(', ')} and ${last}`;
   }
 
   render() {
     const questions = this.props.mleEnabled ? arena.questions.mle : arena.questions.client;
     const { toggleButton, resetArena } = this.props.arenaStateActions;
-
     const { buttons } = this.props;
 
     const buttonComponents = buttons.map((b, index) =>
-      (<View style={styles.buttonWrapper} key={index}>
+      (<View style={styles.buttonWrapper} key={b.name}>
         <Button
           key={index}
           light={!b.selected}
@@ -75,7 +55,7 @@ class ArenaView extends Component {
     return (
       <Container style={styles.windowContainer}>
         <Content padder>
-          <H3 style={styles.h3}>QUALITIES OF BEING</H3>
+          <H3 style={styles.h3}>Qualities of Being</H3>
           <View
             style={{
               flex: 1,
@@ -105,11 +85,11 @@ class ArenaView extends Component {
             </View>
           </View>
 
-          <H3 style={styles.h3}>ARENA QUESTIONS</H3>
+          <H3 style={styles.h3}>Arena Questions</H3>
           <Text style={styles.bodyText}>
             1) {questions[1]}
           </Text>
-          <Text style={styles.bodyTextItalic} >
+          <Text style={styles.bodyTextItalic}>
             {`I am willing to be ${this.formatQualitiesList(this.props.qualitiesList)}.`}
           </Text>
           <Text style={styles.bodyText}>
@@ -130,7 +110,6 @@ class ArenaView extends Component {
   }
 }
 
-// TODO: Use react stylesheet library
 const styles = {
   buttonWrapper: {
     margin: 3,
@@ -160,46 +139,5 @@ const styles = {
     marginVertical: 12,
   },
 };
-
-// const styles = StyleSheet.create({
-//   title: {
-//     //        fontSize: BODY_TEXT_SIZE*1.6,
-//     color: "#555",
-//     marginVertical: 10
-//   },
-//   h3: {
-//     //        fontSize: BODY_TEXT_SIZE*1.3,
-//     marginBottom: 10,
-//     color: "#555"
-//   },
-//   textQuestion: {
-//     marginBottom: 10,
-//     // fontSize: BODY_TEXT_SIZE,
-//     color: "#555"
-//   },
-//   qField: {
-//     //        flex: 1,
-//     //        minHeight: BODY_TEXT_SIZE*4,
-//     paddingLeft: 18,
-//     //height: BODY_TEXT_SIZE*3,
-//     fontStyle: "italic",
-//     color: "#555"
-//   },
-//   copyright: {
-//     // fontSize: BODY_TEXT_SIZE*.8,
-//     fontStyle: "italic",
-//     marginTop: 30,
-//     color: "#888"
-//   },
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff"
-//     // alignItems: 'flex-start',
-//     // justifyContent: 'center',
-//   },
-//   scrollContainer: {
-//     padding: 25
-//   }
-// });
 
 export default ArenaView;
