@@ -54,7 +54,7 @@ class ArenaView extends Component {
 
     return (
       <Container style={styles.windowContainer}>
-        <Content padder>
+        <Content style={styles.contentContainer}>
           <H3 style={styles.h3}>Qualities of Being</H3>
           <View
             style={{
@@ -116,25 +116,29 @@ const styles = {
   },
   windowContent: {
     backgroundColor: 'white',
+
   },
   windowContainer: {
     backgroundColor: 'white',
   },
+  contentContainer: {
+    padding: 20,
+  },
   h3: {
-    marginTop: 18,
+    marginTop: 12,
     marginBottom: 8,
   },
   bodyText: {
-    fontSize: 15,
+    fontSize: 16,
     marginBottom: 8,
   },
   bodyTextItalic: {
-    fontSize: 15,
+    fontSize: 16,
     marginBottom: 8,
     fontStyle: 'italic',
   },
   copyright: {
-    fontSize: 15,
+    fontSize: 16,
     fontStyle: 'italic',
     marginVertical: 12,
   },
