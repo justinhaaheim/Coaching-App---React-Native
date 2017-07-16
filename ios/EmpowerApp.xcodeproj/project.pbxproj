@@ -81,6 +81,8 @@
 		E3D27849EA684841ABF90A47 /* Andale Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79DD1524CF8A441898883448 /* Andale Mono.ttf */; };
 		E3F2017B2DEF487B8E98AEC7 /* SanFrancisco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 661EF11FDF9F4B1B9D805A2A /* SanFrancisco.ttf */; };
 		E61B0A2A56C94063B7D5BE82 /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 567C74C6FDA548CCB23A2042 /* Arial Black.ttf */; };
+		E90BC5E01F1B4AED004B9473 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5DE1F1B4AED004B9473 /* Fabric.framework */; };
+		E90BC5E11F1B4AED004B9473 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E90BC5DF1F1B4AED004B9473 /* Crashlytics.framework */; };
 		E92A9AAD1EF6F81600BC7DCF /* libRNNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92A9AAB1EF6F78700BC7DCF /* libRNNotifications.a */; };
 		F10B14A302754791AC4887C2 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6448131701643E2ABD08175 /* Zocial.ttf */; };
 		F1B654895CAB482EBD2DFAE2 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDA6171205D54FFFADB4A7B8 /* Rubik-Italic.ttf */; };
@@ -371,6 +373,8 @@
 		E4C8A004D2204A7E920B37BA /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../node_modules/native-base/Fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		E801D98EF7004D37A214F2C7 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		E8A5AFE025224C24818BB65A /* Comic Sans MS.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Comic Sans MS.ttf"; path = "../node_modules/native-base/Fonts/Comic Sans MS.ttf"; sourceTree = "<group>"; };
+		E90BC5DE1F1B4AED004B9473 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E90BC5DF1F1B4AED004B9473 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNotifications.xcodeproj; path = "../node_modules/react-native-notifications/RNNotifications/RNNotifications.xcodeproj"; sourceTree = "<group>"; };
 		E92A9AAE1EF736ED00BC7DCF /* EmpowerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EmpowerApp.entitlements; path = EmpowerApp/EmpowerApp.entitlements; sourceTree = "<group>"; };
 		EB1284A186AA4DCA8DE0E79D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
@@ -403,11 +407,13 @@
 				01DC712D1E3C15570081C922 /* libRCTAnimation.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				E90BC5E11F1B4AED004B9473 /* Crashlytics.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				87E9106C2DDB4EE783D15230 /* libRNVectorIcons.a in Frameworks */,
 				A183F76DDDF440A99693AEC9 /* libCodePush.a in Frameworks */,
+				E90BC5E01F1B4AED004B9473 /* Fabric.framework in Frameworks */,
 				A684894B75934A219262E8FE /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +661,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				E90BC5DE1F1B4AED004B9473 /* Fabric.framework */,
+				E90BC5DF1F1B4AED004B9473 /* Crashlytics.framework */,
 				13B07FAE1A68108700A75B9A /* EmpowerApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* EmpowerAppTests */,
@@ -730,6 +738,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				E90BC5C11F1B4A6C004B9473 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1196,6 +1205,19 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		E90BC5C11F1B4A6C004B9473 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 1732b6ee599f635247d7472292f43f7b2fd502f0 5fd394c9a20efe1d784ba56db2aef3f1d83b73d00971879e47323f313e1bc3d0";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1329,6 +1351,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = UFL7WNR5T5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1361,6 +1387,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UFL7WNR5T5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1660,6 +1690,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UFL7WNR5T5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

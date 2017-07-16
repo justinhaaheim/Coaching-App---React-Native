@@ -26,6 +26,7 @@
     "lint": "eslint src test",
     "cleanup": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache verify",
     "cleanmodules": "rm -rf node_modules && yarn",
+    "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache verify",
     "flow:start": "flow start",
     "flow:stop": "flow stop",
     "flow:status": "flow status",
