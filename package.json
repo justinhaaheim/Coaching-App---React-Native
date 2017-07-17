@@ -1,6 +1,6 @@
 {
   "name": "EmpowerApp",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "author": "Justin Haaheim",
   "description": "",
@@ -51,6 +51,7 @@
     "react": "~15.4.1",
     "react-native": "0.42.3",
     "react-native-code-push": "^3.0.0-beta",
+    "react-native-fabric": "^0.4.1",
     "react-native-notifications": "^1.1.11",
     "react-native-vector-icons": "^4.2.0",
     "react-navigation": "^1.0.0-beta.11",

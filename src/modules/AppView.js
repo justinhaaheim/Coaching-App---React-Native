@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
 import throttle from 'lodash.throttle';
+import { Answers } from 'react-native-fabric';
 
 import store from '../redux/store';
 import AppNavigator from './navigator/Navigator';
@@ -19,6 +20,8 @@ class AppView extends Component {
   };
 
   componentDidMount() {
+    Answers.logCustom('AppView mounted');
+
     snapshotUtil.resetSnapshot().then((snapshot) => {
       const { dispatch } = this.props;
 
