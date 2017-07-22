@@ -45,11 +45,11 @@ const SettingsNavigator = StackNavigator({
   },
 });
 
-const AppTabNavigator = TabNavigator(
+const AppNavigator = TabNavigator(
   {
     Arena: {
       screen: StackNavigator({
-        default: {
+        Arena: {
           screen: ArenaViewContainer,
           navigationOptions: {
             headerStyle: {
@@ -66,7 +66,7 @@ const AppTabNavigator = TabNavigator(
 
     Li: {
       screen: StackNavigator({
-        default: {
+        Li: {
           screen: LiViewContainer,
           navigationOptions: {
             headerStyle: {
@@ -127,4 +127,4 @@ const AppTabNavigator = TabNavigator(
 //
 // export default AppIntroNavigator;
 
-export default AppTabNavigator;
+export default AppNavigator;

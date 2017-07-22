@@ -3,7 +3,7 @@ import { View, StyleSheet, ActivityIndicator } from 'react-native';
 import throttle from 'lodash.throttle';
 
 import store from '../redux/store';
-import AppNavigator from './navigator/Navigator';
+import NavigatorViewContainer from './navigator/NavigatorViewContainer';
 import NotifierViewContainer from './notifier/NotifierViewContainer';
 import * as snapshotUtil from '../utils/snapshot';
 import * as SessionStateActions from '../modules/session/SessionState';
@@ -21,8 +21,6 @@ class AppView extends Component {
   componentDidMount() {
     snapshotUtil.resetSnapshot().then((snapshot) => {
       const { dispatch } = this.props;
-
-      console.log('Snapshot:', snapshot);
 
       // TODO: Address issue here where snapshot is a different shapen than the
       // currently defined initial state.
@@ -47,23 +45,17 @@ class AppView extends Component {
   render() {
     if (!this.props.isReady) {
       return (
-        <View style={{
-          flex: 1,
-        }}
-        >
+        <View style={{ flex: 1 }}>
           <ActivityIndicator style={styles.centered} />
         </View>
       );
     }
 
     return (
-      <View style={{
-        flex: 1,
-      }}
-      >
-        <AppNavigator />
-        <DeveloperMenu />
+      <View style={{ flex: 1 }}>
+        <NavigatorViewContainer />
         <NotifierViewContainer />
+        {__DEV__ && <DeveloperMenu />}
       </View>
     );
   }

@@ -3,9 +3,12 @@ import { combineReducers } from 'redux';
 import SessionStateReducer, { RESET_STATE } from '../modules/session/SessionState';
 import SettingsStateReducer from '../modules/settings/SettingsState';
 import ArenaStateReducer, * as fromArenaState from '../modules/arena/ArenaState';
+import NavigatorStateReducer from '../modules/navigator/NavigatorState';
 
 const reducers = {
   arena: ArenaStateReducer,
+
+  navigatorState: NavigatorStateReducer,
 
   session: SessionStateReducer,
 
