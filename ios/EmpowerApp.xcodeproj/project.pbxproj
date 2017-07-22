@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -1907,13 +1906,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
-				DEFAULT_CONFIGURATION = Debug;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)-$(PLATFORM_NAME)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1935,10 +1930,8 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications/**",
-					"$(FRAMEWORK_SEARCH_PATHS)/include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)/**";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -1967,13 +1960,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "Zh4Dik__5Hj33Bf26glu-dBMtsQS1e4a9bd3-393a-415f-a92d-b8d3c6d780b1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;
-				DEFAULT_CONFIGURATION = Release;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)-$(PLATFORM_NAME)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1988,10 +1977,8 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications/**",
-					"$(FRAMEWORK_SEARCH_PATHS)/include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
@@ -1999,7 +1986,7 @@
 			};
 			name = Release;
 		};
-		E9AE0FCF1F23F03F00965947 /* Staging */ = {
+		E984E3B61F0B844100199269 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2020,13 +2007,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "nSXTerVFcxEcaww1BUxOEDs5P8Pp1e4a9bd3-393a-415f-a92d-b8d3c6d780b1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CONFIGURATION_TEMP_DIR = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = YES;
-				DEFAULT_CONFIGURATION = Release;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILD_DIR)/$(DEFAULT_CONFIGURATION)-$(PLATFORM_NAME)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -2041,18 +2025,17 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications/**",
-					"$(FRAMEWORK_SEARCH_PATHS)/include/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)/**";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Staging;
 		};
-		E9AE0FD01F23F03F00965947 /* Staging */ = {
+		E984E3B71F0B844100199269 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1106F0EF2DF7EAB1249973CA /* Pods-EmpowerApp.staging.xcconfig */;
 			buildSettings = {
@@ -2088,7 +2071,7 @@
 			};
 			name = Staging;
 		};
-		E9AE0FD11F23F03F00965947 /* Staging */ = {
+		E984E3B81F0B844100199269 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8033A22D5C1997424C0262B0 /* Pods-EmpowerAppTests.staging.xcconfig */;
 			buildSettings = {
@@ -2123,7 +2106,7 @@
 			};
 			name = Staging;
 		};
-		E9AE0FD21F23F03F00965947 /* Staging */ = {
+		E984E3B91F0B844100199269 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6486307ACF8DE1994F8AE9BA /* Pods-EmpowerApp-tvOS.staging.xcconfig */;
 			buildSettings = {
@@ -2165,7 +2148,7 @@
 			};
 			name = Staging;
 		};
-		E9AE0FD31F23F03F00965947 /* Staging */ = {
+		E984E3BA1F0B844100199269 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80D26BA6F7F419126FE98BE4 /* Pods-EmpowerApp-tvOSTests.staging.xcconfig */;
 			buildSettings = {
@@ -2202,7 +2185,7 @@
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
 				00E356F71AD99517003FC87E /* Release */,
-				E9AE0FD11F23F03F00965947 /* Staging */,
+				E984E3B81F0B844100199269 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2212,7 +2195,7 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
-				E9AE0FD01F23F03F00965947 /* Staging */,
+				E984E3B71F0B844100199269 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2222,7 +2205,7 @@
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
 				2D02E4981E0B4A5E006451C7 /* Release */,
-				E9AE0FD21F23F03F00965947 /* Staging */,
+				E984E3B91F0B844100199269 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2232,7 +2215,7 @@
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
 				2D02E49A1E0B4A5E006451C7 /* Release */,
-				E9AE0FD31F23F03F00965947 /* Staging */,
+				E984E3BA1F0B844100199269 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2242,7 +2225,7 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
-				E9AE0FCF1F23F03F00965947 /* Staging */,
+				E984E3B61F0B844100199269 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
