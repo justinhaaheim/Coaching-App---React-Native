@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		166EFE1EE7131C1DB13D78E3179C169E /* Pods-EmpowerAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A6C3DD1B27FD366EFD2D581E7619A /* Pods-EmpowerAppTests-dummy.m */; };
+		3435B35573D85FD485A0AE70C90A46BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		50F5D039E9EEB53E9F7C266D7700EF5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */; };
+		758A29EBBFD99F58C821E4C172780F6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		8A721736311AD32947759D2DF01A9620 /* Pods-EmpowerApp-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F0F78C0A74F0E9DDE905FF27CFA7F8 /* Pods-EmpowerApp-tvOSTests-dummy.m */; };
+		BEEA160AD953785E04845192756F2528 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */; };
+		CBDB89A2AFD2C724545ECFC5CF8DEB54 /* Pods-EmpowerApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 097BFD807D147C48D822CB9264BFEF96 /* Pods-EmpowerApp-dummy.m */; };
+		F65C2C3CC3243B28A1B4894434C2F1B3 /* Pods-EmpowerApp-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AEB199EFCA9D9F520B37EBBC260AC4 /* Pods-EmpowerApp-tvOS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0056336EF72F1D1020754CB92A1B333F /* Pods-EmpowerAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerAppTests-resources.sh"; sourceTree = "<group>"; };
+		089D82B8F707649AEB9F6E03725EB0A8 /* Pods-EmpowerApp-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EmpowerApp-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		097BFD807D147C48D822CB9264BFEF96 /* Pods-EmpowerApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EmpowerApp-dummy.m"; sourceTree = "<group>"; };
+		0F0D003FB79187A2093265779C2B7C80 /* libPods-EmpowerApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-EmpowerApp-tvOS.a"; path = "libPods-EmpowerApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1458C75901BFAE40A87B32DAD4D15D4C /* Pods-EmpowerApp-tvOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOS.staging.xcconfig"; sourceTree = "<group>"; };
+		1EE5D75B0BA96E8BCF37FE4D7E10377F /* Pods-EmpowerApp-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		21E9652EFD3DEA50A84B71B201984C4E /* Pods-EmpowerAppTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerAppTests.staging.xcconfig"; sourceTree = "<group>"; };
+		25F0F78C0A74F0E9DDE905FF27CFA7F8 /* Pods-EmpowerApp-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EmpowerApp-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		264CA26A0DF8C459333DD929869E891C /* MobileCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCenter.framework; path = "MobileCenter-SDK-iOS/MobileCenter.framework"; sourceTree = "<group>"; };
+		2CF640843E2CD42807F56AB7125768B4 /* Pods-EmpowerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp.release.xcconfig"; sourceTree = "<group>"; };
+		35D333E82AE08B9E4C90D4741A59A3E2 /* Pods-EmpowerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3E632A0391CCCCF7524729A90A47ADF1 /* Pods-EmpowerApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-frameworks.sh"; sourceTree = "<group>"; };
+		3EA87329D42EF3AC751179751F3AE3DD /* libPods-EmpowerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-EmpowerApp.a"; path = "libPods-EmpowerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1C8587ED97AE83457A5B18672D2A72 /* Pods-EmpowerApp-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmpowerApp-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		418CE6C9A672ADD6667A8E65F7F2068C /* Pods-EmpowerAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		41E86140C9F68BBEC5209A8CEA5DFF95 /* Pods-EmpowerApp-tvOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOSTests.staging.xcconfig"; sourceTree = "<group>"; };
+		5793EAC593F3ED0EC138531CF852C142 /* Pods-EmpowerApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0448DC7BC8578EA1BE63FF6185067E /* MobileCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCenterAnalytics.framework; path = "MobileCenter-SDK-iOS/MobileCenterAnalytics.framework"; sourceTree = "<group>"; };
+		5DD766BDC06E3AD3664A4649D04E7AFA /* libPods-EmpowerApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-EmpowerApp-tvOSTests.a"; path = "libPods-EmpowerApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FDE8BD8CFFF7F9E330AC716F8CCE79 /* RNMobileCenterShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RNMobileCenterShared.framework; path = RNMobileCenterShared/RNMobileCenterShared.framework; sourceTree = "<group>"; };
+		713A6C3DD1B27FD366EFD2D581E7619A /* Pods-EmpowerAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EmpowerAppTests-dummy.m"; sourceTree = "<group>"; };
+		71EAEF80E8B9E16F11D011A74E03A47C /* Pods-EmpowerApp-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmpowerApp-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7ADE4E105FA1269A135F4619EA85AAED /* Pods-EmpowerApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmpowerApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A87C353A86A621106CE0E2E859E099A /* Pods-EmpowerApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9F3171FF21E9978D5E8AA054F8A0C745 /* Pods-EmpowerApp.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp.staging.xcconfig"; sourceTree = "<group>"; };
+		A19B3D3976D891F8305CF3008F77CD47 /* Pods-EmpowerApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A4B1794DCE924DA5A795EEEB18686311 /* Pods-EmpowerApp-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EmpowerApp-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		A9D08D97E8E64BAD4E72570545D3DD61 /* libPods-EmpowerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-EmpowerAppTests.a"; path = "libPods-EmpowerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDCBB6D951CDFDC838D70CE2717F9FE /* Pods-EmpowerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACCA106292A4BD9EEC1866ADE68EC628 /* Pods-EmpowerApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-resources.sh"; sourceTree = "<group>"; };
+		B3AEB199EFCA9D9F520B37EBBC260AC4 /* Pods-EmpowerApp-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EmpowerApp-tvOS-dummy.m"; sourceTree = "<group>"; };
+		B6A2119CEE9ED167B8152E14ED1DBC02 /* Pods-EmpowerAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EmpowerAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4BC3C01B871016542BC46175F0B1F03 /* Pods-EmpowerApp-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		CC1A4EDDDF2929C243133665B6881B42 /* Pods-EmpowerApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EmpowerApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		D6876677593D2801194008C66E330CF0 /* Pods-EmpowerApp-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		D79C151CC4BB8011FDD1E033358A97BC /* Pods-EmpowerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		D88D4FE4CFDFE82B8F66E078D1439338 /* MobileCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCenterCrashes.framework; path = "MobileCenter-SDK-iOS/MobileCenterCrashes.framework"; sourceTree = "<group>"; };
+		DBC7EBA11A7B2BB15D0D2ADF12740537 /* Pods-EmpowerApp-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EmpowerApp-tvOS-resources.sh"; sourceTree = "<group>"; };
+		E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F9BB55294BB7D199E544C3D117F433FE /* Pods-EmpowerApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EmpowerApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF7982DA0ECE3B7C7B4CAA7D9FDF1E63 /* Pods-EmpowerAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EmpowerAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		024804278134DA6C681FEE40B1328D0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEEA160AD953785E04845192756F2528 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		226D5C7793E93259861256E0579DA1D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				758A29EBBFD99F58C821E4C172780F6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705FCC8D5550C1783C9488099C7596FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F5D039E9EEB53E9F7C266D7700EF5E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2885F945C60A46B7E58A0647B730A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3435B35573D85FD485A0AE70C90A46BA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02D3963D3119E59AD701CAFCB2033BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88D4FE4CFDFE82B8F66E078D1439338 /* MobileCenterCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C8F650681EDBD4EE7B75937B83B734E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4387F1896A89C89C4A16973E91960BFA /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		12BE5A03A1B2CE05484D33D56667A1B3 /* Pods-EmpowerApp-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1C8587ED97AE83457A5B18672D2A72 /* Pods-EmpowerApp-tvOSTests-acknowledgements.markdown */,
+				089D82B8F707649AEB9F6E03725EB0A8 /* Pods-EmpowerApp-tvOSTests-acknowledgements.plist */,
+				25F0F78C0A74F0E9DDE905FF27CFA7F8 /* Pods-EmpowerApp-tvOSTests-dummy.m */,
+				D6876677593D2801194008C66E330CF0 /* Pods-EmpowerApp-tvOSTests-frameworks.sh */,
+				C4BC3C01B871016542BC46175F0B1F03 /* Pods-EmpowerApp-tvOSTests-resources.sh */,
+				5793EAC593F3ED0EC138531CF852C142 /* Pods-EmpowerApp-tvOSTests.debug.xcconfig */,
+				F9BB55294BB7D199E544C3D117F433FE /* Pods-EmpowerApp-tvOSTests.release.xcconfig */,
+				41E86140C9F68BBEC5209A8CEA5DFF95 /* Pods-EmpowerApp-tvOSTests.staging.xcconfig */,
+			);
+			name = "Pods-EmpowerApp-tvOSTests";
+			path = "Target Support Files/Pods-EmpowerApp-tvOSTests";
+			sourceTree = "<group>";
+		};
+		2D153D9E2B8E3256955127CE47BB8CF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EA87329D42EF3AC751179751F3AE3DD /* libPods-EmpowerApp.a */,
+				0F0D003FB79187A2093265779C2B7C80 /* libPods-EmpowerApp-tvOS.a */,
+				5DD766BDC06E3AD3664A4649D04E7AFA /* libPods-EmpowerApp-tvOSTests.a */,
+				A9D08D97E8E64BAD4E72570545D3DD61 /* libPods-EmpowerAppTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D48912B8B70552CB7E69D87039E4C2C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4387F1896A89C89C4A16973E91960BFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				264CA26A0DF8C459333DD929869E891C /* MobileCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		605EE7388FD97C93161B5D5ED63407BD /* Pods-EmpowerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF7982DA0ECE3B7C7B4CAA7D9FDF1E63 /* Pods-EmpowerAppTests-acknowledgements.markdown */,
+				B6A2119CEE9ED167B8152E14ED1DBC02 /* Pods-EmpowerAppTests-acknowledgements.plist */,
+				713A6C3DD1B27FD366EFD2D581E7619A /* Pods-EmpowerAppTests-dummy.m */,
+				418CE6C9A672ADD6667A8E65F7F2068C /* Pods-EmpowerAppTests-frameworks.sh */,
+				0056336EF72F1D1020754CB92A1B333F /* Pods-EmpowerAppTests-resources.sh */,
+				ABDCBB6D951CDFDC838D70CE2717F9FE /* Pods-EmpowerAppTests.debug.xcconfig */,
+				D79C151CC4BB8011FDD1E033358A97BC /* Pods-EmpowerAppTests.release.xcconfig */,
+				21E9652EFD3DEA50A84B71B201984C4E /* Pods-EmpowerAppTests.staging.xcconfig */,
+			);
+			name = "Pods-EmpowerAppTests";
+			path = "Target Support Files/Pods-EmpowerAppTests";
+			sourceTree = "<group>";
+		};
+		7BB62F2734812856D646B1FAE653D67B /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				02D3963D3119E59AD701CAFCB2033BB0 /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+		7D84A45362D1C7A8A5F39A511FEE7C6C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D5353890CB76E6BB98307E682817EA29 /* Pods-EmpowerApp */,
+				BB60F1794DBB3C3115DDB8828872EFAB /* Pods-EmpowerApp-tvOS */,
+				12BE5A03A1B2CE05484D33D56667A1B3 /* Pods-EmpowerApp-tvOSTests */,
+				605EE7388FD97C93161B5D5ED63407BD /* Pods-EmpowerAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				BFBE4D750AD608E527628562FD3CE2A3 /* Pods */,
+				2D153D9E2B8E3256955127CE47BB8CF7 /* Products */,
+				7D84A45362D1C7A8A5F39A511FEE7C6C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8105DB5B47CAD8C77F1C062E174212B5 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D087AF4336A175C2C641790A26FEE5DF /* Frameworks */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		92FB20EF272686758C16E3413C088C00 /* RNMobileCenterShared */ = {
+			isa = PBXGroup;
+			children = (
+				9A83E2945B877C24308F99246FBEFCF4 /* Frameworks */,
+			);
+			name = RNMobileCenterShared;
+			path = RNMobileCenterShared;
+			sourceTree = "<group>";
+		};
+		9A83E2945B877C24308F99246FBEFCF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66FDE8BD8CFFF7F9E330AC716F8CCE79 /* RNMobileCenterShared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40E69F54529E0CEE3EFB3A6D66970E1D /* iOS */,
+				B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B95AAC6DF73A3AFC4B77A363C70E8A09 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				E89CCC94F17EC560C78ED506CF416FAF /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		BB60F1794DBB3C3115DDB8828872EFAB /* Pods-EmpowerApp-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				71EAEF80E8B9E16F11D011A74E03A47C /* Pods-EmpowerApp-tvOS-acknowledgements.markdown */,
+				A4B1794DCE924DA5A795EEEB18686311 /* Pods-EmpowerApp-tvOS-acknowledgements.plist */,
+				B3AEB199EFCA9D9F520B37EBBC260AC4 /* Pods-EmpowerApp-tvOS-dummy.m */,
+				1EE5D75B0BA96E8BCF37FE4D7E10377F /* Pods-EmpowerApp-tvOS-frameworks.sh */,
+				DBC7EBA11A7B2BB15D0D2ADF12740537 /* Pods-EmpowerApp-tvOS-resources.sh */,
+				A19B3D3976D891F8305CF3008F77CD47 /* Pods-EmpowerApp-tvOS.debug.xcconfig */,
+				8A87C353A86A621106CE0E2E859E099A /* Pods-EmpowerApp-tvOS.release.xcconfig */,
+				1458C75901BFAE40A87B32DAD4D15D4C /* Pods-EmpowerApp-tvOS.staging.xcconfig */,
+			);
+			name = "Pods-EmpowerApp-tvOS";
+			path = "Target Support Files/Pods-EmpowerApp-tvOS";
+			sourceTree = "<group>";
+		};
+		BFBE4D750AD608E527628562FD3CE2A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D475BD27B7EA251F3A9187F2B27E749A /* MobileCenter */,
+				92FB20EF272686758C16E3413C088C00 /* RNMobileCenterShared */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D087AF4336A175C2C641790A26FEE5DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0448DC7BC8578EA1BE63FF6185067E /* MobileCenterAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D475BD27B7EA251F3A9187F2B27E749A /* MobileCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8105DB5B47CAD8C77F1C062E174212B5 /* Analytics */,
+				0C8F650681EDBD4EE7B75937B83B734E /* Core */,
+				7BB62F2734812856D646B1FAE653D67B /* Crashes */,
+			);
+			name = MobileCenter;
+			path = MobileCenter;
+			sourceTree = "<group>";
+		};
+		D5353890CB76E6BB98307E682817EA29 /* Pods-EmpowerApp */ = {
+			isa = PBXGroup;
+			children = (
+				7ADE4E105FA1269A135F4619EA85AAED /* Pods-EmpowerApp-acknowledgements.markdown */,
+				CC1A4EDDDF2929C243133665B6881B42 /* Pods-EmpowerApp-acknowledgements.plist */,
+				097BFD807D147C48D822CB9264BFEF96 /* Pods-EmpowerApp-dummy.m */,
+				3E632A0391CCCCF7524729A90A47ADF1 /* Pods-EmpowerApp-frameworks.sh */,
+				ACCA106292A4BD9EEC1866ADE68EC628 /* Pods-EmpowerApp-resources.sh */,
+				35D333E82AE08B9E4C90D4741A59A3E2 /* Pods-EmpowerApp.debug.xcconfig */,
+				2CF640843E2CD42807F56AB7125768B4 /* Pods-EmpowerApp.release.xcconfig */,
+				9F3171FF21E9978D5E8AA054F8A0C745 /* Pods-EmpowerApp.staging.xcconfig */,
+			);
+			name = "Pods-EmpowerApp";
+			path = "Target Support Files/Pods-EmpowerApp";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A24B719A4E6A7328B3C3A53E847B88A /* Pods-EmpowerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB11B37E1C6FDA4F0B2C1FB51C92E9B0 /* Build configuration list for PBXNativeTarget "Pods-EmpowerAppTests" */;
+			buildPhases = (
+				36A9C9171CEA32812FF71452726DA09B /* Sources */,
+				A2885F945C60A46B7E58A0647B730A3F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EmpowerAppTests";
+			productName = "Pods-EmpowerAppTests";
+			productReference = A9D08D97E8E64BAD4E72570545D3DD61 /* libPods-EmpowerAppTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D6E6FCCBC094F03ECB129965DB5D3434 /* Pods-EmpowerApp-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 727DA3898B8254091A7FB20F98FBC268 /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp-tvOSTests" */;
+			buildPhases = (
+				9D1EB7D8CD9EF09DA6C60CC3AA248434 /* Sources */,
+				226D5C7793E93259861256E0579DA1D4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EmpowerApp-tvOSTests";
+			productName = "Pods-EmpowerApp-tvOSTests";
+			productReference = 5DD766BDC06E3AD3664A4649D04E7AFA /* libPods-EmpowerApp-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7A7C1C2F11AAB4EE9BD22BEF47DE60E /* Pods-EmpowerApp-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 094ACDD122E8B18023B8374EE2776E0E /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp-tvOS" */;
+			buildPhases = (
+				B7DBEB95BB429F1829A62B85CE6F086F /* Sources */,
+				024804278134DA6C681FEE40B1328D0F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EmpowerApp-tvOS";
+			productName = "Pods-EmpowerApp-tvOS";
+			productReference = 0F0D003FB79187A2093265779C2B7C80 /* libPods-EmpowerApp-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECD4D2249FEE84F2C594AA57D991B34E /* Pods-EmpowerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8784477B8F7B0737D96D5D5380454866 /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp" */;
+			buildPhases = (
+				B3ECF2FA5D6FC5E8C5A9AA38212556C0 /* Sources */,
+				705FCC8D5550C1783C9488099C7596FE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EmpowerApp";
+			productName = "Pods-EmpowerApp";
+			productReference = 3EA87329D42EF3AC751179751F3AE3DD /* libPods-EmpowerApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2D153D9E2B8E3256955127CE47BB8CF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECD4D2249FEE84F2C594AA57D991B34E /* Pods-EmpowerApp */,
+				E7A7C1C2F11AAB4EE9BD22BEF47DE60E /* Pods-EmpowerApp-tvOS */,
+				D6E6FCCBC094F03ECB129965DB5D3434 /* Pods-EmpowerApp-tvOSTests */,
+				3A24B719A4E6A7328B3C3A53E847B88A /* Pods-EmpowerAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36A9C9171CEA32812FF71452726DA09B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166EFE1EE7131C1DB13D78E3179C169E /* Pods-EmpowerAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D1EB7D8CD9EF09DA6C60CC3AA248434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A721736311AD32947759D2DF01A9620 /* Pods-EmpowerApp-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3ECF2FA5D6FC5E8C5A9AA38212556C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDB89A2AFD2C724545ECFC5CF8DEB54 /* Pods-EmpowerApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7DBEB95BB429F1829A62B85CE6F086F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65C2C3CC3243B28A1B4894434C2F1B3 /* Pods-EmpowerApp-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		092C17745BB14CE767719D2B5E260F37 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1458C75901BFAE40A87B32DAD4D15D4C /* Pods-EmpowerApp-tvOS.staging.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Staging;
+		};
+		3800AE7561574F05FC27313185661A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D79C151CC4BB8011FDD1E033358A97BC /* Pods-EmpowerAppTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		559E495D337A49F7BDAFACD3D926E310 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3171FF21E9978D5E8AA054F8A0C745 /* Pods-EmpowerApp.staging.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Staging;
+		};
+		59FE7FFF63A504DBC2D7E65127FD2AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19B3D3976D891F8305CF3008F77CD47 /* Pods-EmpowerApp-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		5BA316A64ED601C007926423BE6042BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF640843E2CD42807F56AB7125768B4 /* Pods-EmpowerApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		772247E45ACC5B75C64584D93DB3B9EB /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_STAGING=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		79F7C36BA3BFF5F4FD39E4E3E93D6E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D333E82AE08B9E4C90D4741A59A3E2 /* Pods-EmpowerApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		828355CD5572557ABC37FDC9A280B202 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E86140C9F68BBEC5209A8CEA5DFF95 /* Pods-EmpowerApp-tvOSTests.staging.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Staging;
+		};
+		85A7353BF878AFD43C8C164CA99F039B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9BB55294BB7D199E544C3D117F433FE /* Pods-EmpowerApp-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		BDA36289136462A27EDE1143CD1F4F4F /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21E9652EFD3DEA50A84B71B201984C4E /* Pods-EmpowerAppTests.staging.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Staging;
+		};
+		D2F1B31F31084C010B83B914C1798C96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABDCBB6D951CDFDC838D70CE2717F9FE /* Pods-EmpowerAppTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E0A706AE29C8C9E8796177F51A82E27D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5793EAC593F3ED0EC138531CF852C142 /* Pods-EmpowerApp-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		E2E29BEC10317BB2B1AB42A4E12CB423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		EC327A2C61546A0B08C35B6D371E621B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF42F4BB10A2A6F0F85D6B594BC0646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A87C353A86A621106CE0E2E859E099A /* Pods-EmpowerApp-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		094ACDD122E8B18023B8374EE2776E0E /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59FE7FFF63A504DBC2D7E65127FD2AC2 /* Debug */,
+				FAF42F4BB10A2A6F0F85D6B594BC0646 /* Release */,
+				092C17745BB14CE767719D2B5E260F37 /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E29BEC10317BB2B1AB42A4E12CB423 /* Debug */,
+				EC327A2C61546A0B08C35B6D371E621B /* Release */,
+				772247E45ACC5B75C64584D93DB3B9EB /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		727DA3898B8254091A7FB20F98FBC268 /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0A706AE29C8C9E8796177F51A82E27D /* Debug */,
+				85A7353BF878AFD43C8C164CA99F039B /* Release */,
+				828355CD5572557ABC37FDC9A280B202 /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8784477B8F7B0737D96D5D5380454866 /* Build configuration list for PBXNativeTarget "Pods-EmpowerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F7C36BA3BFF5F4FD39E4E3E93D6E86 /* Debug */,
+				5BA316A64ED601C007926423BE6042BA /* Release */,
+				559E495D337A49F7BDAFACD3D926E310 /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB11B37E1C6FDA4F0B2C1FB51C92E9B0 /* Build configuration list for PBXNativeTarget "Pods-EmpowerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2F1B31F31084C010B83B914C1798C96 /* Debug */,
+				3800AE7561574F05FC27313185661A02 /* Release */,
+				BDA36289136462A27EDE1143CD1F4F4F /* Staging */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

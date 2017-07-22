@@ -3766,6 +3766,36 @@ minimist@^1.1.0, minimist@^1.1.1, minimist@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
+mobile-center-analytics@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/mobile-center-analytics/-/mobile-center-analytics-0.7.0.tgz#2d8986569fea31b6e7bb2983c5421a17e810a8ee"
+  dependencies:
+    mobile-center-link-scripts "0.7.0"
+
+mobile-center-crashes@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/mobile-center-crashes/-/mobile-center-crashes-0.7.0.tgz#003fe6ea2c020b44af265fcd748317a578aefdb3"
+  dependencies:
+    mobile-center-link-scripts "0.7.0"
+
+mobile-center-link-scripts@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/mobile-center-link-scripts/-/mobile-center-link-scripts-0.7.0.tgz#d232ae4569715b21d3213a55b54a4c0149ad83cc"
+  dependencies:
+    debug "^2.2.0"
+    glob "^5.0.15"
+    inquirer "1.1.2"
+    mkdirp "^0.5.1"
+    plist "1.2.0"
+    which "^1.2.11"
+    xcode "^0.8.9"
+
+mobile-center@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/mobile-center/-/mobile-center-0.7.0.tgz#e0415a37a58c22c059f8c30bd8e73a49654966e8"
+  dependencies:
+    mobile-center-link-scripts "0.7.0"
+
 moment@2.x.x:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
@@ -5604,7 +5634,7 @@ which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
 
-which@^1.2.12, which@^1.2.9:
+which@^1.2.11, which@^1.2.12, which@^1.2.9:
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
   dependencies:
