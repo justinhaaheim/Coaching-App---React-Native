@@ -1,7 +1,5 @@
 # Empower App :high_brightness:
 
-![Build status](https://build.mobile.azure.com/v0.1/apps/428c193b-55d8-43f8-8c41-8bdba2f7a7f4/branches/master/badge)
-
 A mobile app built in React Native + Redux that provides leadership coaching resources.
 
 <kbd>
