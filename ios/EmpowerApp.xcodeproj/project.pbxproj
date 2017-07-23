@@ -244,6 +244,34 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNNotifications;
 		};
+		E93852291F241F8500DC34D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93852211F241F8400DC34D5 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3EA87329D42EF3AC751179751F3AE3DD;
+			remoteInfo = "Pods-EmpowerApp";
+		};
+		E938522B1F241F8500DC34D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93852211F241F8400DC34D5 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F0D003FB79187A2093265779C2B7C80;
+			remoteInfo = "Pods-EmpowerApp-tvOS";
+		};
+		E938522D1F241F8500DC34D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93852211F241F8400DC34D5 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DD766BDC06E3AD3664A4649D04E7AFA;
+			remoteInfo = "Pods-EmpowerApp-tvOSTests";
+		};
+		E938522F1F241F8500DC34D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93852211F241F8400DC34D5 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9D08D97E8E64BAD4E72570545D3DD61;
+			remoteInfo = "Pods-EmpowerAppTests";
+		};
 		E97AF9551EB8531C0008EB21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
@@ -425,6 +453,7 @@
 		E8F04FF447BB55F2B2CA042D /* Pods-EmpowerApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmpowerApp-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmpowerApp-tvOSTests/Pods-EmpowerApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E92A9A8D1EF6F78700BC7DCF /* RNNotifications.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNotifications.xcodeproj; path = "../node_modules/react-native-notifications/RNNotifications/RNNotifications.xcodeproj"; sourceTree = "<group>"; };
 		E92A9AAE1EF736ED00BC7DCF /* EmpowerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EmpowerApp.entitlements; path = EmpowerApp/EmpowerApp.entitlements; sourceTree = "<group>"; };
+		E93852211F241F8400DC34D5 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		EB1284A186AA4DCA8DE0E79D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		ED092326CDA049839F548044 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		F0516F33BD29489CB3254D35 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../node_modules/native-base/Fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -748,6 +777,7 @@
 		C7FDA6437086ADC042B0542D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E93852211F241F8400DC34D5 /* Pods.xcodeproj */,
 				A2859CBC551C858438D975D0 /* Pods-EmpowerApp.debug.xcconfig */,
 				17C00BCDE4AB318C63C4216A /* Pods-EmpowerApp.release.xcconfig */,
 				1106F0EF2DF7EAB1249973CA /* Pods-EmpowerApp.staging.xcconfig */,
@@ -768,6 +798,17 @@
 			isa = PBXGroup;
 			children = (
 				E92A9AAB1EF6F78700BC7DCF /* libRNNotifications.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E93852221F241F8400DC34D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E938522A1F241F8500DC34D5 /* libPods-EmpowerApp.a */,
+				E938522C1F241F8500DC34D5 /* libPods-EmpowerApp-tvOS.a */,
+				E938522E1F241F8500DC34D5 /* libPods-EmpowerApp-tvOSTests.a */,
+				E93852301F241F8500DC34D5 /* libPods-EmpowerAppTests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -948,6 +989,10 @@
 				{
 					ProductGroup = E984E3961F0B840800199269 /* Products */;
 					ProjectRef = DC0602406C93402493661A45 /* CodePush.xcodeproj */;
+				},
+				{
+					ProductGroup = E93852221F241F8400DC34D5 /* Products */;
+					ProjectRef = E93852211F241F8400DC34D5 /* Pods.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1156,6 +1201,34 @@
 			fileType = archive.ar;
 			path = libRNNotifications.a;
 			remoteRef = E92A9AAA1EF6F78700BC7DCF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E938522A1F241F8500DC34D5 /* libPods-EmpowerApp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-EmpowerApp.a";
+			remoteRef = E93852291F241F8500DC34D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E938522C1F241F8500DC34D5 /* libPods-EmpowerApp-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-EmpowerApp-tvOS.a";
+			remoteRef = E938522B1F241F8500DC34D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E938522E1F241F8500DC34D5 /* libPods-EmpowerApp-tvOSTests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-EmpowerApp-tvOSTests.a";
+			remoteRef = E938522D1F241F8500DC34D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E93852301F241F8500DC34D5 /* libPods-EmpowerAppTests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-EmpowerAppTests.a";
+			remoteRef = E938522F1F241F8500DC34D5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E97AF9561EB8531C0008EB21 /* libRCTImage-tvOS.a */ = {
