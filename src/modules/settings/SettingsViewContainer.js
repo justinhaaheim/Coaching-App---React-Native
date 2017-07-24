@@ -10,6 +10,7 @@ export default connect(
     arenaVersion: state.settings.arenaVersion,
     mleEnabled: state.settings.mleEnabled,
     notificationsEnabled: state.settings.notificationsEnabled,
+    appVersion: state.settings.appVersion,
   }),
   dispatch => ({
     settingsStateActions: bindActionCreators(SettingsStateActions, dispatch),
