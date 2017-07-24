@@ -19,14 +19,21 @@ class AppView extends Component {
   };
 
   componentDidMount() {
+    const { appVersion } = this.props;
+
     snapshotUtil.resetSnapshot().then((snapshot) => {
       const { dispatch } = this.props;
 
       // TODO: Address issue here where snapshot is a different shapen than the
       // currently defined initial state.
       if (snapshot) {
-        console.log('Resetting session state from snapshot.');
-        dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
+        if (appVersion === snapshot.settings.appVersion) {
+          console.log('Resetting session state from snapshot.');
+          dispatch(SessionStateActions.resetSessionStateFromSnapshot(snapshot));
+        } else {
+          console.log('Snapshot does not match current app version. Discarding');
+          dispatch(SessionStateActions.initializeSessionState());
+        }
       } else {
         console.log('No snapshot available. Initializing state normally.');
         dispatch(SessionStateActions.initializeSessionState());
