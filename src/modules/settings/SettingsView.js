@@ -14,9 +14,12 @@ import {
   StyleProvider,
   Switch,
 } from 'native-base';
+import codePush from 'react-native-code-push';
 
 import getTheme from '../../native-base-theme/components';
 import commonColor from '../../native-base-theme/variables/commonColor';
+
+import projectPackage from '../../../package.json';
 
 class SettingsView extends Component {
   static displayName = 'SettingsView';
@@ -28,18 +31,38 @@ class SettingsView extends Component {
   static propTypes = {
     mleEnabled: PropTypes.bool.isRequired,
     notificationsEnabled: PropTypes.bool.isRequired,
+    appVersion: PropTypes.string.isRequired,
     settingsStateActions: PropTypes.shape({
       toggleArenaVersion: PropTypes.func.isRequired,
       toggleNotifications: PropTypes.func.isRequired,
+      setAppVersion: PropTypes.func.isRequired,
     }).isRequired,
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired,
     }).isRequired,
   };
 
+  // async getAppVersion() {
+  //   const { appVersion } = await codePush.getConfiguration();
+  //   console.log(appVersion);
+  //
+  //   const meta = await codePush.getUpdateMetadata();
+  //   if (!meta) return { appVersion };
+  //
+  //   const { label } = meta;
+  //   return { appVersion, label };
+  // }
+
+  componentDidMount() {
+    // const { setAppVersion } = this.props.settingsStateActions;
+    // const { appVersion, label } = this.getAppVersion();
+    // setAppVersion(`${appVersion} ${label}`);
+    // console.log('App version set!');
+  }
+
   render() {
     const { toggleArenaVersion, toggleNotifications } = this.props.settingsStateActions;
-    const { mleEnabled, notificationsEnabled } = this.props;
+    const { mleEnabled, notificationsEnabled, appVersion } = this.props;
     const { navigate } = this.props.navigation;
 
     return (
@@ -47,9 +70,9 @@ class SettingsView extends Component {
         <Container style={StyleSheet.flatten(styles.container)}>
           <Content>
             <List style={StyleSheet.flatten(styles.whiteBg)}>
-              <Separator style={{ backgroundColor: '#efeff3' }} bordered>
+              <ListItem itemHeader style={{ backgroundColor: '#efeff3' }} bordered>
                 <Text>COACHING ARENA</Text>
-              </Separator>
+              </ListItem>
 
               <ListItem icon>
                 <Left>
@@ -112,6 +135,22 @@ class SettingsView extends Component {
                 </Body>
                 <Right style={{ borderBottomWidth: 0 }}>
                   <Icon name="arrow-forward" />
+                </Right>
+              </ListItem>
+
+              <Separator style={{ backgroundColor: '#efeff3' }} bordered />
+
+              <ListItem icon>
+                <Left>
+                  <Text>
+                    {'App Version'}
+                  </Text>
+                </Left>
+                <Body style={{ borderBottomWidth: 0 }} />
+                <Right style={{ borderBottomWidth: 0 }}>
+                  <Text>
+                    {projectPackage.version}
+                  </Text>
                 </Right>
               </ListItem>
 

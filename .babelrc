@@ -1,4 +1,7 @@
 {
   "presets": ["react-native", "flow"],
-  "retainLines": true
+  "retainLines": true,
+  "plugins": [
+    ["inline-json-import", {}]
+  ]
 }

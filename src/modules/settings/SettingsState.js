@@ -4,6 +4,7 @@ const initialState = {
   liList: '',
   notificationsEnabled: false,
   introComplete: false,
+  appVersion: '0.0.0',
 };
 
 // Actions
@@ -11,6 +12,7 @@ const TOGGLE_ARENA_VERSION = 'SettingsState/TOGGLE_ARENA_VERSION';
 const UPDATE_LI = 'SettingsState/UPDATE_LI';
 const TOGGLE_NOTIFICATIONS = 'SettingsState/TOGGLE_NOTIFICATIONS';
 const SET_INTRO_STATUS = 'SettingsState/SET_INTRO_STATUS';
+const SET_APP_VERSION = 'SettingsState/SET_APP_VERSION';
 
 // Action creators
 export function toggleArenaVersion() {
@@ -39,6 +41,13 @@ export function setIntroStatus(status) {
   };
 }
 
+export function setAppVersion(ver) {
+  return {
+    type: SET_APP_VERSION,
+    payload: ver,
+  };
+}
+
 // Reducer
 export default function SettingsStateReducer(state = initialState, action = {}) {
   switch (action.type) {
@@ -57,6 +66,10 @@ export default function SettingsStateReducer(state = initialState, action = {}) 
     case SET_INTRO_STATUS:
       return Object.assign({}, state, {
         introComplete: action.payload,
+      });
+    case SET_APP_VERSION:
+      return Object.assign({}, state, {
+        appVersion: action.payload,
       });
     default:
       return state;

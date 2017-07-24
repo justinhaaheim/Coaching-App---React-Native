@@ -956,6 +956,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = UFL7WNR5T5;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1776,6 +1777,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.justinh.theempowerapp;
 				PRODUCT_NAME = EmpowerApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1812,6 +1814,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.justinh.theempowerapp;
 				PRODUCT_NAME = EmpowerApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -2144,6 +2148,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.justinh.theempowerapp;
 				PRODUCT_NAME = EmpowerApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
