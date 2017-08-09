@@ -21,7 +21,8 @@ The app's core functionality is a tool called the "Coaching Arena" from the [Aca
 I'm always glad to hear from folks. Get in touch on twitter: [@justinhaaheim](https://twitter.com/justinhaaheim) Or write me a note: `io` at `justinh` dot `org`.
 
 -Justin 🤓
-&nbsp
+
+<br />
 
 # Setup
 
