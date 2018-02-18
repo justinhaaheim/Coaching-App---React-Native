@@ -1,3 +1,6 @@
+import { RESET_STATE } from '../session/SessionState';
+
+
 // Initial state
 const initialState = {
   buttons: [
@@ -65,6 +68,9 @@ export default function ArenaStateReducer(state = initialState, action = {}) {
       return Object.assign({}, state, {
         buttons: newButtons,
       });
+    }
+    case RESET_STATE: {
+      
     }
     default: {
       return state;

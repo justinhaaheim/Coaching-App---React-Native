@@ -1,5 +1,3 @@
-// import {Map} from 'immutable';
-
 export const RESET_STATE = 'SessionState/RESET_STATE';
 export const INITIALIZE_STATE = 'SessionState/INITIALIZE';
 
